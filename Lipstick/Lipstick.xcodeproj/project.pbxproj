@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF14210EC5B1000604C3 /* AppDelegate.swift */; };
-		709FDF17210EC5B1000604C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF16210EC5B1000604C3 /* ViewController.swift */; };
+		709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF16210EC5B1000604C3 /* BrandController.swift */; };
 		709FDF1A210EC5B1000604C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709FDF18210EC5B1000604C3 /* Main.storyboard */; };
 		709FDF1D210EC5B1000604C3 /* Lipstick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF1B210EC5B1000604C3 /* Lipstick.xcdatamodeld */; };
 		709FDF1F210EC5B1000604C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709FDF1E210EC5B1000604C3 /* Assets.xcassets */; };
 		709FDF22210EC5B1000604C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709FDF20210EC5B1000604C3 /* LaunchScreen.storyboard */; };
 		709FDF2D210EC5B1000604C3 /* LipstickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF2C210EC5B1000604C3 /* LipstickTests.swift */; };
 		709FDF38210EC5B1000604C3 /* LipstickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF37210EC5B1000604C3 /* LipstickUITests.swift */; };
+		709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		709FDF11210EC5B1000604C3 /* Lipstick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lipstick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709FDF14210EC5B1000604C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		709FDF16210EC5B1000604C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		709FDF16210EC5B1000604C3 /* BrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandController.swift; sourceTree = "<group>"; };
 		709FDF19210EC5B1000604C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		709FDF1C210EC5B1000604C3 /* Lipstick.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lipstick.xcdatamodel; sourceTree = "<group>"; };
 		709FDF1E210EC5B1000604C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		709FDF33210EC5B1000604C3 /* LipstickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LipstickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		709FDF37210EC5B1000604C3 /* LipstickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipstickUITests.swift; sourceTree = "<group>"; };
 		709FDF39210EC5B1000604C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				709FDF14210EC5B1000604C3 /* AppDelegate.swift */,
-				709FDF16210EC5B1000604C3 /* ViewController.swift */,
+				709FDF45210ECF55000604C3 /* Brands */,
 				709FDF18210EC5B1000604C3 /* Main.storyboard */,
 				709FDF1E210EC5B1000604C3 /* Assets.xcassets */,
 				709FDF20210EC5B1000604C3 /* LaunchScreen.storyboard */,
@@ -126,6 +128,15 @@
 				709FDF39210EC5B1000604C3 /* Info.plist */,
 			);
 			path = LipstickUITests;
+			sourceTree = "<group>";
+		};
+		709FDF45210ECF55000604C3 /* Brands */ = {
+			isa = PBXGroup;
+			children = (
+				709FDF16210EC5B1000604C3 /* BrandController.swift */,
+				709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */,
+			);
+			path = Brands;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				709FDF1D210EC5B1000604C3 /* Lipstick.xcdatamodeld in Sources */,
-				709FDF17210EC5B1000604C3 /* ViewController.swift in Sources */,
+				709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */,
+				709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */,
 				709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
