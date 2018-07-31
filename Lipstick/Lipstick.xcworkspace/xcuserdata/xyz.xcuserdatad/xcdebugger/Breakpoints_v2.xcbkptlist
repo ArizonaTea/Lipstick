@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
+            timestampString = "554709791.110458"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "imageView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of Lipstick.ImageItemView.imageView : __ObjC.UIImageView"
+                  moduleName = "Lipstick"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xyz/Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
+                  timestampString = "554717178.557379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __ObjC.UIImageView in variable initialization expression of Lipstick.ImageItemView.imageView : __ObjC.UIImageView"
+                  moduleName = "Lipstick"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xyz/Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
+                  timestampString = "554717178.558931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lipstick.ImageItemView.imageView.getter : __ObjC.UIImageView"
+                  moduleName = "Lipstick"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xyz/Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
+                  timestampString = "554717178.560419"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,2077 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02C424EB77408175DD78D2C48301E581 /* PINRemoteImageDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 13806FD9B6E833E661704532E37F0340 /* PINRemoteImageDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02DD9C6D1131607C75B1A1CDC8096DB5 /* NSObject+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA3492E935B7EDF3DB97B2605938FB /* NSObject+YAAL.swift */; };
+		02E5E6757F828217AA505C7AF48C106D /* Pods-LipstickUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 778E41AC1682BB92E6AE7FCB1C5E82DB /* Pods-LipstickUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03A17C219E4A45C3EC9D475A5C2FEF37 /* SizeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88858B41530343533B0505282DDCFD7B /* SizeSource.swift */; };
+		04DD0C802556073BD0F665335614DCE9 /* CollectionReuseViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29595A0E847EAEE3897592229A8144BA /* CollectionReuseViewManager.swift */; };
+		04DD7B85568DA507007BBA0184A31CDD /* VisibleFrameInsetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5A934B4D8A17BE164AB328CCF628F /* VisibleFrameInsetLayout.swift */; };
+		0564243D3A9BF26F3DFDEB86BB7078A2 /* PINRemoteImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89EDA8E4DAB7B0B1F330EDD4917D /* PINRemoteImageManager.m */; };
+		05A1AA1F626B8D76EA8369396F1D6EA9 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE98FA43A93237A8D8125CD120AABEF /* CollectionView.swift */; };
+		06F5FD9556E1A14BE8ADC473FCA33560 /* YetAnotherAnimationLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29975230A857D1F813F77EE9FF8FE396 /* YetAnotherAnimationLibrary-dummy.m */; };
+		070148BEE8458B1C278C91808BC407F3 /* InsetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7154D1DA7E6DB660F3174F0F3FB129 /* InsetLayout.swift */; };
+		07DC170C9DAB9B435B0D96BA7D3D9A57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E9599884279DF54FA8DC450A9C886E /* QuartzCore.framework */; };
+		07F4E5CF376E17A8B0BD9F8D2F4AF9CB /* SimpleViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EF8F261DE7096E0CA1DCDC09652781 /* SimpleViewProvider.swift */; };
+		0C65F1ECC63BBA3D1CD97CD489ECC171 /* SectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD06E2FFEB1E68F205514467CE353 /* SectionProvider.swift */; };
+		0CF59C113832CDD763AEE33D52F6BF22 /* CALayer+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F641498CE738E43291E2DE92597DF3 /* CALayer+YAAL.swift */; };
+		0F1EF6DA45F047D57F1F477C89CEE332 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		0F5468F65A5EF965896A0201A321F784 /* CollectionReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73B2F78E2BB5319F1567E5BD02AFF7 /* CollectionReloadable.swift */; };
+		12986901962B2E7C6C12F735060BE406 /* FlattenedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A766AD598A67BD4A60639EE96D9B0F /* FlattenedProvider.swift */; };
+		13ADE84F672E4DF94AB419484FFAEAFA /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D6865F7A97556D96D07B4B13F8FFB /* FLAnimatedImage-dummy.m */; };
+		151DBAAE0F0F8A3CEE639CB2E8A3C8D8 /* Pods-Lipstick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81764946540FE2ED5D7FD5F35BF2F26C /* Pods-Lipstick-dummy.m */; };
+		155F6794FF7046DFFB912D8DB74171ED /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6CD0991EFFDF9AB66A21EC3744B790 /* WaterfallLayout.swift */; };
+		156DC7F043A417990334006FA0AF6FB5 /* PINProgressiveImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D60688F5D18C2F88197521D6013F3C /* PINProgressiveImage.m */; };
+		15A6A3046453B5013AB17497F47821A0 /* RK4Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BE82C204920F65744263B278DDE93 /* RK4Solver.swift */; };
+		183511FB53782109C2C12D66ED8B23AC /* PINImageView+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 926A4FA9694D495A829604142C5258A6 /* PINImageView+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18DA8F84FFAE5A099C59CD404B320A51 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EF8C97D66986162CCD70E56165C7C6 /* ArrayDataSource.swift */; };
+		1C8505CA4BA0D77035241E77D005B900 /* SpringAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5667616706529F0D55174ACF3956C9 /* SpringAnimatable.swift */; };
+		1CC9B1D745A70387B887CA7815AF9C61 /* RowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC47D1879377A5468C6FDB62D32B1962 /* RowLayout.swift */; };
+		1D14AF5065F6152D18A6502B74AE18DF /* PINRemoteImageTask.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F4AAEB761489EAA048774CA4360729 /* PINRemoteImageTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		225D2B4C91D6BAE7BDE240932CE63F69 /* UIView+CollectionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278237A808AC850554E621B3B413C7E1 /* UIView+CollectionKit.swift */; };
+		23CBAD56A5D8564932114FAD293DA9BA /* OverlayLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F030B71501D3122D1F4D93EDDA5EFC /* OverlayLayout.swift */; };
+		248D35BB6CD4CB48EF433AAF9E454C49 /* PINRemoteLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 262E6BF2B7FBE262E05A6A3E6916B53D /* PINRemoteLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D54E37B7517BA71063F279BF4D935F3C /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		29B8210179D87368D359274EA9EBCBB9 /* DecayAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22453AB8ECD47E9E1ED55E1E791BD7C3 /* DecayAnimatable.swift */; };
+		2AB5CB174075ADEE5067CEB678C22B8E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0551C1687736334FF60E12708FC2CF /* ImageIO.framework */; };
+		2D388410666A88EB68B2ED72E7C1F61D /* PINRemoteImageManagerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A7AC8F9E4CDF5EA76A06751E9AC5B /* PINRemoteImageManagerResult.m */; };
+		2F5A2CF6AE9D5622241EF27D87FA5959 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D369A17AD17C2B42F09753B13CFA68F /* Animator.swift */; };
+		33811F03F3E481EC0C43222646F0A58B /* SpaceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCBDCA074874263FEF2820AE84FBD9 /* SpaceProvider.swift */; };
+		34CEDB062F6D43E43411B3C3593B2D0A /* CurveSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA305F562273BF206F0E84AC9B414317 /* CurveSolver.swift */; };
+		3659DD4D7767B7C1BBB389AE6B0FB048 /* CollectionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 146D5F3910D7467C2C9A060C1EE809FD /* CollectionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38EF0DE1C9B59568BA5B6C1B98516B99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		3960AC5216292CACE0E7D5300594365D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACA3181D94A3D95C0306190C93A84 /* Util.swift */; };
+		3DE4C3773A3F98B2FF737DC49ADAE72D /* Pods-LipstickTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64721FC6DF1B9BE5889CB99848FA9072 /* Pods-LipstickTests-dummy.m */; };
+		40F7D62D52B3B98311FBF0F5DE8CB6FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F753AC98F2163C2D6010544FBF09E02D /* UIKit.framework */; };
+		411E56C9C358C49067B09A3CDE12CEEC /* PINRemoteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3E361ACA6885936EC54725BA1A1590 /* PINRemoteLock.m */; };
+		434528B5B0925467CB17D1812C8EADE2 /* NSData+ImageDetectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF0B64580012694EB4EC589907BFAFF /* NSData+ImageDetectors.m */; };
+		4351D2FBF25F70D22B64C21773012589 /* StickyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34DB796A2BB30EDA6BFB9759A09ABD /* StickyLayout.swift */; };
+		441B332822DE6E1660740CB57E4F45F3 /* PINURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 27372B0E89E5F9964E8273C6577D61C1 /* PINURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45BFA8B3B93C4271D11A917ED65BC418 /* CurveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146E1F38EFE00566AB0CFFC995AA085 /* CurveAnimation.swift */; };
+		492B93473D342D741B02A4B970F83772 /* Announcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0127197CE5BE58A3746EA86D01F20692 /* Announcer.swift */; };
+		49A49C9373CC274D2156337FCEDCF5E4 /* EmptyCollectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE83167A16C053412D18B706EB27CA0 /* EmptyCollectionProvider.swift */; };
+		4AD081B2D7F704181FE19DF8BDD1E1CD /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0E3CE0535C895D1075ECFC4822CA8 /* LayoutHelper.swift */; };
+		4B01447BE2B4AF873A11B4F2DC2B126F /* AnyViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7F44122176C671B04AE8FD06293C2 /* AnyViewSource.swift */; };
+		4BDF894ACADD348FCDB2C85BFABDCD24 /* ClosureDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B76E3CED132CAF09FE5F646D24F663 /* ClosureDataSource.swift */; };
+		4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC451E16B0B3B244EDA087B4EC2AD1F3 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4D9A7903BFBD7A7BCE4E038DCA2B9397 /* Pods-LipstickTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A5A1CC03FB4E3C0EFF88CA5AB6649D /* Pods-LipstickTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E1C1B888CA1C3AF1299FB177B9AFA52 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE51D519C964219E58F762D7397EB9A /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		504FE5B64997DB7252F4517C3DF0CF56 /* UIView+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74610C52A15A57BD754287F8BE7648B8 /* UIView+YAAL.swift */; };
+		50504DEC855B790C921C42A52DD77A1F /* PINImage+WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = E034CFF7B1067E2449DFF52E3D2D17A7 /* PINImage+WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54B72BE8851E881007E5620B47F98A89 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = B4419DF45256306603ACFC4C2ABB8943 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5557452112B561C5B1C67B8E678208D1 /* YaalCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863FC50F469B326B7D91FEA67BB46FB /* YaalCompatible.swift */; };
+		572E9CAEC0703E64ED3165F00EE5A102 /* EmptyStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00EFABAA6895980E0A917640A26F6FB /* EmptyStateProvider.swift */; };
+		5BD7C329F98E548DE40B3FEEFE7DC7A1 /* PINProgressiveImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3267DF1006A6E0C30F71115842DB081E /* PINProgressiveImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C1E072714865963500DFD6EF3FA3E07 /* FLAnimatedImageView+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4B9E953635599E2447FC8DF20C4AA /* FLAnimatedImageView+PINRemoteImage.m */; };
+		5D0D2BB58CC53D3CE306310AFA56C54E /* VectorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED9ED40B6483C987E0F0809B37C96C /* VectorConvertible.swift */; };
+		5E5E031CF27FAAEBEB9768AF0B667BBD /* PINImage+DecodedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4BF22F9577D2683006450D7E30659D /* PINImage+DecodedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EB07F97D1299A912633F3DA5BE337E5 /* PINRemoteImageDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F913321DB076EED9361CB82FD041336E /* PINRemoteImageDownloadTask.m */; };
+		5EC4ACCC53B301B62A48ADA71EA9EF81 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9640CC82D9CB7D0269D9D9F1F5A19 /* Deprecated.swift */; };
+		5F2C51030CB95C0B94B061003650487F /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6080D4F9AE0AC6AB6B7BEBD8C95750 /* FLAnimatedImage.framework */; };
+		603CA29ED61FE167A51D50AE378183FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8F068E7A6F7D3C789162F1ABD6A18F /* Animation.swift */; };
+		60B68B3362DEE39A6A68E4336A254EEF /* PINRemoteImageProcessorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 15489C1793B08291C8684D8AD808E507 /* PINRemoteImageProcessorTask.m */; };
+		6277B48B190D0BAD48184BCCBD0D4623 /* BasicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B466F2C9C1FBD6F273520472A817B6 /* BasicProvider.swift */; };
+		676C2D9776AAE76BD5639B0D91FD8CA9 /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6F619E654DB2E9BFCF68123D06579 /* DisplayLink.swift */; };
+		68944E65DC6567018F8B1D392D38C8C0 /* ScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F88C1F5EA15D281898F24D104E38 /* ScaleAnimator.swift */; };
+		68A966DC9FE75F46B517A0A01458F0DD /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAC3F53234019400BAAC74BC57A6C2 /* PINCache-dummy.m */; };
+		68F8286945D200F884100AACDD62D6BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		69CC68F8999B31BF54BE7FD053DAC92E /* ValueAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B874BEE0814ECC0B75A08CA19E31 /* ValueAnimation.swift */; };
+		6A71A23227E6FB0C57B01ED20FAE6DE6 /* WrapperLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCF7CCE2F48871B9E68413050CE58D /* WrapperLayout.swift */; };
+		6AA6FAB5EE785E7627683168CE50C4B6 /* PINButton+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 25049080C0D7065926ABC58A766192C9 /* PINButton+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ADBA2C332A2BF5C317AA15EE609B8CC /* PINRemoteImageCategoryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C8C480EA1E52228DFA4AEE742E91B3 /* PINRemoteImageCategoryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE66B52EA65DF5B232359DC23937968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		6D620ABFFEBD88D2FE82664B6D31EF08 /* DecayAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0ABEAB8056EFE890E65170A24388CC /* DecayAnimation.swift */; };
+		71592C0CF93E90FA69E01D98AA6819F0 /* ViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D3C675D94FE498149C28CB80EAE7 /* ViewSource.swift */; };
+		736BF7CD8C5296498C3782743717D11A /* PINRemoteImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AC3F97CA4B6A2810A6955C61E6429AD1 /* PINRemoteImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73AF2EAF2720137ABC5418DCBE95817C /* ClosureLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D40BEF46CAF2C4E4B67ED8CEB030C9 /* ClosureLayout.swift */; };
+		7723FF02714A4D9D4D50338862AD09C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F753AC98F2163C2D6010544FBF09E02D /* UIKit.framework */; };
+		7B9F7D24B6C1A67D532B25435A66B3B7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC23CD9494F414D9F3FCFBF78CF735BA /* Accelerate.framework */; };
+		7D00332C0E554E00DCFAC03EDCCCA5FC /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA54DAA962ED43D4A7654F8FDB8847B /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		824B4C730E99B60710682512A1C66232 /* PINRemoteImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A758746832551B0CAB0DDE751417E /* PINRemoteImage-dummy.m */; };
+		857920EF75016C09311B5B4D9623A69C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		86AECE8427BADF839A0DD7FA79587EC7 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3F247C3486160FC45C7662F5FF07 /* Animatable.swift */; };
+		879F3C72BF6A5122BA70CAEEDDC5B845 /* FLAnimatedImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFD765DAF56FC754495EE236176F264 /* FLAnimatedImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B2501C9FA5FCDE6070FED72C412DF38 /* PINDataTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F1143E9B91ECF78C1B752D174A35869 /* PINDataTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C1771BECC0DA6C28D8EB206F8D62D67 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A12B90CD61FB23256A4AE3B55A5A0E /* FLAnimatedImage.m */; };
+		8CFB9AD1E39485BF26D377921B5F6705 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DCC61C49B3DDCE675150F849A4A15 /* Curve.swift */; };
+		8E6938B44EF54643338F39A68C3E6DB7 /* PINRemoteImageCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A962E78C517920C974BE2BA01EF0149 /* PINRemoteImageCategoryManager.m */; };
+		8E866D91CB4C5DCF2A8E4680E807298F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397F955C5178D05C1AA3512B14A55004 /* CoreGraphics.framework */; };
+		907DBCCB78AC6617D01B02E48620F412 /* PINRemoteImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 32536586FEB6F3479B3BEEB8CC8AFE38 /* PINRemoteImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92B0C6990DC7099C2F81F7861ADB0430 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0551C1687736334FF60E12708FC2CF /* ImageIO.framework */; };
+		93460896B41C4D159ED6490E08E2C296 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C4A01DF9210B492545B996B42E3B8 /* PINCache.framework */; };
+		95F91CEA761E693772BFEE2A9CE483A5 /* ComposedViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177CCAED7EAF721BF872D2CBCC00D8F /* ComposedViewSource.swift */; };
+		96F39B74B9073244698A05E0A098865B /* ChainOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D303ED1799414B0462BBEF06FB623 /* ChainOperator.swift */; };
+		97A0222EF9DE779A5A10179DE0A745F1 /* PINImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D1F9093E315BAE2F2E05DF513246FB /* PINImage+WebP.m */; };
+		9A3239B8D807C6C91D46CF7A227E275A /* LayoutableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B934F87BBE871C4DB071B3071BDF4C /* LayoutableProvider.swift */; };
+		9C5C909E3A5DF8EBB7C68C6E18F5EAC0 /* DecaySolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775D3B9C5D648006220AB28916860BD /* DecaySolver.swift */; };
+		9CDD4344DFD2C1E9D62CE54F7D4E6FC3 /* UIScrollView+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C922F56C41D6B08DC5A00D393E1C7A /* UIScrollView+YAAL.swift */; };
+		9F9D70B228C36F0CA659725CAEEC636F /* UILabel+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE42FC25BC28E62634A3085E5E118F /* UILabel+YAAL.swift */; };
+		A0DD7608472EFE926BC1EAA1081808A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		A4276999F7266A6C44E2CA706D24340F /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8AD176CE67B03F723A8713340119B5E /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A524889BE32B9A3DA40A93309A3B3DBD /* Pods-LipstickUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1C7CCE5E8DA65F7C5C165BAE7E1C41 /* Pods-LipstickUITests-dummy.m */; };
+		A72B573D39DEB9BDB1941E1FC6BEAE8F /* PINButton+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AB336980FF6938580F2B7EE3FE0A1 /* PINButton+PINRemoteImage.m */; };
+		A98F35F4F1F4D459CA79645E1AE797EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		A9E01154527D14E6933379AFBF07C579 /* ComposedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B861662CFA619CF0EC07CB72C8C6D /* ComposedProvider.swift */; };
+		ACEF52D266CBF9E8C7E9F7D5E2C0937A /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE832E104FFF9F57AB62E23DD136F62 /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF1D8FEC72D0963311BE53DE2C71E3FB /* SimpleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF8DDE4AA3427EB80065C189369F3F /* SimpleLayout.swift */; };
+		B00EC20A95367E3634CC70121385F419 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C597999D8E6BCBA709C1D8E2041647 /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2D3A41BC0CC5A6941DA65F50043220F /* NSData+ImageDetectors.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0E0264A3536910384F359878967D55 /* NSData+ImageDetectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3145B7D73AE35131987FF285FA9E6FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
+		B31C10967C762DCBADBF8092EDCE8AF4 /* PINDataTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B039B3D07FED04D357F2AD7D1A4747 /* PINDataTaskOperation.m */; };
+		B4711CDC22A85523A82B953476E4D217 /* UIScrollView+CollectionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF42E57EDBAC6AA51C35CFC8BFEF0D1 /* UIScrollView+CollectionKit.swift */; };
+		B6533EFF69AA9E2AB73837FD8950F1C8 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A18920D8033438A083BAD804BC50370 /* FLAnimatedImageView.m */; };
+		B8AC06908589939A59672C9F1A20D0ED /* PINImage+DecodedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 79319EE3B37D5223FD426B62AFDB855F /* PINImage+DecodedImage.m */; };
+		B9310487313EC6DFB9D38678AE23C428 /* PINRemoteImageProcessorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B4F861404F6E8D9A71A48D205236A0 /* PINRemoteImageProcessorTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9E552DAFCC40CE53BF3E93452D2F8EA /* PINRemoteImageCallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 64FDB28C85766BD25FB38A3CCC1978F8 /* PINRemoteImageCallbacks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD7816BB511DBB2E99620F9DC4950616 /* CurveAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08C1DDEE09138D7773FF4B6AE38973 /* CurveAnimatable.swift */; };
+		BED1DE79AD6EBFBA1DA0108EDE82E3F4 /* PINURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C35B8283F50C6386878FC8C5D2A12 /* PINURLSessionManager.m */; };
+		C1A36041E5E13074F859BB6817F17725 /* SpringSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90219A36E598BCB3B2234D862199A1ED /* SpringSolver.swift */; };
+		C46FABA00F83FDC5B961B22EFDCA6E05 /* ClosureViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB0E4F4D9A5E93E85DA73AE9C0E489 /* ClosureViewSource.swift */; };
+		C663B8BBA8ED3ABFB3CA81645423397B /* LayoutContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9EB5B177E5381D192C6FDD308C818 /* LayoutContext.swift */; };
+		C671D0CCF5DE02899868216E7DBFEF35 /* TransposeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A651619CF733AF261798D10BCEF4F32 /* TransposeLayout.swift */; };
+		C96C10CBB9102281025EBAF6608EFD8A /* ItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F7CC1DCF24AF50A90264B460E0E35 /* ItemProvider.swift */; };
+		CBCA986711FD634431AD7AA4438B8A79 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C02A81F3BAD7A52D77D624D04412CEB /* Vector.swift */; };
+		CC72AC7921142AEA50CE7CDD778FEB45 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44DA19D9FC449E1397C70025CA60D60 /* MobileCoreServices.framework */; };
+		CE7CB3E987C37C26CE1AE5337BB3BBCC /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69244635DE3F9A02AF7C564EAB6AD0C /* Provider.swift */; };
+		D04F230E9D7109AD1F34DB96916FF4EE /* YetAnotherAnimationLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B509FE347CF437C768E79DA58EFA0AD /* YetAnotherAnimationLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D15F7F93047B54CDC5A9AEB85AFCD5B6 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDC118BB8C90A801D2E0DBD5196D98F /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1D0F7549CD81349E0E286EC7A509E41 /* VelocitySmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9053B24A2D54A47D1E3421FA398AC /* VelocitySmoother.swift */; };
+		D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1484CE38F973F1EF5A023A0A2F8CF3 /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D484D4A4B18B1143F24859CEB06094AB /* PINRemoteImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF3AB49579CF45167999BA127C8668 /* PINRemoteImageTask.m */; };
+		D4AB193A949BDB9210C7A3F60D035693 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DBD334593F08D3AE0FCE1A6D627305 /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5E29D47986D44B4705F7956C1B8CE31 /* ComposedHeaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DC47271DAC7CE7AF508B5A0683B61 /* ComposedHeaderProvider.swift */; };
+		D882582A5820F607375885EF65AAE548 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CADB8FA010651B6273512C87B415C /* SpringAnimation.swift */; };
+		DCA2E00138CF536BA868B98887E470F3 /* PINImageView+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC42B2CD9016AA36AAE24F2A41CD99B2 /* PINImageView+PINRemoteImage.m */; };
+		DE73EB74B3B0EE9C0EEFDC36525257AD /* PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 432B525A460D8C92C579B393BB2A46E2 /* PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF879FF0B0FBC86216430DF01B711305 /* PINRemoteImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F4828DC18D1C02DFA4DB5E9874A9CE /* PINRemoteImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E051ED3B36CB3FF1E8B137F6E8EDF35E /* SolverAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90856A6DBC79D91691B6818F43B48EE /* SolverAnimatable.swift */; };
+		E15F4FDFDF10D4F360DE0F06B82ABD09 /* MixAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B9D1EFAB4D1C65257CCC0D567E1F0 /* MixAnimation.swift */; };
+		E8B4695E4ADE60B2EA871C7726821057 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712C4C413074481FFD1A5A377CCA4BB /* FadeAnimator.swift */; };
+		E954700CAAC47FA598155FAE86CA915E /* BaseSimpleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0234E962CC24D2BF676EE45BFFD4D /* BaseSimpleAnimator.swift */; };
+		E9EA394EDA65A8FC902678E225E8B10D /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D95EF810B2ADD3B6F0AE433204D49D /* Layout.swift */; };
+		EBC49D6D08227DF7918A0D35693ACF1F /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95C9BE1524A46E6BC1145C4ACD452F /* FlowLayout.swift */; };
+		EE75E38C524C5DB07DF0CA0837092B26 /* PINRemoteImageCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = F6306893265D2E7D5EDBD3F03BDE43F5 /* PINRemoteImageCallbacks.m */; };
+		F1AEBE4E3F419ED02A2CA675F3EB9A6C /* FLAnimatedImageView+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E6FAB698208CCDC0EFFFEED8BE622AC /* FLAnimatedImageView+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2D9F3161389FD8D94B5EA155728BC52 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B923F96AEC84AFFD265B8ECC005FC /* DataSource.swift */; };
+		F4550B666A1DA99188C8302BC82171DB /* AnimationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DE91AF1D2D6A2EDD89CADD58AF64F /* AnimationProperty.swift */; };
+		F5E93620ED2E92885C3D0CC3DDF44647 /* CollectionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7EB1EE07F4514560EB79C966080353 /* CollectionKit-dummy.m */; };
+		F7736D72A6FF493C62F8B926C69803AB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AB5F4A92CB15E4853813C5A75DE9A9 /* Animator.swift */; };
+		F80C0CA9C88CE9118FD9D0BACE6E65AA /* PINRemoteImageManagerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 419469B29A974B77B58C57BE90D600F4 /* PINRemoteImageManagerResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA8B1EB0703C24047FE6914EB3898F86 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53866F8C7C1656145521E24663CEBF2 /* Solver.swift */; };
+		FBA1A0F906DE1AE2D3C90005EBF41912 /* Pods-Lipstick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77FC37AA5867355EEA8A812CCBEFFB10 /* Pods-Lipstick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCDE965581E02C485C525F13ED7A9C21 /* SolvableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B9D8F722E8D459D656B308B683F0 /* SolvableAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15FC84DBB0A534584B4C33332B99CC75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F30D544179C376C189794B9F2C0BBE88;
+			remoteInfo = CollectionKit;
+		};
+		50FA66EEBBCC1BAED66900FE91C6A0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B5B60C676A8D31829A6AE91CE86A75;
+			remoteInfo = FLAnimatedImage;
+		};
+		64AE401A007066FE947C618D338F7C48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A4878A4A87B118BAF0877A103373708;
+			remoteInfo = PINCache;
+		};
+		7DB95E7ED9A24BC7D66212F06308763F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B5B60C676A8D31829A6AE91CE86A75;
+			remoteInfo = FLAnimatedImage;
+		};
+		A07E1D76348A659345D45A738A3E0CA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02EE1452A6B9ED8895E739554320B81;
+			remoteInfo = PINRemoteImage;
+		};
+		E4111D6CFEC5F1FE1578B8D560286D38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A4878A4A87B118BAF0877A103373708;
+			remoteInfo = PINCache;
+		};
+		EF4BE48ED4E7AF80A7CEFFF19D4A8244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7D9BD17DCCFCB952CBDBCD7087E15A7;
+			remoteInfo = YetAnotherAnimationLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0127197CE5BE58A3746EA86D01F20692 /* Announcer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Announcer.swift; path = Sources/AnimationProperty/Announcer.swift; sourceTree = "<group>"; };
+		06B76E3CED132CAF09FE5F646D24F663 /* ClosureDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClosureDataSource.swift; path = Sources/DataSource/ClosureDataSource.swift; sourceTree = "<group>"; };
+		0775D3B9C5D648006220AB28916860BD /* DecaySolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecaySolver.swift; path = Sources/Solvers/DecaySolver.swift; sourceTree = "<group>"; };
+		0A651619CF733AF261798D10BCEF4F32 /* TransposeLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransposeLayout.swift; path = Sources/Layout/TransposeLayout.swift; sourceTree = "<group>"; };
+		0B509FE347CF437C768E79DA58EFA0AD /* YetAnotherAnimationLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YetAnotherAnimationLibrary-umbrella.h"; sourceTree = "<group>"; };
+		0E3F7CC1DCF24AF50A90264B460E0E35 /* ItemProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemProvider.swift; path = Sources/Protocol/ItemProvider.swift; sourceTree = "<group>"; };
+		11F6F619E654DB2E9BFCF68123D06579 /* DisplayLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisplayLink.swift; path = Sources/Animator/DisplayLink.swift; sourceTree = "<group>"; };
+		13806FD9B6E833E661704532E37F0340 /* PINRemoteImageDownloadTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageDownloadTask.h; path = Pod/Classes/PINRemoteImageDownloadTask.h; sourceTree = "<group>"; };
+		146D5F3910D7467C2C9A060C1EE809FD /* CollectionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionKit-umbrella.h"; sourceTree = "<group>"; };
+		15489C1793B08291C8684D8AD808E507 /* PINRemoteImageProcessorTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageProcessorTask.m; path = Pod/Classes/PINRemoteImageProcessorTask.m; sourceTree = "<group>"; };
+		155114C19500B1AE4476CC97F67B6206 /* FLAnimatedImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FLAnimatedImage.modulemap; sourceTree = "<group>"; };
+		1671A3EC31659D276406DF38D90538B8 /* Pods-LipstickTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LipstickTests-resources.sh"; sourceTree = "<group>"; };
+		179CADB8FA010651B6273512C87B415C /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Sources/Animations/SpringAnimation.swift; sourceTree = "<group>"; };
+		17C15EA2DAD410872E20FB22361AB660 /* Pods-Lipstick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Lipstick.modulemap"; sourceTree = "<group>"; };
+		1AF5A934B4D8A17BE164AB328CCF628F /* VisibleFrameInsetLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisibleFrameInsetLayout.swift; path = Sources/Layout/VisibleFrameInsetLayout.swift; sourceTree = "<group>"; };
+		1BE51D519C964219E58F762D7397EB9A /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
+		1D39B9D8F722E8D459D656B308B683F0 /* SolvableAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolvableAnimation.swift; path = Sources/Animations/SolvableAnimation.swift; sourceTree = "<group>"; };
+		1ED1D3C675D94FE498149C28CB80EAE7 /* ViewSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewSource.swift; path = Sources/ViewSource/ViewSource.swift; sourceTree = "<group>"; };
+		1FEE42FC25BC28E62634A3085E5E118F /* UILabel+YAAL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+YAAL.swift"; path = "Sources/Extensions/UILabel+YAAL.swift"; sourceTree = "<group>"; };
+		22453AB8ECD47E9E1ED55E1E791BD7C3 /* DecayAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecayAnimatable.swift; path = Sources/Animatables/DecayAnimatable.swift; sourceTree = "<group>"; };
+		227BA4A78EF368DAD2ED5C489AAE0A91 /* YetAnotherAnimationLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YetAnotherAnimationLibrary.modulemap; sourceTree = "<group>"; };
+		23D95EF810B2ADD3B6F0AE433204D49D /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Sources/Layout/Layout.swift; sourceTree = "<group>"; };
+		25049080C0D7065926ABC58A766192C9 /* PINButton+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINButton+PINRemoteImage.h"; path = "Pod/Classes/Image Categories/PINButton+PINRemoteImage.h"; sourceTree = "<group>"; };
+		262E6BF2B7FBE262E05A6A3E6916B53D /* PINRemoteLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteLock.h; path = Pod/Classes/PINRemoteLock.h; sourceTree = "<group>"; };
+		26757078DFEDC5209176ECADA85A89A2 /* FLAnimatedImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.xcconfig; sourceTree = "<group>"; };
+		27372B0E89E5F9964E8273C6577D61C1 /* PINURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINURLSessionManager.h; path = Pod/Classes/PINURLSessionManager.h; sourceTree = "<group>"; };
+		278237A808AC850554E621B3B413C7E1 /* UIView+CollectionKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+CollectionKit.swift"; path = "Sources/Extensions/UIView+CollectionKit.swift"; sourceTree = "<group>"; };
+		29595A0E847EAEE3897592229A8144BA /* CollectionReuseViewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionReuseViewManager.swift; path = Sources/Other/CollectionReuseViewManager.swift; sourceTree = "<group>"; };
+		29975230A857D1F813F77EE9FF8FE396 /* YetAnotherAnimationLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YetAnotherAnimationLibrary-dummy.m"; sourceTree = "<group>"; };
+		29FCF7CCE2F48871B9E68413050CE58D /* WrapperLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WrapperLayout.swift; path = Sources/Layout/WrapperLayout.swift; sourceTree = "<group>"; };
+		2AA4B9E953635599E2447FC8DF20C4AA /* FLAnimatedImageView+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FLAnimatedImageView+PINRemoteImage.m"; path = "Pod/Classes/Image Categories/FLAnimatedImageView+PINRemoteImage.m"; sourceTree = "<group>"; };
+		2C02A81F3BAD7A52D77D624D04412CEB /* Vector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vector.swift; path = "Sources/Types & Operators/Vector.swift"; sourceTree = "<group>"; };
+		2CE83167A16C053412D18B706EB27CA0 /* EmptyCollectionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyCollectionProvider.swift; path = Sources/Provider/EmptyCollectionProvider.swift; sourceTree = "<group>"; };
+		2D7154D1DA7E6DB660F3174F0F3FB129 /* InsetLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsetLayout.swift; path = Sources/Layout/InsetLayout.swift; sourceTree = "<group>"; };
+		2DCCA991756C69C499F298B42C3C67A2 /* Pods-LipstickTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LipstickTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2ECC82D2066C9AD1249C377D70F0D810 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F323ED85B2F8A443F9065CB0F437B80 /* PINRemoteImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PINRemoteImage.modulemap; sourceTree = "<group>"; };
+		2F39BA4884B8222EF8FAD3798DDECFFB /* Pods-LipstickUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LipstickUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		31B466F2C9C1FBD6F273520472A817B6 /* BasicProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasicProvider.swift; path = Sources/Provider/BasicProvider.swift; sourceTree = "<group>"; };
+		322DC47271DAC7CE7AF508B5A0683B61 /* ComposedHeaderProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComposedHeaderProvider.swift; path = Sources/Provider/ComposedHeaderProvider.swift; sourceTree = "<group>"; };
+		32536586FEB6F3479B3BEEB8CC8AFE38 /* PINRemoteImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManager.h; path = Pod/Classes/PINRemoteImageManager.h; sourceTree = "<group>"; };
+		3267DF1006A6E0C30F71115842DB081E /* PINProgressiveImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINProgressiveImage.h; path = Pod/Classes/PINProgressiveImage.h; sourceTree = "<group>"; };
+		32DD75BF0DA5EAB033EEBA1A68C82CF9 /* Pods-LipstickUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LipstickUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		34AB6EEB86C3870A4D59894C43BF0CE5 /* YetAnotherAnimationLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YetAnotherAnimationLibrary.xcconfig; sourceTree = "<group>"; };
+		34DBD334593F08D3AE0FCE1A6D627305 /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
+		35ECB0018A42FDFD3315E31F648D6F7A /* Pods-LipstickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LipstickTests.debug.xcconfig"; sourceTree = "<group>"; };
+		36B138ECC8EB39D6DD3765DF8814CDF8 /* Pods-LipstickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LipstickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		36EF8C97D66986162CCD70E56165C7C6 /* ArrayDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayDataSource.swift; path = Sources/DataSource/ArrayDataSource.swift; sourceTree = "<group>"; };
+		374E3D588011431C84992CADCE226EEB /* CollectionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionKit-prefix.pch"; sourceTree = "<group>"; };
+		38B9EB5B177E5381D192C6FDD308C818 /* LayoutContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutContext.swift; path = Sources/Layout/LayoutContext.swift; sourceTree = "<group>"; };
+		392B662769FB8FF7654D523541E395B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		397F955C5178D05C1AA3512B14A55004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		3A18920D8033438A083BAD804BC50370 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
+		3C1484CE38F973F1EF5A023A0A2F8CF3 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
+		3C4BF22F9577D2683006450D7E30659D /* PINImage+DecodedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+DecodedImage.h"; path = "Pod/Classes/Categories/PINImage+DecodedImage.h"; sourceTree = "<group>"; };
+		3DD3B874BEE0814ECC0B75A08CA19E31 /* ValueAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueAnimation.swift; path = Sources/Animations/ValueAnimation.swift; sourceTree = "<group>"; };
+		3DEF8DDE4AA3427EB80065C189369F3F /* SimpleLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleLayout.swift; path = Sources/Layout/SimpleLayout.swift; sourceTree = "<group>"; };
+		3E6FAB698208CCDC0EFFFEED8BE622AC /* FLAnimatedImageView+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FLAnimatedImageView+PINRemoteImage.h"; path = "Pod/Classes/Image Categories/FLAnimatedImageView+PINRemoteImage.h"; sourceTree = "<group>"; };
+		3F2AB336980FF6938580F2B7EE3FE0A1 /* PINButton+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINButton+PINRemoteImage.m"; path = "Pod/Classes/Image Categories/PINButton+PINRemoteImage.m"; sourceTree = "<group>"; };
+		3F5B1F8740191E03631B2610F05C6C30 /* CollectionKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionKit.xcconfig; sourceTree = "<group>"; };
+		419469B29A974B77B58C57BE90D600F4 /* PINRemoteImageManagerResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManagerResult.h; path = Pod/Classes/PINRemoteImageManagerResult.h; sourceTree = "<group>"; };
+		41BAC3F53234019400BAAC74BC57A6C2 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		432B525A460D8C92C579B393BB2A46E2 /* PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImage.h; path = Pod/Classes/PINRemoteImage.h; sourceTree = "<group>"; };
+		47F18EB9944B719F43131B15B4BE552B /* Pods-LipstickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LipstickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A7B861662CFA619CF0EC07CB72C8C6D /* ComposedProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComposedProvider.swift; path = Sources/Provider/ComposedProvider.swift; sourceTree = "<group>"; };
+		4BA54DAA962ED43D4A7654F8FDB8847B /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = PINCache/Nullability.h; sourceTree = "<group>"; };
+		4C520FC1128977C3C5073E996BA78B52 /* Pods-Lipstick-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lipstick-acknowledgements.plist"; sourceTree = "<group>"; };
+		4D0DCC61C49B3DDCE675150F849A4A15 /* Curve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Curve.swift; path = Sources/Solvers/Curve.swift; sourceTree = "<group>"; };
+		4DFCBDCA074874263FEF2820AE84FBD9 /* SpaceProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpaceProvider.swift; path = Sources/Addon/SpaceProvider.swift; sourceTree = "<group>"; };
+		4F1143E9B91ECF78C1B752D174A35869 /* PINDataTaskOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDataTaskOperation.h; path = Pod/Classes/PINDataTaskOperation.h; sourceTree = "<group>"; };
+		4F5BE82C204920F65744263B278DDE93 /* RK4Solver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RK4Solver.swift; path = Sources/Solvers/RK4Solver.swift; sourceTree = "<group>"; };
+		4FDACA3181D94A3D95C0306190C93A84 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Sources/Extensions/Util.swift; sourceTree = "<group>"; };
+		52C597999D8E6BCBA709C1D8E2041647 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
+		54BA1B7D77E1F7C53C436510FDEB8A3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5602D44F929E1911F028F66197036677 /* Pods-LipstickUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LipstickUITests-frameworks.sh"; sourceTree = "<group>"; };
+		57F030B71501D3122D1F4D93EDDA5EFC /* OverlayLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayLayout.swift; path = Sources/Layout/OverlayLayout.swift; sourceTree = "<group>"; };
+		5863FC50F469B326B7D91FEA67BB46FB /* YaalCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YaalCompatible.swift; path = Sources/YaalCompatible.swift; sourceTree = "<group>"; };
+		5AC9053B24A2D54A47D1E3421FA398AC /* VelocitySmoother.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VelocitySmoother.swift; path = Sources/Solvers/VelocitySmoother.swift; sourceTree = "<group>"; };
+		5E3E361ACA6885936EC54725BA1A1590 /* PINRemoteLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteLock.m; path = Pod/Classes/PINRemoteLock.m; sourceTree = "<group>"; };
+		5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5E8B0044B8D959BAACA37911F5AF3E20 /* YetAnotherAnimationLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YetAnotherAnimationLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64721FC6DF1B9BE5889CB99848FA9072 /* Pods-LipstickTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LipstickTests-dummy.m"; sourceTree = "<group>"; };
+		64FDB28C85766BD25FB38A3CCC1978F8 /* PINRemoteImageCallbacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCallbacks.h; path = Pod/Classes/PINRemoteImageCallbacks.h; sourceTree = "<group>"; };
+		6887630A2803D64C46FC1C25F09E6EDF /* Pods_Lipstick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lipstick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E9599884279DF54FA8DC450A9C886E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		6B7EB1EE07F4514560EB79C966080353 /* CollectionKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CollectionKit-dummy.m"; sourceTree = "<group>"; };
+		6C6080D4F9AE0AC6AB6B7BEBD8C95750 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2C4A01DF9210B492545B996B42E3B8 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D369A17AD17C2B42F09753B13CFA68F /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Animator/Animator.swift; sourceTree = "<group>"; };
+		6D9A7AC8F9E4CDF5EA76A06751E9AC5B /* PINRemoteImageManagerResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerResult.m; path = Pod/Classes/PINRemoteImageManagerResult.m; sourceTree = "<group>"; };
+		6E09E49EC3569FCB9A268BB06276B3B1 /* Pods-Lipstick-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lipstick-acknowledgements.markdown"; sourceTree = "<group>"; };
+		70EF8F261DE7096E0CA1DCDC09652781 /* SimpleViewProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleViewProvider.swift; path = Sources/Addon/SimpleViewProvider.swift; sourceTree = "<group>"; };
+		717D303ED1799414B0462BBEF06FB623 /* ChainOperator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChainOperator.swift; path = "Sources/Types & Operators/ChainOperator.swift"; sourceTree = "<group>"; };
+		72B4F861404F6E8D9A71A48D205236A0 /* PINRemoteImageProcessorTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageProcessorTask.h; path = Pod/Classes/PINRemoteImageProcessorTask.h; sourceTree = "<group>"; };
+		72CA3492E935B7EDF3DB97B2605938FB /* NSObject+YAAL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+YAAL.swift"; path = "Sources/Extensions/NSObject+YAAL.swift"; sourceTree = "<group>"; };
+		74610C52A15A57BD754287F8BE7648B8 /* UIView+YAAL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+YAAL.swift"; path = "Sources/Extensions/UIView+YAAL.swift"; sourceTree = "<group>"; };
+		778E41AC1682BB92E6AE7FCB1C5E82DB /* Pods-LipstickUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LipstickUITests-umbrella.h"; sourceTree = "<group>"; };
+		77FC37AA5867355EEA8A812CCBEFFB10 /* Pods-Lipstick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lipstick-umbrella.h"; sourceTree = "<group>"; };
+		788A100F0D23AEDB5241AD8CEB192A26 /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		79319EE3B37D5223FD426B62AFDB855F /* PINImage+DecodedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+DecodedImage.m"; path = "Pod/Classes/Categories/PINImage+DecodedImage.m"; sourceTree = "<group>"; };
+		7B0ABEAB8056EFE890E65170A24388CC /* DecayAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecayAnimation.swift; path = Sources/Animations/DecayAnimation.swift; sourceTree = "<group>"; };
+		7DDC118BB8C90A801D2E0DBD5196D98F /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = PINCache/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		8146E1F38EFE00566AB0CFFC995AA085 /* CurveAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurveAnimation.swift; path = Sources/Animations/CurveAnimation.swift; sourceTree = "<group>"; };
+		81764946540FE2ED5D7FD5F35BF2F26C /* Pods-Lipstick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lipstick-dummy.m"; sourceTree = "<group>"; };
+		82566C3621278452FA6D89380AA2475D /* CollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F4828DC18D1C02DFA4DB5E9874A9CE /* PINRemoteImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-umbrella.h"; sourceTree = "<group>"; };
+		85191C845D0A1186F3C2B0CB5FE5C0A3 /* Pods-Lipstick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lipstick.debug.xcconfig"; sourceTree = "<group>"; };
+		88858B41530343533B0505282DDCFD7B /* SizeSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeSource.swift; path = Sources/Other/SizeSource.swift; sourceTree = "<group>"; };
+		8A08C1DDEE09138D7773FF4B6AE38973 /* CurveAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurveAnimatable.swift; path = Sources/Animatables/CurveAnimatable.swift; sourceTree = "<group>"; };
+		8C6CD0991EFFDF9AB66A21EC3744B790 /* WaterfallLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WaterfallLayout.swift; path = Sources/Layout/WaterfallLayout.swift; sourceTree = "<group>"; };
+		8F95C9BE1524A46E6BC1145C4ACD452F /* FlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlowLayout.swift; path = Sources/Layout/FlowLayout.swift; sourceTree = "<group>"; };
+		90219A36E598BCB3B2234D862199A1ED /* SpringSolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringSolver.swift; path = Sources/Solvers/SpringSolver.swift; sourceTree = "<group>"; };
+		926A4FA9694D495A829604142C5258A6 /* PINImageView+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImageView+PINRemoteImage.h"; path = "Pod/Classes/Image Categories/PINImageView+PINRemoteImage.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93B934F87BBE871C4DB071B3071BDF4C /* LayoutableProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutableProvider.swift; path = Sources/Protocol/LayoutableProvider.swift; sourceTree = "<group>"; };
+		93C8C480EA1E52228DFA4AEE742E91B3 /* PINRemoteImageCategoryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCategoryManager.h; path = Pod/Classes/PINRemoteImageCategoryManager.h; sourceTree = "<group>"; };
+		97C922F56C41D6B08DC5A00D393E1C7A /* UIScrollView+YAAL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+YAAL.swift"; path = "Sources/Extensions/UIScrollView+YAAL.swift"; sourceTree = "<group>"; };
+		9A962E78C517920C974BE2BA01EF0149 /* PINRemoteImageCategoryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCategoryManager.m; path = Pod/Classes/PINRemoteImageCategoryManager.m; sourceTree = "<group>"; };
+		9C2D6865F7A97556D96D07B4B13F8FFB /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
+		9C34DB796A2BB30EDA6BFB9759A09ABD /* StickyLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickyLayout.swift; path = Sources/Layout/StickyLayout.swift; sourceTree = "<group>"; };
+		9D73B2F78E2BB5319F1567E5BD02AFF7 /* CollectionReloadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionReloadable.swift; path = Sources/Other/CollectionReloadable.swift; sourceTree = "<group>"; };
+		9F3A9241FC7B6477CB371A393322F792 /* PINRemoteImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-prefix.pch"; sourceTree = "<group>"; };
+		9F5667616706529F0D55174ACF3956C9 /* SpringAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimatable.swift; path = Sources/Animatables/SpringAnimatable.swift; sourceTree = "<group>"; };
+		A0B8F0674256434B91EEFDF463EB8D50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A177CCAED7EAF721BF872D2CBCC00D8F /* ComposedViewSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComposedViewSource.swift; path = Sources/ViewSource/ComposedViewSource.swift; sourceTree = "<group>"; };
+		A3A5A1CC03FB4E3C0EFF88CA5AB6649D /* Pods-LipstickTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LipstickTests-umbrella.h"; sourceTree = "<group>"; };
+		A5C14985D891653BB40BC6B111B7C944 /* Pods-Lipstick-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lipstick-frameworks.sh"; sourceTree = "<group>"; };
+		A5E525463BB58337FBFD40817DF423C5 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A766AD598A67BD4A60639EE96D9B0F /* FlattenedProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlattenedProvider.swift; path = Sources/Provider/FlattenedProvider.swift; sourceTree = "<group>"; };
+		AA2EF05C1888F4D7E12C5DFB10230951 /* Pods-LipstickTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LipstickTests-frameworks.sh"; sourceTree = "<group>"; };
+		ABB7F44122176C671B04AE8FD06293C2 /* AnyViewSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyViewSource.swift; path = Sources/ViewSource/AnyViewSource.swift; sourceTree = "<group>"; };
+		AC0551C1687736334FF60E12708FC2CF /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		AC3F97CA4B6A2810A6955C61E6429AD1 /* PINRemoteImageMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMacros.h; path = Pod/Classes/PINRemoteImageMacros.h; sourceTree = "<group>"; };
+		AC451E16B0B3B244EDA087B4EC2AD1F3 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		B00EFABAA6895980E0A917640A26F6FB /* EmptyStateProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyStateProvider.swift; path = Sources/Addon/EmptyStateProvider.swift; sourceTree = "<group>"; };
+		B05E3F247C3486160FC45C7662F5FF07 /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animatable.swift; path = Sources/Animatables/Animatable.swift; sourceTree = "<group>"; };
+		B1CCEBB7B3BB077B80BC9B509F51BD3D /* Pods-LipstickTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LipstickTests.modulemap"; sourceTree = "<group>"; };
+		B4419DF45256306603ACFC4C2ABB8943 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/FLAnimatedImageView.h; sourceTree = "<group>"; };
+		B4D60688F5D18C2F88197521D6013F3C /* PINProgressiveImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINProgressiveImage.m; path = Pod/Classes/PINProgressiveImage.m; sourceTree = "<group>"; };
+		B5BF57F2BE06C95A15275EEB3B7A171B /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PINCache.modulemap; sourceTree = "<group>"; };
+		B5F4AAEB761489EAA048774CA4360729 /* PINRemoteImageTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageTask.h; path = Pod/Classes/PINRemoteImageTask.h; sourceTree = "<group>"; };
+		B6C90418FFA53A1FDC40EF4BEFD9BF65 /* Pods-LipstickUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LipstickUITests.modulemap"; sourceTree = "<group>"; };
+		B7D40BEF46CAF2C4E4B67ED8CEB030C9 /* ClosureLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClosureLayout.swift; path = Sources/Layout/ClosureLayout.swift; sourceTree = "<group>"; };
+		B7F0234E962CC24D2BF676EE45BFFD4D /* BaseSimpleAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseSimpleAnimator.swift; path = Sources/Animator/BaseSimpleAnimator.swift; sourceTree = "<group>"; };
+		B8AD176CE67B03F723A8713340119B5E /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
+		BA6FD06E2FFEB1E68F205514467CE353 /* SectionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionProvider.swift; path = Sources/Protocol/SectionProvider.swift; sourceTree = "<group>"; };
+		BC23CD9494F414D9F3FCFBF78CF735BA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		BC42B2CD9016AA36AAE24F2A41CD99B2 /* PINImageView+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImageView+PINRemoteImage.m"; path = "Pod/Classes/Image Categories/PINImageView+PINRemoteImage.m"; sourceTree = "<group>"; };
+		BDF42E57EDBAC6AA51C35CFC8BFEF0D1 /* UIScrollView+CollectionKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+CollectionKit.swift"; path = "Sources/Extensions/UIScrollView+CollectionKit.swift"; sourceTree = "<group>"; };
+		BE3A3A87DE3C7FAD623CA474D4CB86C8 /* Pods-Lipstick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lipstick.release.xcconfig"; sourceTree = "<group>"; };
+		BE4A758746832551B0CAB0DDE751417E /* PINRemoteImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINRemoteImage-dummy.m"; sourceTree = "<group>"; };
+		BFB8ABA4D6CE0D04F6946D9A3F9A40F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C06B9D1EFAB4D1C65257CCC0D567E1F0 /* MixAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MixAnimation.swift; path = Sources/Animations/MixAnimation.swift; sourceTree = "<group>"; };
+		C44DA19D9FC449E1397C70025CA60D60 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		C574B2E0A039BC07C61D173F8489AEA9 /* Pods-LipstickTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LipstickTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5C9640CC82D9CB7D0269D9D9F1F5A19 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/Other/Deprecated.swift; sourceTree = "<group>"; };
+		C7F641498CE738E43291E2DE92597DF3 /* CALayer+YAAL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+YAAL.swift"; path = "Sources/Extensions/CALayer+YAAL.swift"; sourceTree = "<group>"; };
+		C8ED78D873971E14970D883C19E2FEE7 /* PINRemoteImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINRemoteImage.xcconfig; sourceTree = "<group>"; };
+		C956CA90FBC018BDDBD9FFBB2B6EDD16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA305F562273BF206F0E84AC9B414317 /* CurveSolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurveSolver.swift; path = Sources/Solvers/CurveSolver.swift; sourceTree = "<group>"; };
+		CD1C7CCE5E8DA65F7C5C165BAE7E1C41 /* Pods-LipstickUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LipstickUITests-dummy.m"; sourceTree = "<group>"; };
+		CD6AAC6E4B9F641A6359B358C871F76C /* Pods-Lipstick-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lipstick-resources.sh"; sourceTree = "<group>"; };
+		CE0E0264A3536910384F359878967D55 /* NSData+ImageDetectors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageDetectors.h"; path = "Pod/Classes/Categories/NSData+ImageDetectors.h"; sourceTree = "<group>"; };
+		CFD52EF97172EDABE106D98656A29B61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF0B64580012694EB4EC589907BFAFF /* NSData+ImageDetectors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageDetectors.m"; path = "Pod/Classes/Categories/NSData+ImageDetectors.m"; sourceTree = "<group>"; };
+		D0DF3AB49579CF45167999BA127C8668 /* PINRemoteImageTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageTask.m; path = Pod/Classes/PINRemoteImageTask.m; sourceTree = "<group>"; };
+		D32B923F96AEC84AFFD265B8ECC005FC /* DataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataSource.swift; path = Sources/DataSource/DataSource.swift; sourceTree = "<group>"; };
+		D500E831E42FE76329B50E38518ADFA5 /* CollectionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CollectionKit.modulemap; sourceTree = "<group>"; };
+		D53866F8C7C1656145521E24663CEBF2 /* Solver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Solver.swift; path = Sources/Solvers/Solver.swift; sourceTree = "<group>"; };
+		D54E37B7517BA71063F279BF4D935F3C /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
+		D69244635DE3F9A02AF7C564EAB6AD0C /* Provider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Sources/Protocol/Provider.swift; sourceTree = "<group>"; };
+		D74C35B8283F50C6386878FC8C5D2A12 /* PINURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINURLSessionManager.m; path = Pod/Classes/PINURLSessionManager.m; sourceTree = "<group>"; };
+		D8ED9ED40B6483C987E0F0809B37C96C /* VectorConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorConvertible.swift; path = "Sources/Types & Operators/VectorConvertible.swift"; sourceTree = "<group>"; };
+		D9ABF55E1B002C33CE504332072504E5 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9BF42C9C4588AC77E6A4C13F4C0EBFF /* Pods-LipstickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LipstickTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC47D1879377A5468C6FDB62D32B1962 /* RowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowLayout.swift; path = Sources/Layout/RowLayout.swift; sourceTree = "<group>"; };
+		DCE98FA43A93237A8D8125CD120AABEF /* CollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionView.swift; path = Sources/CollectionView.swift; sourceTree = "<group>"; };
+		DEB27DE3CD6423C2AF4E8C4E5308B66D /* Pods_LipstickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipstickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E034CFF7B1067E2449DFF52E3D2D17A7 /* PINImage+WebP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+WebP.h"; path = "Pod/Classes/Categories/PINImage+WebP.h"; sourceTree = "<group>"; };
+		E2A12B90CD61FB23256A4AE3B55A5A0E /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
+		E3AB5F4A92CB15E4853813C5A75DE9A9 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Animator/Animator.swift; sourceTree = "<group>"; };
+		E5B039B3D07FED04D357F2AD7D1A4747 /* PINDataTaskOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDataTaskOperation.m; path = Pod/Classes/PINDataTaskOperation.m; sourceTree = "<group>"; };
+		E8A22255789773358BCCC4F73FA0A47B /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		E90856A6DBC79D91691B6818F43B48EE /* SolverAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolverAnimatable.swift; path = Sources/Animatables/SolverAnimatable.swift; sourceTree = "<group>"; };
+		EB60F7A0EC68A0D59C92EC967CA0794E /* Pods_LipstickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipstickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB8F068E7A6F7D3C789162F1ABD6A18F /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = Sources/Animations/Animation.swift; sourceTree = "<group>"; };
+		EBE832E104FFF9F57AB62E23DD136F62 /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/FLAnimatedImage.h; sourceTree = "<group>"; };
+		EE2DE91AF1D2D6A2EDD89CADD58AF64F /* AnimationProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationProperty.swift; path = Sources/AnimationProperty/AnimationProperty.swift; sourceTree = "<group>"; };
+		EEA61E4A69DFA64931236423389D5B12 /* YetAnotherAnimationLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YetAnotherAnimationLibrary-prefix.pch"; sourceTree = "<group>"; };
+		EF302001A4A12962F43D8AC6005D85B3 /* Pods-LipstickUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LipstickUITests-resources.sh"; sourceTree = "<group>"; };
+		F22952A6AD26B2EE3949704876EBD472 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F247CCAEC1BAB34CFCC4EF4C37708709 /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
+		F2D1F9093E315BAE2F2E05DF513246FB /* PINImage+WebP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+WebP.m"; path = "Pod/Classes/Categories/PINImage+WebP.m"; sourceTree = "<group>"; };
+		F432F88C1F5EA15D281898F24D104E38 /* ScaleAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleAnimator.swift; path = Sources/Animator/ScaleAnimator.swift; sourceTree = "<group>"; };
+		F4DB0E4F4D9A5E93E85DA73AE9C0E489 /* ClosureViewSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClosureViewSource.swift; path = Sources/ViewSource/ClosureViewSource.swift; sourceTree = "<group>"; };
+		F6306893265D2E7D5EDBD3F03BDE43F5 /* PINRemoteImageCallbacks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCallbacks.m; path = Pod/Classes/PINRemoteImageCallbacks.m; sourceTree = "<group>"; };
+		F712C4C413074481FFD1A5A377CCA4BB /* FadeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FadeAnimator.swift; path = Sources/Animator/FadeAnimator.swift; sourceTree = "<group>"; };
+		F753AC98F2163C2D6010544FBF09E02D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F8B0E3CE0535C895D1075ECFC4822CA8 /* LayoutHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutHelper.swift; path = Sources/Other/LayoutHelper.swift; sourceTree = "<group>"; };
+		F913321DB076EED9361CB82FD041336E /* PINRemoteImageDownloadTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageDownloadTask.m; path = Pod/Classes/PINRemoteImageDownloadTask.m; sourceTree = "<group>"; };
+		F997177A66A406727BB24D1F1AB7EBD0 /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1E89EDA8E4DAB7B0B1F330EDD4917D /* PINRemoteImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManager.m; path = Pod/Classes/PINRemoteImageManager.m; sourceTree = "<group>"; };
+		FDFD765DAF56FC754495EE236176F264 /* FLAnimatedImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04AC110919451265F0A566F379593B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3145B7D73AE35131987FF285FA9E6FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1899EB920B2B1639AC39D89A5A24C806 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68F8286945D200F884100AACDD62D6BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FF3E6DD87189C874E974CBDD0ACA49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE66B52EA65DF5B232359DC23937968 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C71CF445F3725E13BFDAC5D84B69C3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E866D91CB4C5DCF2A8E4680E807298F /* CoreGraphics.framework in Frameworks */,
+				0F1EF6DA45F047D57F1F477C89CEE332 /* Foundation.framework in Frameworks */,
+				92B0C6990DC7099C2F81F7861ADB0430 /* ImageIO.framework in Frameworks */,
+				CC72AC7921142AEA50CE7CDD778FEB45 /* MobileCoreServices.framework in Frameworks */,
+				07DC170C9DAB9B435B0D96BA7D3D9A57 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9AEED7BB05C039B32249039AC37480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0DD7608472EFE926BC1EAA1081808A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A263C84E904EB398E90AACDF00B96B0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				857920EF75016C09311B5B4D9623A69C /* Foundation.framework in Frameworks */,
+				40F7D62D52B3B98311FBF0F5DE8CB6FC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD18F3F0E7DF6DABF228C7B8F67840DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98F35F4F1F4D459CA79645E1AE797EF /* Foundation.framework in Frameworks */,
+				7723FF02714A4D9D4D50338862AD09C6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B312696954DA63036B56F59FBEF223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9F7D24B6C1A67D532B25435A66B3B7 /* Accelerate.framework in Frameworks */,
+				5F2C51030CB95C0B94B061003650487F /* FLAnimatedImage.framework in Frameworks */,
+				38EF0DE1C9B59568BA5B6C1B98516B99 /* Foundation.framework in Frameworks */,
+				2AB5CB174075ADEE5067CEB678C22B8E /* ImageIO.framework in Frameworks */,
+				93460896B41C4D159ED6490E08E2C296 /* PINCache.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1997DFD14583A28C1FDE5F79D7B64AF5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				392B662769FB8FF7654D523541E395B0 /* Info.plist */,
+				2F323ED85B2F8A443F9065CB0F437B80 /* PINRemoteImage.modulemap */,
+				C8ED78D873971E14970D883C19E2FEE7 /* PINRemoteImage.xcconfig */,
+				BE4A758746832551B0CAB0DDE751417E /* PINRemoteImage-dummy.m */,
+				9F3A9241FC7B6477CB371A393322F792 /* PINRemoteImage-prefix.pch */,
+				83F4828DC18D1C02DFA4DB5E9874A9CE /* PINRemoteImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINRemoteImage";
+			sourceTree = "<group>";
+		};
+		23D4EE8016FD7ED5A9C6FF4D8A04BD67 /* YetAnotherAnimationLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				B05E3F247C3486160FC45C7662F5FF07 /* Animatable.swift */,
+				EB8F068E7A6F7D3C789162F1ABD6A18F /* Animation.swift */,
+				EE2DE91AF1D2D6A2EDD89CADD58AF64F /* AnimationProperty.swift */,
+				E3AB5F4A92CB15E4853813C5A75DE9A9 /* Animator.swift */,
+				0127197CE5BE58A3746EA86D01F20692 /* Announcer.swift */,
+				C7F641498CE738E43291E2DE92597DF3 /* CALayer+YAAL.swift */,
+				717D303ED1799414B0462BBEF06FB623 /* ChainOperator.swift */,
+				4D0DCC61C49B3DDCE675150F849A4A15 /* Curve.swift */,
+				8A08C1DDEE09138D7773FF4B6AE38973 /* CurveAnimatable.swift */,
+				8146E1F38EFE00566AB0CFFC995AA085 /* CurveAnimation.swift */,
+				CA305F562273BF206F0E84AC9B414317 /* CurveSolver.swift */,
+				22453AB8ECD47E9E1ED55E1E791BD7C3 /* DecayAnimatable.swift */,
+				7B0ABEAB8056EFE890E65170A24388CC /* DecayAnimation.swift */,
+				0775D3B9C5D648006220AB28916860BD /* DecaySolver.swift */,
+				11F6F619E654DB2E9BFCF68123D06579 /* DisplayLink.swift */,
+				C06B9D1EFAB4D1C65257CCC0D567E1F0 /* MixAnimation.swift */,
+				72CA3492E935B7EDF3DB97B2605938FB /* NSObject+YAAL.swift */,
+				4F5BE82C204920F65744263B278DDE93 /* RK4Solver.swift */,
+				1D39B9D8F722E8D459D656B308B683F0 /* SolvableAnimation.swift */,
+				D53866F8C7C1656145521E24663CEBF2 /* Solver.swift */,
+				E90856A6DBC79D91691B6818F43B48EE /* SolverAnimatable.swift */,
+				9F5667616706529F0D55174ACF3956C9 /* SpringAnimatable.swift */,
+				179CADB8FA010651B6273512C87B415C /* SpringAnimation.swift */,
+				90219A36E598BCB3B2234D862199A1ED /* SpringSolver.swift */,
+				1FEE42FC25BC28E62634A3085E5E118F /* UILabel+YAAL.swift */,
+				97C922F56C41D6B08DC5A00D393E1C7A /* UIScrollView+YAAL.swift */,
+				74610C52A15A57BD754287F8BE7648B8 /* UIView+YAAL.swift */,
+				3DD3B874BEE0814ECC0B75A08CA19E31 /* ValueAnimation.swift */,
+				2C02A81F3BAD7A52D77D624D04412CEB /* Vector.swift */,
+				D8ED9ED40B6483C987E0F0809B37C96C /* VectorConvertible.swift */,
+				5AC9053B24A2D54A47D1E3421FA398AC /* VelocitySmoother.swift */,
+				5863FC50F469B326B7D91FEA67BB46FB /* YaalCompatible.swift */,
+				514CFD3FADDA1249AC9C8A04BA53F6B5 /* Support Files */,
+			);
+			path = YetAnotherAnimationLibrary;
+			sourceTree = "<group>";
+		};
+		29DA8F81DF6E9F5F20B7499097CB6CC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82566C3621278452FA6D89380AA2475D /* CollectionKit.framework */,
+				A5E525463BB58337FBFD40817DF423C5 /* FLAnimatedImage.framework */,
+				D9ABF55E1B002C33CE504332072504E5 /* PINCache.framework */,
+				F997177A66A406727BB24D1F1AB7EBD0 /* PINRemoteImage.framework */,
+				6887630A2803D64C46FC1C25F09E6EDF /* Pods_Lipstick.framework */,
+				EB60F7A0EC68A0D59C92EC967CA0794E /* Pods_LipstickTests.framework */,
+				DEB27DE3CD6423C2AF4E8C4E5308B66D /* Pods_LipstickUITests.framework */,
+				5E8B0044B8D959BAACA37911F5AF3E20 /* YetAnotherAnimationLibrary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33105A80BE203F47554C80332EAD561A /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				3E6FAB698208CCDC0EFFFEED8BE622AC /* FLAnimatedImageView+PINRemoteImage.h */,
+				2AA4B9E953635599E2447FC8DF20C4AA /* FLAnimatedImageView+PINRemoteImage.m */,
+			);
+			name = FLAnimatedImage;
+			sourceTree = "<group>";
+		};
+		4ECC6BCC2BF9585869F63C18B8DF8A1F /* Pods-Lipstick */ = {
+			isa = PBXGroup;
+			children = (
+				C956CA90FBC018BDDBD9FFBB2B6EDD16 /* Info.plist */,
+				17C15EA2DAD410872E20FB22361AB660 /* Pods-Lipstick.modulemap */,
+				6E09E49EC3569FCB9A268BB06276B3B1 /* Pods-Lipstick-acknowledgements.markdown */,
+				4C520FC1128977C3C5073E996BA78B52 /* Pods-Lipstick-acknowledgements.plist */,
+				81764946540FE2ED5D7FD5F35BF2F26C /* Pods-Lipstick-dummy.m */,
+				A5C14985D891653BB40BC6B111B7C944 /* Pods-Lipstick-frameworks.sh */,
+				CD6AAC6E4B9F641A6359B358C871F76C /* Pods-Lipstick-resources.sh */,
+				77FC37AA5867355EEA8A812CCBEFFB10 /* Pods-Lipstick-umbrella.h */,
+				85191C845D0A1186F3C2B0CB5FE5C0A3 /* Pods-Lipstick.debug.xcconfig */,
+				BE3A3A87DE3C7FAD623CA474D4CB86C8 /* Pods-Lipstick.release.xcconfig */,
+			);
+			name = "Pods-Lipstick";
+			path = "Target Support Files/Pods-Lipstick";
+			sourceTree = "<group>";
+		};
+		514CFD3FADDA1249AC9C8A04BA53F6B5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFD52EF97172EDABE106D98656A29B61 /* Info.plist */,
+				227BA4A78EF368DAD2ED5C489AAE0A91 /* YetAnotherAnimationLibrary.modulemap */,
+				34AB6EEB86C3870A4D59894C43BF0CE5 /* YetAnotherAnimationLibrary.xcconfig */,
+				29975230A857D1F813F77EE9FF8FE396 /* YetAnotherAnimationLibrary-dummy.m */,
+				EEA61E4A69DFA64931236423389D5B12 /* YetAnotherAnimationLibrary-prefix.pch */,
+				0B509FE347CF437C768E79DA58EFA0AD /* YetAnotherAnimationLibrary-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YetAnotherAnimationLibrary";
+			sourceTree = "<group>";
+		};
+		6851592C8E28FCF16EEBAC4B2551F53A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C6080D4F9AE0AC6AB6B7BEBD8C95750 /* FLAnimatedImage.framework */,
+				6D2C4A01DF9210B492545B996B42E3B8 /* PINCache.framework */,
+				DDEF125CF9D4F726A43895FEDACC7EA3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BD5EF94380572D660B5009DF4E31178 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFB8ABA4D6CE0D04F6946D9A3F9A40F0 /* Info.plist */,
+				B5BF57F2BE06C95A15275EEB3B7A171B /* PINCache.modulemap */,
+				E8A22255789773358BCCC4F73FA0A47B /* PINCache.xcconfig */,
+				41BAC3F53234019400BAAC74BC57A6C2 /* PINCache-dummy.m */,
+				788A100F0D23AEDB5241AD8CEB192A26 /* PINCache-prefix.pch */,
+				B8AD176CE67B03F723A8713340119B5E /* PINCache-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINCache";
+			sourceTree = "<group>";
+		};
+		746D6F395FDDF5BB1D907CEC5366456B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				155114C19500B1AE4476CC97F67B6206 /* FLAnimatedImage.modulemap */,
+				26757078DFEDC5209176ECADA85A89A2 /* FLAnimatedImage.xcconfig */,
+				9C2D6865F7A97556D96D07B4B13F8FFB /* FLAnimatedImage-dummy.m */,
+				F247CCAEC1BAB34CFCC4EF4C37708709 /* FLAnimatedImage-prefix.pch */,
+				FDFD765DAF56FC754495EE236176F264 /* FLAnimatedImage-umbrella.h */,
+				A0B8F0674256434B91EEFDF463EB8D50 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FLAnimatedImage";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				6851592C8E28FCF16EEBAC4B2551F53A /* Frameworks */,
+				CB5CB39D20123EAB2A9BFF1E1087EA67 /* Pods */,
+				29DA8F81DF6E9F5F20B7499097CB6CC1 /* Products */,
+				F6C35D43CD6C29B414600DDFFB5AB4AA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F2B508994DFBC22585D01612BDD393A /* Pods-LipstickUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2ECC82D2066C9AD1249C377D70F0D810 /* Info.plist */,
+				B6C90418FFA53A1FDC40EF4BEFD9BF65 /* Pods-LipstickUITests.modulemap */,
+				2F39BA4884B8222EF8FAD3798DDECFFB /* Pods-LipstickUITests-acknowledgements.markdown */,
+				32DD75BF0DA5EAB033EEBA1A68C82CF9 /* Pods-LipstickUITests-acknowledgements.plist */,
+				CD1C7CCE5E8DA65F7C5C165BAE7E1C41 /* Pods-LipstickUITests-dummy.m */,
+				5602D44F929E1911F028F66197036677 /* Pods-LipstickUITests-frameworks.sh */,
+				EF302001A4A12962F43D8AC6005D85B3 /* Pods-LipstickUITests-resources.sh */,
+				778E41AC1682BB92E6AE7FCB1C5E82DB /* Pods-LipstickUITests-umbrella.h */,
+				47F18EB9944B719F43131B15B4BE552B /* Pods-LipstickUITests.debug.xcconfig */,
+				36B138ECC8EB39D6DD3765DF8814CDF8 /* Pods-LipstickUITests.release.xcconfig */,
+			);
+			name = "Pods-LipstickUITests";
+			path = "Target Support Files/Pods-LipstickUITests";
+			sourceTree = "<group>";
+		};
+		9EDA8B3C0C0C79F2D8211BEB9FF13130 /* PINRemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				FC0535AF89465673661F8664E7D3402D /* Core */,
+				33105A80BE203F47554C80332EAD561A /* FLAnimatedImage */,
+				1997DFD14583A28C1FDE5F79D7B64AF5 /* Support Files */,
+			);
+			path = PINRemoteImage;
+			sourceTree = "<group>";
+		};
+		A3274FA467525739BF540D6A65D20185 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D500E831E42FE76329B50E38518ADFA5 /* CollectionKit.modulemap */,
+				3F5B1F8740191E03631B2610F05C6C30 /* CollectionKit.xcconfig */,
+				6B7EB1EE07F4514560EB79C966080353 /* CollectionKit-dummy.m */,
+				374E3D588011431C84992CADCE226EEB /* CollectionKit-prefix.pch */,
+				146D5F3910D7467C2C9A060C1EE809FD /* CollectionKit-umbrella.h */,
+				F22952A6AD26B2EE3949704876EBD472 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CollectionKit";
+			sourceTree = "<group>";
+		};
+		A437F65DD57B9654EE83B916F5A6E530 /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				4BA54DAA962ED43D4A7654F8FDB8847B /* Nullability.h */,
+				52C597999D8E6BCBA709C1D8E2041647 /* PINCache.h */,
+				D54E37B7517BA71063F279BF4D935F3C /* PINCache.m */,
+				7DDC118BB8C90A801D2E0DBD5196D98F /* PINCacheObjectSubscripting.h */,
+				1BE51D519C964219E58F762D7397EB9A /* PINDiskCache.h */,
+				AC451E16B0B3B244EDA087B4EC2AD1F3 /* PINDiskCache.m */,
+				34DBD334593F08D3AE0FCE1A6D627305 /* PINMemoryCache.h */,
+				3C1484CE38F973F1EF5A023A0A2F8CF3 /* PINMemoryCache.m */,
+				6BD5EF94380572D660B5009DF4E31178 /* Support Files */,
+			);
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		B72172EC9CAFFF09D3548C974E982F3F /* Pods-LipstickTests */ = {
+			isa = PBXGroup;
+			children = (
+				54BA1B7D77E1F7C53C436510FDEB8A3C /* Info.plist */,
+				B1CCEBB7B3BB077B80BC9B509F51BD3D /* Pods-LipstickTests.modulemap */,
+				2DCCA991756C69C499F298B42C3C67A2 /* Pods-LipstickTests-acknowledgements.markdown */,
+				C574B2E0A039BC07C61D173F8489AEA9 /* Pods-LipstickTests-acknowledgements.plist */,
+				64721FC6DF1B9BE5889CB99848FA9072 /* Pods-LipstickTests-dummy.m */,
+				AA2EF05C1888F4D7E12C5DFB10230951 /* Pods-LipstickTests-frameworks.sh */,
+				1671A3EC31659D276406DF38D90538B8 /* Pods-LipstickTests-resources.sh */,
+				A3A5A1CC03FB4E3C0EFF88CA5AB6649D /* Pods-LipstickTests-umbrella.h */,
+				35ECB0018A42FDFD3315E31F648D6F7A /* Pods-LipstickTests.debug.xcconfig */,
+				D9BF42C9C4588AC77E6A4C13F4C0EBFF /* Pods-LipstickTests.release.xcconfig */,
+			);
+			name = "Pods-LipstickTests";
+			path = "Target Support Files/Pods-LipstickTests";
+			sourceTree = "<group>";
+		};
+		CB5CB39D20123EAB2A9BFF1E1087EA67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EED41EFF1E6DC951A65B87E44396E3BA /* CollectionKit */,
+				E1EFDFCF380930A0884F2462D1638864 /* FLAnimatedImage */,
+				A437F65DD57B9654EE83B916F5A6E530 /* PINCache */,
+				9EDA8B3C0C0C79F2D8211BEB9FF13130 /* PINRemoteImage */,
+				23D4EE8016FD7ED5A9C6FF4D8A04BD67 /* YetAnotherAnimationLibrary */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDEF125CF9D4F726A43895FEDACC7EA3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BC23CD9494F414D9F3FCFBF78CF735BA /* Accelerate.framework */,
+				397F955C5178D05C1AA3512B14A55004 /* CoreGraphics.framework */,
+				5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */,
+				AC0551C1687736334FF60E12708FC2CF /* ImageIO.framework */,
+				C44DA19D9FC449E1397C70025CA60D60 /* MobileCoreServices.framework */,
+				69E9599884279DF54FA8DC450A9C886E /* QuartzCore.framework */,
+				F753AC98F2163C2D6010544FBF09E02D /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E1EFDFCF380930A0884F2462D1638864 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				EBE832E104FFF9F57AB62E23DD136F62 /* FLAnimatedImage.h */,
+				E2A12B90CD61FB23256A4AE3B55A5A0E /* FLAnimatedImage.m */,
+				B4419DF45256306603ACFC4C2ABB8943 /* FLAnimatedImageView.h */,
+				3A18920D8033438A083BAD804BC50370 /* FLAnimatedImageView.m */,
+				746D6F395FDDF5BB1D907CEC5366456B /* Support Files */,
+			);
+			path = FLAnimatedImage;
+			sourceTree = "<group>";
+		};
+		EED41EFF1E6DC951A65B87E44396E3BA /* CollectionKit */ = {
+			isa = PBXGroup;
+			children = (
+				6D369A17AD17C2B42F09753B13CFA68F /* Animator.swift */,
+				ABB7F44122176C671B04AE8FD06293C2 /* AnyViewSource.swift */,
+				36EF8C97D66986162CCD70E56165C7C6 /* ArrayDataSource.swift */,
+				B7F0234E962CC24D2BF676EE45BFFD4D /* BaseSimpleAnimator.swift */,
+				31B466F2C9C1FBD6F273520472A817B6 /* BasicProvider.swift */,
+				06B76E3CED132CAF09FE5F646D24F663 /* ClosureDataSource.swift */,
+				B7D40BEF46CAF2C4E4B67ED8CEB030C9 /* ClosureLayout.swift */,
+				F4DB0E4F4D9A5E93E85DA73AE9C0E489 /* ClosureViewSource.swift */,
+				9D73B2F78E2BB5319F1567E5BD02AFF7 /* CollectionReloadable.swift */,
+				29595A0E847EAEE3897592229A8144BA /* CollectionReuseViewManager.swift */,
+				DCE98FA43A93237A8D8125CD120AABEF /* CollectionView.swift */,
+				322DC47271DAC7CE7AF508B5A0683B61 /* ComposedHeaderProvider.swift */,
+				4A7B861662CFA619CF0EC07CB72C8C6D /* ComposedProvider.swift */,
+				A177CCAED7EAF721BF872D2CBCC00D8F /* ComposedViewSource.swift */,
+				D32B923F96AEC84AFFD265B8ECC005FC /* DataSource.swift */,
+				C5C9640CC82D9CB7D0269D9D9F1F5A19 /* Deprecated.swift */,
+				2CE83167A16C053412D18B706EB27CA0 /* EmptyCollectionProvider.swift */,
+				B00EFABAA6895980E0A917640A26F6FB /* EmptyStateProvider.swift */,
+				F712C4C413074481FFD1A5A377CCA4BB /* FadeAnimator.swift */,
+				A9A766AD598A67BD4A60639EE96D9B0F /* FlattenedProvider.swift */,
+				8F95C9BE1524A46E6BC1145C4ACD452F /* FlowLayout.swift */,
+				2D7154D1DA7E6DB660F3174F0F3FB129 /* InsetLayout.swift */,
+				0E3F7CC1DCF24AF50A90264B460E0E35 /* ItemProvider.swift */,
+				23D95EF810B2ADD3B6F0AE433204D49D /* Layout.swift */,
+				93B934F87BBE871C4DB071B3071BDF4C /* LayoutableProvider.swift */,
+				38B9EB5B177E5381D192C6FDD308C818 /* LayoutContext.swift */,
+				F8B0E3CE0535C895D1075ECFC4822CA8 /* LayoutHelper.swift */,
+				57F030B71501D3122D1F4D93EDDA5EFC /* OverlayLayout.swift */,
+				D69244635DE3F9A02AF7C564EAB6AD0C /* Provider.swift */,
+				DC47D1879377A5468C6FDB62D32B1962 /* RowLayout.swift */,
+				F432F88C1F5EA15D281898F24D104E38 /* ScaleAnimator.swift */,
+				BA6FD06E2FFEB1E68F205514467CE353 /* SectionProvider.swift */,
+				3DEF8DDE4AA3427EB80065C189369F3F /* SimpleLayout.swift */,
+				70EF8F261DE7096E0CA1DCDC09652781 /* SimpleViewProvider.swift */,
+				88858B41530343533B0505282DDCFD7B /* SizeSource.swift */,
+				4DFCBDCA074874263FEF2820AE84FBD9 /* SpaceProvider.swift */,
+				9C34DB796A2BB30EDA6BFB9759A09ABD /* StickyLayout.swift */,
+				0A651619CF733AF261798D10BCEF4F32 /* TransposeLayout.swift */,
+				BDF42E57EDBAC6AA51C35CFC8BFEF0D1 /* UIScrollView+CollectionKit.swift */,
+				278237A808AC850554E621B3B413C7E1 /* UIView+CollectionKit.swift */,
+				4FDACA3181D94A3D95C0306190C93A84 /* Util.swift */,
+				1ED1D3C675D94FE498149C28CB80EAE7 /* ViewSource.swift */,
+				1AF5A934B4D8A17BE164AB328CCF628F /* VisibleFrameInsetLayout.swift */,
+				8C6CD0991EFFDF9AB66A21EC3744B790 /* WaterfallLayout.swift */,
+				29FCF7CCE2F48871B9E68413050CE58D /* WrapperLayout.swift */,
+				A3274FA467525739BF540D6A65D20185 /* Support Files */,
+			);
+			path = CollectionKit;
+			sourceTree = "<group>";
+		};
+		F6C35D43CD6C29B414600DDFFB5AB4AA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC6BCC2BF9585869F63C18B8DF8A1F /* Pods-Lipstick */,
+				B72172EC9CAFFF09D3548C974E982F3F /* Pods-LipstickTests */,
+				7F2B508994DFBC22585D01612BDD393A /* Pods-LipstickUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FC0535AF89465673661F8664E7D3402D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E0264A3536910384F359878967D55 /* NSData+ImageDetectors.h */,
+				CFF0B64580012694EB4EC589907BFAFF /* NSData+ImageDetectors.m */,
+				25049080C0D7065926ABC58A766192C9 /* PINButton+PINRemoteImage.h */,
+				3F2AB336980FF6938580F2B7EE3FE0A1 /* PINButton+PINRemoteImage.m */,
+				4F1143E9B91ECF78C1B752D174A35869 /* PINDataTaskOperation.h */,
+				E5B039B3D07FED04D357F2AD7D1A4747 /* PINDataTaskOperation.m */,
+				3C4BF22F9577D2683006450D7E30659D /* PINImage+DecodedImage.h */,
+				79319EE3B37D5223FD426B62AFDB855F /* PINImage+DecodedImage.m */,
+				E034CFF7B1067E2449DFF52E3D2D17A7 /* PINImage+WebP.h */,
+				F2D1F9093E315BAE2F2E05DF513246FB /* PINImage+WebP.m */,
+				926A4FA9694D495A829604142C5258A6 /* PINImageView+PINRemoteImage.h */,
+				BC42B2CD9016AA36AAE24F2A41CD99B2 /* PINImageView+PINRemoteImage.m */,
+				3267DF1006A6E0C30F71115842DB081E /* PINProgressiveImage.h */,
+				B4D60688F5D18C2F88197521D6013F3C /* PINProgressiveImage.m */,
+				432B525A460D8C92C579B393BB2A46E2 /* PINRemoteImage.h */,
+				64FDB28C85766BD25FB38A3CCC1978F8 /* PINRemoteImageCallbacks.h */,
+				F6306893265D2E7D5EDBD3F03BDE43F5 /* PINRemoteImageCallbacks.m */,
+				93C8C480EA1E52228DFA4AEE742E91B3 /* PINRemoteImageCategoryManager.h */,
+				9A962E78C517920C974BE2BA01EF0149 /* PINRemoteImageCategoryManager.m */,
+				13806FD9B6E833E661704532E37F0340 /* PINRemoteImageDownloadTask.h */,
+				F913321DB076EED9361CB82FD041336E /* PINRemoteImageDownloadTask.m */,
+				AC3F97CA4B6A2810A6955C61E6429AD1 /* PINRemoteImageMacros.h */,
+				32536586FEB6F3479B3BEEB8CC8AFE38 /* PINRemoteImageManager.h */,
+				FD1E89EDA8E4DAB7B0B1F330EDD4917D /* PINRemoteImageManager.m */,
+				419469B29A974B77B58C57BE90D600F4 /* PINRemoteImageManagerResult.h */,
+				6D9A7AC8F9E4CDF5EA76A06751E9AC5B /* PINRemoteImageManagerResult.m */,
+				72B4F861404F6E8D9A71A48D205236A0 /* PINRemoteImageProcessorTask.h */,
+				15489C1793B08291C8684D8AD808E507 /* PINRemoteImageProcessorTask.m */,
+				B5F4AAEB761489EAA048774CA4360729 /* PINRemoteImageTask.h */,
+				D0DF3AB49579CF45167999BA127C8668 /* PINRemoteImageTask.m */,
+				262E6BF2B7FBE262E05A6A3E6916B53D /* PINRemoteLock.h */,
+				5E3E361ACA6885936EC54725BA1A1590 /* PINRemoteLock.m */,
+				27372B0E89E5F9964E8273C6577D61C1 /* PINURLSessionManager.h */,
+				D74C35B8283F50C6386878FC8C5D2A12 /* PINURLSessionManager.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23991D9853CFFCE720F539E7A01AE093 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02E5E6757F828217AA505C7AF48C106D /* Pods-LipstickUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53D78C27A27FBB7E0C30181DB9764C78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA1A0F906DE1AE2D3C90005EBF41912 /* Pods-Lipstick-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75896AD4AB66D33DDD2DEF68877D4BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D00332C0E554E00DCFAC03EDCCCA5FC /* Nullability.h in Headers */,
+				A4276999F7266A6C44E2CA706D24340F /* PINCache-umbrella.h in Headers */,
+				B00EC20A95367E3634CC70121385F419 /* PINCache.h in Headers */,
+				D15F7F93047B54CDC5A9AEB85AFCD5B6 /* PINCacheObjectSubscripting.h in Headers */,
+				4E1C1B888CA1C3AF1299FB177B9AFA52 /* PINDiskCache.h in Headers */,
+				D4AB193A949BDB9210C7A3F60D035693 /* PINMemoryCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A917E0C9F9C795DE09E6FE6AE605FBDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3659DD4D7767B7C1BBB389AE6B0FB048 /* CollectionKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F1C80BB83282D66D5628A02EB93EB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D04F230E9D7109AD1F34DB96916FF4EE /* YetAnotherAnimationLibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC0266E516AF1C36E8FA9F7A005968B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9A7903BFBD7A7BCE4E038DCA2B9397 /* Pods-LipstickTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA64BDF07F033D7C01125C73FCCFEC87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879F3C72BF6A5122BA70CAEEDDC5B845 /* FLAnimatedImage-umbrella.h in Headers */,
+				ACEF52D266CBF9E8C7E9F7D5E2C0937A /* FLAnimatedImage.h in Headers */,
+				54B72BE8851E881007E5620B47F98A89 /* FLAnimatedImageView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE9080CE3C899DC802142B415B04F81E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1AEBE4E3F419ED02A2CA675F3EB9A6C /* FLAnimatedImageView+PINRemoteImage.h in Headers */,
+				B2D3A41BC0CC5A6941DA65F50043220F /* NSData+ImageDetectors.h in Headers */,
+				6AA6FAB5EE785E7627683168CE50C4B6 /* PINButton+PINRemoteImage.h in Headers */,
+				8B2501C9FA5FCDE6070FED72C412DF38 /* PINDataTaskOperation.h in Headers */,
+				5E5E031CF27FAAEBEB9768AF0B667BBD /* PINImage+DecodedImage.h in Headers */,
+				50504DEC855B790C921C42A52DD77A1F /* PINImage+WebP.h in Headers */,
+				183511FB53782109C2C12D66ED8B23AC /* PINImageView+PINRemoteImage.h in Headers */,
+				5BD7C329F98E548DE40B3FEEFE7DC7A1 /* PINProgressiveImage.h in Headers */,
+				DF879FF0B0FBC86216430DF01B711305 /* PINRemoteImage-umbrella.h in Headers */,
+				DE73EB74B3B0EE9C0EEFDC36525257AD /* PINRemoteImage.h in Headers */,
+				B9E552DAFCC40CE53BF3E93452D2F8EA /* PINRemoteImageCallbacks.h in Headers */,
+				6ADBA2C332A2BF5C317AA15EE609B8CC /* PINRemoteImageCategoryManager.h in Headers */,
+				02C424EB77408175DD78D2C48301E581 /* PINRemoteImageDownloadTask.h in Headers */,
+				736BF7CD8C5296498C3782743717D11A /* PINRemoteImageMacros.h in Headers */,
+				907DBCCB78AC6617D01B02E48620F412 /* PINRemoteImageManager.h in Headers */,
+				F80C0CA9C88CE9118FD9D0BACE6E65AA /* PINRemoteImageManagerResult.h in Headers */,
+				B9310487313EC6DFB9D38678AE23C428 /* PINRemoteImageProcessorTask.h in Headers */,
+				1D14AF5065F6152D18A6502B74AE18DF /* PINRemoteImageTask.h in Headers */,
+				248D35BB6CD4CB48EF433AAF9E454C49 /* PINRemoteLock.h in Headers */,
+				441B332822DE6E1660740CB57E4F45F3 /* PINURLSessionManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3154D10BEF135D97343A8E6F4B3288D3 /* Pods-LipstickUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E105DB8FB09DAFF856FD0836846D49D6 /* Build configuration list for PBXNativeTarget "Pods-LipstickUITests" */;
+			buildPhases = (
+				17656023E3584D07E1C4D73CC5EBC416 /* Sources */,
+				1899EB920B2B1639AC39D89A5A24C806 /* Frameworks */,
+				23991D9853CFFCE720F539E7A01AE093 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-LipstickUITests";
+			productName = "Pods-LipstickUITests";
+			productReference = DEB27DE3CD6423C2AF4E8C4E5308B66D /* Pods_LipstickUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6A4878A4A87B118BAF0877A103373708 /* PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483ECA1F8F3E1AF3A5A61F0D70AE8993 /* Build configuration list for PBXNativeTarget "PINCache" */;
+			buildPhases = (
+				06A5C791F37C3C61E858A02BAB9C23C0 /* Sources */,
+				37FF3E6DD87189C874E974CBDD0ACA49 /* Frameworks */,
+				A75896AD4AB66D33DDD2DEF68877D4BE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PINCache;
+			productName = PINCache;
+			productReference = D9ABF55E1B002C33CE504332072504E5 /* PINCache.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		83B5B60C676A8D31829A6AE91CE86A75 /* FLAnimatedImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BE17412EAFC0423EA482DB389779961 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */;
+			buildPhases = (
+				4AAEDB21198D433CF90C7195F1F02A6F /* Sources */,
+				5C71CF445F3725E13BFDAC5D84B69C3A /* Frameworks */,
+				FA64BDF07F033D7C01125C73FCCFEC87 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLAnimatedImage;
+			productName = FLAnimatedImage;
+			productReference = A5E525463BB58337FBFD40817DF423C5 /* FLAnimatedImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B8B96876CEAF546FA9D88FDADE2C254 /* Pods-Lipstick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADEF563AED899CD7EDA35CD3180BEEC2 /* Build configuration list for PBXNativeTarget "Pods-Lipstick" */;
+			buildPhases = (
+				8D65C7AC77648D0AD7B951C2CBCD3472 /* Sources */,
+				04AC110919451265F0A566F379593B31 /* Frameworks */,
+				53D78C27A27FBB7E0C30181DB9764C78 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D8076852917A1589666A1B6E7FF20B3 /* PBXTargetDependency */,
+				51712D4563BE3C20EAAC16851B1D7ACF /* PBXTargetDependency */,
+				E810572867E5C2A6DFAF8D6AE758A99C /* PBXTargetDependency */,
+				5FE44757BF8EA1623DAABF2FA17A266B /* PBXTargetDependency */,
+				B12E5A36B286FFAA8B381D4EE915FAC1 /* PBXTargetDependency */,
+			);
+			name = "Pods-Lipstick";
+			productName = "Pods-Lipstick";
+			productReference = 6887630A2803D64C46FC1C25F09E6EDF /* Pods_Lipstick.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A02EE1452A6B9ED8895E739554320B81 /* PINRemoteImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92E7D2B21F7D923110ADE6283228200 /* Build configuration list for PBXNativeTarget "PINRemoteImage" */;
+			buildPhases = (
+				B4AD79C459CEC83994507E91EA006BD4 /* Sources */,
+				E2B312696954DA63036B56F59FBEF223 /* Frameworks */,
+				FE9080CE3C899DC802142B415B04F81E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90D6D14030BC736502B0FC7DC826A341 /* PBXTargetDependency */,
+				6F418D58A130EFDB4DB3D6774D448249 /* PBXTargetDependency */,
+			);
+			name = PINRemoteImage;
+			productName = PINRemoteImage;
+			productReference = F997177A66A406727BB24D1F1AB7EBD0 /* PINRemoteImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C7D9BD17DCCFCB952CBDBCD7087E15A7 /* YetAnotherAnimationLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D3D190AE0C523E1380B5B52CF2339B5 /* Build configuration list for PBXNativeTarget "YetAnotherAnimationLibrary" */;
+			buildPhases = (
+				EBCFAA03BCA771692C660AE039BCE8F5 /* Sources */,
+				A263C84E904EB398E90AACDF00B96B0F /* Frameworks */,
+				B4F1C80BB83282D66D5628A02EB93EB6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YetAnotherAnimationLibrary;
+			productName = YetAnotherAnimationLibrary;
+			productReference = 5E8B0044B8D959BAACA37911F5AF3E20 /* YetAnotherAnimationLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F1AE3C7A182A9FAB0E8826D22ED965C7 /* Pods-LipstickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6775E0DF429A5943EC235F91DA8BEE70 /* Build configuration list for PBXNativeTarget "Pods-LipstickTests" */;
+			buildPhases = (
+				668AEC01188A8E3819C1EA9C004E9527 /* Sources */,
+				8C9AEED7BB05C039B32249039AC37480 /* Frameworks */,
+				EFC0266E516AF1C36E8FA9F7A005968B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-LipstickTests";
+			productName = "Pods-LipstickTests";
+			productReference = EB60F7A0EC68A0D59C92EC967CA0794E /* Pods_LipstickTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F30D544179C376C189794B9F2C0BBE88 /* CollectionKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F90F3051DE9D61CAD8F5F01ECB5C6843 /* Build configuration list for PBXNativeTarget "CollectionKit" */;
+			buildPhases = (
+				0EEB2F8A546805D5EA933324FD0812B6 /* Sources */,
+				DD18F3F0E7DF6DABF228C7B8F67840DF /* Frameworks */,
+				A917E0C9F9C795DE09E6FE6AE605FBDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollectionKit;
+			productName = CollectionKit;
+			productReference = 82566C3621278452FA6D89380AA2475D /* CollectionKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 29DA8F81DF6E9F5F20B7499097CB6CC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F30D544179C376C189794B9F2C0BBE88 /* CollectionKit */,
+				83B5B60C676A8D31829A6AE91CE86A75 /* FLAnimatedImage */,
+				6A4878A4A87B118BAF0877A103373708 /* PINCache */,
+				A02EE1452A6B9ED8895E739554320B81 /* PINRemoteImage */,
+				8B8B96876CEAF546FA9D88FDADE2C254 /* Pods-Lipstick */,
+				F1AE3C7A182A9FAB0E8826D22ED965C7 /* Pods-LipstickTests */,
+				3154D10BEF135D97343A8E6F4B3288D3 /* Pods-LipstickUITests */,
+				C7D9BD17DCCFCB952CBDBCD7087E15A7 /* YetAnotherAnimationLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06A5C791F37C3C61E858A02BAB9C23C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A966DC9FE75F46B517A0A01458F0DD /* PINCache-dummy.m in Sources */,
+				27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */,
+				4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */,
+				D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EEB2F8A546805D5EA933324FD0812B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F5A2CF6AE9D5622241EF27D87FA5959 /* Animator.swift in Sources */,
+				4B01447BE2B4AF873A11B4F2DC2B126F /* AnyViewSource.swift in Sources */,
+				18DA8F84FFAE5A099C59CD404B320A51 /* ArrayDataSource.swift in Sources */,
+				E954700CAAC47FA598155FAE86CA915E /* BaseSimpleAnimator.swift in Sources */,
+				6277B48B190D0BAD48184BCCBD0D4623 /* BasicProvider.swift in Sources */,
+				4BDF894ACADD348FCDB2C85BFABDCD24 /* ClosureDataSource.swift in Sources */,
+				73AF2EAF2720137ABC5418DCBE95817C /* ClosureLayout.swift in Sources */,
+				C46FABA00F83FDC5B961B22EFDCA6E05 /* ClosureViewSource.swift in Sources */,
+				F5E93620ED2E92885C3D0CC3DDF44647 /* CollectionKit-dummy.m in Sources */,
+				0F5468F65A5EF965896A0201A321F784 /* CollectionReloadable.swift in Sources */,
+				04DD0C802556073BD0F665335614DCE9 /* CollectionReuseViewManager.swift in Sources */,
+				05A1AA1F626B8D76EA8369396F1D6EA9 /* CollectionView.swift in Sources */,
+				D5E29D47986D44B4705F7956C1B8CE31 /* ComposedHeaderProvider.swift in Sources */,
+				A9E01154527D14E6933379AFBF07C579 /* ComposedProvider.swift in Sources */,
+				95F91CEA761E693772BFEE2A9CE483A5 /* ComposedViewSource.swift in Sources */,
+				F2D9F3161389FD8D94B5EA155728BC52 /* DataSource.swift in Sources */,
+				5EC4ACCC53B301B62A48ADA71EA9EF81 /* Deprecated.swift in Sources */,
+				49A49C9373CC274D2156337FCEDCF5E4 /* EmptyCollectionProvider.swift in Sources */,
+				572E9CAEC0703E64ED3165F00EE5A102 /* EmptyStateProvider.swift in Sources */,
+				E8B4695E4ADE60B2EA871C7726821057 /* FadeAnimator.swift in Sources */,
+				12986901962B2E7C6C12F735060BE406 /* FlattenedProvider.swift in Sources */,
+				EBC49D6D08227DF7918A0D35693ACF1F /* FlowLayout.swift in Sources */,
+				070148BEE8458B1C278C91808BC407F3 /* InsetLayout.swift in Sources */,
+				C96C10CBB9102281025EBAF6608EFD8A /* ItemProvider.swift in Sources */,
+				E9EA394EDA65A8FC902678E225E8B10D /* Layout.swift in Sources */,
+				9A3239B8D807C6C91D46CF7A227E275A /* LayoutableProvider.swift in Sources */,
+				C663B8BBA8ED3ABFB3CA81645423397B /* LayoutContext.swift in Sources */,
+				4AD081B2D7F704181FE19DF8BDD1E1CD /* LayoutHelper.swift in Sources */,
+				23CBAD56A5D8564932114FAD293DA9BA /* OverlayLayout.swift in Sources */,
+				CE7CB3E987C37C26CE1AE5337BB3BBCC /* Provider.swift in Sources */,
+				1CC9B1D745A70387B887CA7815AF9C61 /* RowLayout.swift in Sources */,
+				68944E65DC6567018F8B1D392D38C8C0 /* ScaleAnimator.swift in Sources */,
+				0C65F1ECC63BBA3D1CD97CD489ECC171 /* SectionProvider.swift in Sources */,
+				AF1D8FEC72D0963311BE53DE2C71E3FB /* SimpleLayout.swift in Sources */,
+				07F4E5CF376E17A8B0BD9F8D2F4AF9CB /* SimpleViewProvider.swift in Sources */,
+				03A17C219E4A45C3EC9D475A5C2FEF37 /* SizeSource.swift in Sources */,
+				33811F03F3E481EC0C43222646F0A58B /* SpaceProvider.swift in Sources */,
+				4351D2FBF25F70D22B64C21773012589 /* StickyLayout.swift in Sources */,
+				C671D0CCF5DE02899868216E7DBFEF35 /* TransposeLayout.swift in Sources */,
+				B4711CDC22A85523A82B953476E4D217 /* UIScrollView+CollectionKit.swift in Sources */,
+				225D2B4C91D6BAE7BDE240932CE63F69 /* UIView+CollectionKit.swift in Sources */,
+				3960AC5216292CACE0E7D5300594365D /* Util.swift in Sources */,
+				71592C0CF93E90FA69E01D98AA6819F0 /* ViewSource.swift in Sources */,
+				04DD7B85568DA507007BBA0184A31CDD /* VisibleFrameInsetLayout.swift in Sources */,
+				155F6794FF7046DFFB912D8DB74171ED /* WaterfallLayout.swift in Sources */,
+				6A71A23227E6FB0C57B01ED20FAE6DE6 /* WrapperLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17656023E3584D07E1C4D73CC5EBC416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A524889BE32B9A3DA40A93309A3B3DBD /* Pods-LipstickUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AAEDB21198D433CF90C7195F1F02A6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13ADE84F672E4DF94AB419484FFAEAFA /* FLAnimatedImage-dummy.m in Sources */,
+				8C1771BECC0DA6C28D8EB206F8D62D67 /* FLAnimatedImage.m in Sources */,
+				B6533EFF69AA9E2AB73837FD8950F1C8 /* FLAnimatedImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		668AEC01188A8E3819C1EA9C004E9527 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4C3773A3F98B2FF737DC49ADAE72D /* Pods-LipstickTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D65C7AC77648D0AD7B951C2CBCD3472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151DBAAE0F0F8A3CEE639CB2E8A3C8D8 /* Pods-Lipstick-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AD79C459CEC83994507E91EA006BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1E072714865963500DFD6EF3FA3E07 /* FLAnimatedImageView+PINRemoteImage.m in Sources */,
+				434528B5B0925467CB17D1812C8EADE2 /* NSData+ImageDetectors.m in Sources */,
+				A72B573D39DEB9BDB1941E1FC6BEAE8F /* PINButton+PINRemoteImage.m in Sources */,
+				B31C10967C762DCBADBF8092EDCE8AF4 /* PINDataTaskOperation.m in Sources */,
+				B8AC06908589939A59672C9F1A20D0ED /* PINImage+DecodedImage.m in Sources */,
+				97A0222EF9DE779A5A10179DE0A745F1 /* PINImage+WebP.m in Sources */,
+				DCA2E00138CF536BA868B98887E470F3 /* PINImageView+PINRemoteImage.m in Sources */,
+				156DC7F043A417990334006FA0AF6FB5 /* PINProgressiveImage.m in Sources */,
+				824B4C730E99B60710682512A1C66232 /* PINRemoteImage-dummy.m in Sources */,
+				EE75E38C524C5DB07DF0CA0837092B26 /* PINRemoteImageCallbacks.m in Sources */,
+				8E6938B44EF54643338F39A68C3E6DB7 /* PINRemoteImageCategoryManager.m in Sources */,
+				5EB07F97D1299A912633F3DA5BE337E5 /* PINRemoteImageDownloadTask.m in Sources */,
+				0564243D3A9BF26F3DFDEB86BB7078A2 /* PINRemoteImageManager.m in Sources */,
+				2D388410666A88EB68B2ED72E7C1F61D /* PINRemoteImageManagerResult.m in Sources */,
+				60B68B3362DEE39A6A68E4336A254EEF /* PINRemoteImageProcessorTask.m in Sources */,
+				D484D4A4B18B1143F24859CEB06094AB /* PINRemoteImageTask.m in Sources */,
+				411E56C9C358C49067B09A3CDE12CEEC /* PINRemoteLock.m in Sources */,
+				BED1DE79AD6EBFBA1DA0108EDE82E3F4 /* PINURLSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCFAA03BCA771692C660AE039BCE8F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AECE8427BADF839A0DD7FA79587EC7 /* Animatable.swift in Sources */,
+				603CA29ED61FE167A51D50AE378183FA /* Animation.swift in Sources */,
+				F4550B666A1DA99188C8302BC82171DB /* AnimationProperty.swift in Sources */,
+				F7736D72A6FF493C62F8B926C69803AB /* Animator.swift in Sources */,
+				492B93473D342D741B02A4B970F83772 /* Announcer.swift in Sources */,
+				0CF59C113832CDD763AEE33D52F6BF22 /* CALayer+YAAL.swift in Sources */,
+				96F39B74B9073244698A05E0A098865B /* ChainOperator.swift in Sources */,
+				8CFB9AD1E39485BF26D377921B5F6705 /* Curve.swift in Sources */,
+				BD7816BB511DBB2E99620F9DC4950616 /* CurveAnimatable.swift in Sources */,
+				45BFA8B3B93C4271D11A917ED65BC418 /* CurveAnimation.swift in Sources */,
+				34CEDB062F6D43E43411B3C3593B2D0A /* CurveSolver.swift in Sources */,
+				29B8210179D87368D359274EA9EBCBB9 /* DecayAnimatable.swift in Sources */,
+				6D620ABFFEBD88D2FE82664B6D31EF08 /* DecayAnimation.swift in Sources */,
+				9C5C909E3A5DF8EBB7C68C6E18F5EAC0 /* DecaySolver.swift in Sources */,
+				676C2D9776AAE76BD5639B0D91FD8CA9 /* DisplayLink.swift in Sources */,
+				E15F4FDFDF10D4F360DE0F06B82ABD09 /* MixAnimation.swift in Sources */,
+				02DD9C6D1131607C75B1A1CDC8096DB5 /* NSObject+YAAL.swift in Sources */,
+				15A6A3046453B5013AB17497F47821A0 /* RK4Solver.swift in Sources */,
+				FCDE965581E02C485C525F13ED7A9C21 /* SolvableAnimation.swift in Sources */,
+				FA8B1EB0703C24047FE6914EB3898F86 /* Solver.swift in Sources */,
+				E051ED3B36CB3FF1E8B137F6E8EDF35E /* SolverAnimatable.swift in Sources */,
+				1C8505CA4BA0D77035241E77D005B900 /* SpringAnimatable.swift in Sources */,
+				D882582A5820F607375885EF65AAE548 /* SpringAnimation.swift in Sources */,
+				C1A36041E5E13074F859BB6817F17725 /* SpringSolver.swift in Sources */,
+				9F9D70B228C36F0CA659725CAEEC636F /* UILabel+YAAL.swift in Sources */,
+				9CDD4344DFD2C1E9D62CE54F7D4E6FC3 /* UIScrollView+YAAL.swift in Sources */,
+				504FE5B64997DB7252F4517C3DF0CF56 /* UIView+YAAL.swift in Sources */,
+				69CC68F8999B31BF54BE7FD053DAC92E /* ValueAnimation.swift in Sources */,
+				CBCA986711FD634431AD7AA4438B8A79 /* Vector.swift in Sources */,
+				5D0D2BB58CC53D3CE306310AFA56C54E /* VectorConvertible.swift in Sources */,
+				D1D0F7549CD81349E0E286EC7A509E41 /* VelocitySmoother.swift in Sources */,
+				5557452112B561C5B1C67B8E678208D1 /* YaalCompatible.swift in Sources */,
+				06F5FD9556E1A14BE8ADC473FCA33560 /* YetAnotherAnimationLibrary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51712D4563BE3C20EAAC16851B1D7ACF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLAnimatedImage;
+			target = 83B5B60C676A8D31829A6AE91CE86A75 /* FLAnimatedImage */;
+			targetProxy = 7DB95E7ED9A24BC7D66212F06308763F /* PBXContainerItemProxy */;
+		};
+		5D8076852917A1589666A1B6E7FF20B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CollectionKit;
+			target = F30D544179C376C189794B9F2C0BBE88 /* CollectionKit */;
+			targetProxy = 15FC84DBB0A534584B4C33332B99CC75 /* PBXContainerItemProxy */;
+		};
+		5FE44757BF8EA1623DAABF2FA17A266B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = A02EE1452A6B9ED8895E739554320B81 /* PINRemoteImage */;
+			targetProxy = A07E1D76348A659345D45A738A3E0CA9 /* PBXContainerItemProxy */;
+		};
+		6F418D58A130EFDB4DB3D6774D448249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 6A4878A4A87B118BAF0877A103373708 /* PINCache */;
+			targetProxy = E4111D6CFEC5F1FE1578B8D560286D38 /* PBXContainerItemProxy */;
+		};
+		90D6D14030BC736502B0FC7DC826A341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLAnimatedImage;
+			target = 83B5B60C676A8D31829A6AE91CE86A75 /* FLAnimatedImage */;
+			targetProxy = 50FA66EEBBCC1BAED66900FE91C6A0C0 /* PBXContainerItemProxy */;
+		};
+		B12E5A36B286FFAA8B381D4EE915FAC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YetAnotherAnimationLibrary;
+			target = C7D9BD17DCCFCB952CBDBCD7087E15A7 /* YetAnotherAnimationLibrary */;
+			targetProxy = EF4BE48ED4E7AF80A7CEFFF19D4A8244 /* PBXContainerItemProxy */;
+		};
+		E810572867E5C2A6DFAF8D6AE758A99C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 6A4878A4A87B118BAF0877A103373708 /* PINCache */;
+			targetProxy = 64AE401A007066FE947C618D338F7C48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12E6ECA9FED15F0D0FCC44B7EB376462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE3A3A87DE3C7FAD623CA474D4CB86C8 /* Pods-Lipstick.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Lipstick/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lipstick/Pods-Lipstick.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lipstick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1E1AA0820FF0C0B032E903E64EEE1E32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8ED78D873971E14970D883C19E2FEE7 /* PINRemoteImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINRemoteImage/PINRemoteImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		219851EE63A20A9EE3EBA011ED0E5BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8ED78D873971E14970D883C19E2FEE7 /* PINRemoteImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINRemoteImage/PINRemoteImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2654E63A853F9B7199A1708CC402EC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B138ECC8EB39D6DD3765DF8814CDF8 /* Pods-LipstickUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LipstickUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LipstickUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5740400B038DD3ECA3C330F0F5F07B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AB6EEB86C3870A4D59894C43BF0CE5 /* YetAnotherAnimationLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YetAnotherAnimationLibrary/YetAnotherAnimationLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YetAnotherAnimationLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YetAnotherAnimationLibrary/YetAnotherAnimationLibrary.modulemap";
+				PRODUCT_NAME = YetAnotherAnimationLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A18AA9928502ECD7F193ECE874152FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F5B1F8740191E03631B2610F05C6C30 /* CollectionKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionKit/CollectionKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CollectionKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CollectionKit/CollectionKit.modulemap";
+				PRODUCT_NAME = CollectionKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6EE2001BA6DBB33FE965A829148265AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26757078DFEDC5209176ECADA85A89A2 /* FLAnimatedImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FLAnimatedImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage.modulemap";
+				PRODUCT_NAME = FLAnimatedImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74DE501B7CC0E83CAAF87E397D9F24DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85191C845D0A1186F3C2B0CB5FE5C0A3 /* Pods-Lipstick.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Lipstick/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lipstick/Pods-Lipstick.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lipstick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8552A4F6C3487427DDA210B09AE81ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F18EB9944B719F43131B15B4BE552B /* Pods-LipstickUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LipstickUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LipstickUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8DC1B9C74599BC192F8887282581D94B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A22255789773358BCCC4F73FA0A47B /* PINCache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		907C756EA38519F2FAB24456B755835D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F5B1F8740191E03631B2610F05C6C30 /* CollectionKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionKit/CollectionKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CollectionKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CollectionKit/CollectionKit.modulemap";
+				PRODUCT_NAME = CollectionKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3C36F41799DACB6A09A7190A5996158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A22255789773358BCCC4F73FA0A47B /* PINCache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A4F92559ED52D4B7D89F058BC11968B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AB6EEB86C3870A4D59894C43BF0CE5 /* YetAnotherAnimationLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YetAnotherAnimationLibrary/YetAnotherAnimationLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YetAnotherAnimationLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YetAnotherAnimationLibrary/YetAnotherAnimationLibrary.modulemap";
+				PRODUCT_NAME = YetAnotherAnimationLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF048C255BD3F913EEDF636DCEF33B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9BF42C9C4588AC77E6A4C13F4C0EBFF /* Pods-LipstickTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LipstickTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LipstickTests/Pods-LipstickTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LipstickTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3FF302C63AF8A7283B9B70A478FB8CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35ECB0018A42FDFD3315E31F648D6F7A /* Pods-LipstickTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LipstickTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LipstickTests/Pods-LipstickTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LipstickTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2FEEB56D860404103E8CE2AB71D494B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26757078DFEDC5209176ECADA85A89A2 /* FLAnimatedImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FLAnimatedImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage.modulemap";
+				PRODUCT_NAME = FLAnimatedImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39C5BC78A31CDE101068C530CAC7FA0F /* Debug */,
+				89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483ECA1F8F3E1AF3A5A61F0D70AE8993 /* Build configuration list for PBXNativeTarget "PINCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DC1B9C74599BC192F8887282581D94B /* Debug */,
+				A3C36F41799DACB6A09A7190A5996158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BE17412EAFC0423EA482DB389779961 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE2001BA6DBB33FE965A829148265AE /* Debug */,
+				F2FEEB56D860404103E8CE2AB71D494B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D3D190AE0C523E1380B5B52CF2339B5 /* Build configuration list for PBXNativeTarget "YetAnotherAnimationLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F92559ED52D4B7D89F058BC11968B5 /* Debug */,
+				5740400B038DD3ECA3C330F0F5F07B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6775E0DF429A5943EC235F91DA8BEE70 /* Build configuration list for PBXNativeTarget "Pods-LipstickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FF302C63AF8A7283B9B70A478FB8CB /* Debug */,
+				CF048C255BD3F913EEDF636DCEF33B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADEF563AED899CD7EDA35CD3180BEEC2 /* Build configuration list for PBXNativeTarget "Pods-Lipstick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DE501B7CC0E83CAAF87E397D9F24DD /* Debug */,
+				12E6ECA9FED15F0D0FCC44B7EB376462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E105DB8FB09DAFF856FD0836846D49D6 /* Build configuration list for PBXNativeTarget "Pods-LipstickUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8552A4F6C3487427DDA210B09AE81ACA /* Debug */,
+				2654E63A853F9B7199A1708CC402EC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92E7D2B21F7D923110ADE6283228200 /* Build configuration list for PBXNativeTarget "PINRemoteImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1AA0820FF0C0B032E903E64EEE1E32 /* Debug */,
+				219851EE63A20A9EE3EBA011ED0E5BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F90F3051DE9D61CAD8F5F01ECB5C6843 /* Build configuration list for PBXNativeTarget "CollectionKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907C756EA38519F2FAB24456B755835D /* Debug */,
+				5A18AA9928502ECD7F193ECE874152FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
