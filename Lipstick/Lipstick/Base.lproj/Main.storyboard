@@ -46,6 +46,87 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
+        <!--Catagories Controller-->
+        <scene sceneID="nTv-64-0SC">
+            <objects>
+                <viewController storyboardIdentifier="CatagoriesController" id="Pfa-IM-XCE" customClass="CatagoriesController" customModule="Lipstick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTb-zg-S2U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7I-da-0vR">
+                                <rect key="frame" x="318" y="20" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="didTapDone:" destination="Pfa-IM-XCE" eventType="touchUpInside" id="ORc-mn-2bv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4Y-U0-BUa">
+                                <rect key="frame" x="20" y="20" width="40" height="30"/>
+                                <state key="normal" title="Detail"/>
+                                <connections>
+                                    <action selector="didTapDetail:" destination="Pfa-IM-XCE" eventType="touchUpInside" id="EDh-Dq-vSz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Catagories View, to be continue..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-dA-sjr">
+                                <rect key="frame" x="17.5" y="323" width="339" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I7I-da-0vR" firstAttribute="top" secondItem="P8V-HR-fKx" secondAttribute="top" id="46C-Fp-HGE"/>
+                            <constraint firstItem="P8V-HR-fKx" firstAttribute="trailing" secondItem="I7I-da-0vR" secondAttribute="trailing" constant="20" id="WvA-qi-8Hm"/>
+                            <constraint firstItem="Zp4-dA-sjr" firstAttribute="centerX" secondItem="JTb-zg-S2U" secondAttribute="centerX" id="aD4-Pc-cdF"/>
+                            <constraint firstItem="Zp4-dA-sjr" firstAttribute="centerY" secondItem="JTb-zg-S2U" secondAttribute="centerY" id="fX8-zf-JtQ"/>
+                            <constraint firstItem="R4Y-U0-BUa" firstAttribute="top" secondItem="P8V-HR-fKx" secondAttribute="top" id="fur-Sx-c29"/>
+                            <constraint firstItem="R4Y-U0-BUa" firstAttribute="leading" secondItem="P8V-HR-fKx" secondAttribute="leading" constant="20" id="kGF-Um-QJz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8V-HR-fKx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mF-TN-GU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.79999999999995" y="117.39130434782609"/>
+        </scene>
+        <!--Lipstick Detail Controller-->
+        <scene sceneID="cZm-Vq-Whr">
+            <objects>
+                <viewController storyboardIdentifier="LipstickDetailController" id="d2L-yf-uwP" customClass="LipstickDetailController" customModule="Lipstick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aje-i2-K04">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjO-ep-e3p">
+                                <rect key="frame" x="318" y="20" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="didTapDone:" destination="d2L-yf-uwP" eventType="touchUpInside" id="4th-js-sqb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Lipstick detail View, to be continue..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-hA-ukF">
+                                <rect key="frame" x="7.5" y="323" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FB7-Ve-x4n" firstAttribute="trailing" secondItem="CjO-ep-e3p" secondAttribute="trailing" constant="20" id="efI-9T-ISy"/>
+                            <constraint firstItem="CjO-ep-e3p" firstAttribute="top" secondItem="FB7-Ve-x4n" secondAttribute="top" id="iYo-PX-i3W"/>
+                            <constraint firstItem="QoK-hA-ukF" firstAttribute="centerX" secondItem="Aje-i2-K04" secondAttribute="centerX" id="r5k-sN-qeG"/>
+                            <constraint firstItem="QoK-hA-ukF" firstAttribute="centerY" secondItem="Aje-i2-K04" secondAttribute="centerY" id="tVR-61-kQF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FB7-Ve-x4n"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxV-rL-K4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="118"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Metron" width="660" height="75"/>

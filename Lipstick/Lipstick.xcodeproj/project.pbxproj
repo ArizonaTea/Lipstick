@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10EC9B487357A76ACCC87F59 /* Pods_LipstickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D36D7E305134F4E0731FFA2 /* Pods_LipstickTests.framework */; };
+		7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080AC8921117A5F006C2B60 /* CatagoriesController.swift */; };
+		7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACC621119071006C2B60 /* LipstickDetailController.swift */; };
 		709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF14210EC5B1000604C3 /* AppDelegate.swift */; };
 		709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF16210EC5B1000604C3 /* BrandController.swift */; };
 		709FDF1A210EC5B1000604C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709FDF18210EC5B1000604C3 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		36430D6D5C9FC39444DC5A13 /* Pods-Lipstick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lipstick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick.debug.xcconfig"; sourceTree = "<group>"; };
 		68336328352F54441C9F71E0 /* Pods-LipstickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69664916DCD62A4A1D2871D9 /* Pods-LipstickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests.release.xcconfig"; sourceTree = "<group>"; };
+		7080AC8921117A5F006C2B60 /* CatagoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesController.swift; sourceTree = "<group>"; };
+		7080ACC621119071006C2B60 /* LipstickDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipstickDetailController.swift; sourceTree = "<group>"; };
 		709FDF11210EC5B1000604C3 /* Lipstick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lipstick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709FDF14210EC5B1000604C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709FDF16210EC5B1000604C3 /* BrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7080AC8721113BD4006C2B60 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				7080AC8921117A5F006C2B60 /* CatagoriesController.swift */,
+			);
+			path = Catagories;
+			sourceTree = "<group>";
+		};
+		7080AC8821113BED006C2B60 /* LipstickDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7080ACC621119071006C2B60 /* LipstickDetailController.swift */,
+			);
+			path = LipstickDetail;
+			sourceTree = "<group>";
+		};
 		709FDF08210EC5B1000604C3 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				709FDF14210EC5B1000604C3 /* AppDelegate.swift */,
+				7080AC8821113BED006C2B60 /* LipstickDetail */,
+				7080AC8721113BD4006C2B60 /* Catagories */,
 				709FDF45210ECF55000604C3 /* Brands */,
 				709FDF18210EC5B1000604C3 /* Main.storyboard */,
 				709FDF1E210EC5B1000604C3 /* Assets.xcassets */,
@@ -488,6 +510,8 @@
 				709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */,
 				709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */,
 				70A3815421102F21009A615E /* ImageItemView.swift in Sources */,
+				7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */,
+				7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

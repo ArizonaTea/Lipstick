@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
-            timestampString = "554709791.110458"
+            timestampString = "554788456.284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -26,7 +26,7 @@
                   moduleName = "Lipstick"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xyz/Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
-                  timestampString = "554717178.557379"
+                  timestampString = "554799827.115569"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -41,7 +41,7 @@
                   moduleName = "Lipstick"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xyz/Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
-                  timestampString = "554717178.558931"
+                  timestampString = "554799827.11707"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -56,7 +56,7 @@
                   moduleName = "Lipstick"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xyz/Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"
-                  timestampString = "554717178.560419"
+                  timestampString = "554799827.11852"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -64,6 +64,38 @@
                   offsetFromSymbolStart = "104">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lipstick/Brands/WobbleAnimator.swift"
+            timestampString = "554797427.675679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "update(collectionView:view:at:frame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lipstick/Brands/WobbleAnimator.swift"
+            timestampString = "554797427.676019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "insert(collectionView:view:at:frame:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

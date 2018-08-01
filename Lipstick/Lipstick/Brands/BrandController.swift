@@ -9,30 +9,81 @@
 import UIKit
 import CollectionKit
 var brandsurl:[String] = ["Dior", "Chanel"]
+
+
+
+struct brandCellObject: Codable {
+    let name: String
+}
+class brandCell: UIView {
+    let imageView = UIImageView()
+    let label = UILabel()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        layer.cornerRadius = 4
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowRadius = 14
+        layer.shadowOffset = CGSize(width: 0, height: 14)
+        layer.shadowOpacity = 0.2
+        addSubview(imageView)
+        addSubview(label)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageView.frame = CGRect(x: 5, y:5, width: bounds.width-10, height: bounds.width-10)
+//        label.frame = CGRect(x: 10, y: 210, width: bounds.width - 20, height: 20)
+        
+    }
+    
+    func populate(brandName: brandCellObject) {
+        imageView.image = UIImage(named: brandName.name)
+//        label.text = brandName.name
+        backgroundColor = .gray
+    }
+    
+}
+
+
 class BrandController: UIViewController{
     @IBOutlet weak var collectionView: CollectionView!
     @IBOutlet weak var logoBackground: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        let dataSource = ArrayDataSource(data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
-        let viewSource = ClosureViewSource(viewUpdater: { (view: UILabel, data: Int, index: Int) in
-            view.backgroundColor = .green
-            view.text = "\(data)"
+        
+        
+        let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
+                return String(index)
+        })
+        let viewSource = ClosureViewSource(viewUpdater: { (view: brandCell, data: brandCellObject, index: Int) in
+            view.populate(brandName: data)
         })
         
-        let sizeSource = { (index: Int, data: Int, collectionSize: CGSize) -> CGSize in
+        let sizeSource = { (index: Int, data: brandCellObject, collectionSize: CGSize) -> CGSize in
             return CGSize(width: self.collectionView.frame.size.width / 2 - 20, height: self.collectionView.frame.size.width / 2 - 20)
         }
+        
         let provider = BasicProvider(
             dataSource: dataSource,
             viewSource: viewSource,
-            sizeSource: sizeSource
+            sizeSource: sizeSource,
+            tapHandler: { [weak self] context in
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CatagoriesController") as? CatagoriesController
+                self?.present(vc!, animated: true, completion: nil)
+            }
         )
-        provider.layout = FlowLayout(spacing: 10, justifyContent: .center)
+        provider.animator = FadeAnimator()
+        provider.layout =  FlowLayout(spacing: 10, justifyContent: .center)
         collectionView.provider = provider
         collectionView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 40, right: 0)
         collectionView.delegate = self
+        
     }
     
     func tween(offset: CGFloat, start: CGFloat, end: CGFloat) -> CGFloat {
