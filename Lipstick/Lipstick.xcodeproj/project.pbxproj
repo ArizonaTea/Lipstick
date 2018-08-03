@@ -19,7 +19,6 @@
 		709FDF2D210EC5B1000604C3 /* LipstickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF2C210EC5B1000604C3 /* LipstickTests.swift */; };
 		709FDF38210EC5B1000604C3 /* LipstickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF37210EC5B1000604C3 /* LipstickUITests.swift */; };
 		709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */; };
-		70A3815421102F21009A615E /* ImageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3815321102F21009A615E /* ImageItemView.swift */; };
 		A1D210FEACC1490862F36665 /* Pods_Lipstick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED924BD878E7A3FC90BFEE79 /* Pods_Lipstick.framework */; };
 		AEE14A100F520C1C60F7D7BA /* Pods_LipstickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2479714012616E945C8AFA40 /* Pods_LipstickUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,7 +63,6 @@
 		709FDF37210EC5B1000604C3 /* LipstickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipstickUITests.swift; sourceTree = "<group>"; };
 		709FDF39210EC5B1000604C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
-		70A3815321102F21009A615E /* ImageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageItemView.swift; path = "../../../../../Downloads/SearchUIExample-master/SearchUI/ImageItemView.swift"; sourceTree = "<group>"; };
 		9483F08E54ED67B662180B2E /* Pods-LipstickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0C9BBFB4ED0BF96879CEAA9 /* Pods-LipstickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1FBA2CE0355B4BD1B7C5977 /* Pods-Lipstick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lipstick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		709FDF45210ECF55000604C3 /* Brands */ = {
 			isa = PBXGroup;
 			children = (
-				70A3815321102F21009A615E /* ImageItemView.swift */,
 				709FDF16210EC5B1000604C3 /* BrandController.swift */,
 				709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */,
 			);
@@ -509,7 +506,6 @@
 				709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */,
 				709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */,
 				709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */,
-				70A3815421102F21009A615E /* ImageItemView.swift in Sources */,
 				7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */,
 				7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */,
 			);
@@ -679,7 +675,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GKJXKA9NC;
+				DEVELOPMENT_TEAM = 822TXGJNLG;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = joylink.Lipstick;
@@ -695,7 +691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GKJXKA9NC;
+				DEVELOPMENT_TEAM = 822TXGJNLG;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = joylink.Lipstick;
