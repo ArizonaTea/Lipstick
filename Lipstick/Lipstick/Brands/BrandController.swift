@@ -21,10 +21,10 @@ class brandCell: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.cornerRadius = 4
+        layer.cornerRadius = 5
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowRadius = 14
-        layer.shadowOffset = CGSize(width: 0, height: 14)
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 2)
         layer.shadowOpacity = 0.2
         addSubview(imageView)
         addSubview(label)
@@ -36,15 +36,26 @@ class brandCell: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.frame = CGRect(x: 5, y:5, width: bounds.width-10, height: bounds.width-10)
+        imageView.frame = CGRect(x: 5, y:5, width: bounds.width-10, height: bounds.height-10)
 //        label.frame = CGRect(x: 10, y: 210, width: bounds.width - 20, height: 20)
         
     }
     
     func populate(brandName: brandCellObject) {
+        imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
+        imageView.contentMode = .scaleAspectFit // OR .scaleAspectFill
+        imageView.clipsToBounds = true
+
         imageView.image = UIImage(named: brandName.name)
 //        label.text = brandName.name
-        backgroundColor = .gray
+        
+//        backgroundColor = UIColor(red:0.93, green:0.93, blue:0.93, alpha:0)
+//        imageView.layer.cornerRadius = 4
+//        imageView.layer.shadowColor = UIColor.black.cgColor
+//        imageView.layer.shadowRadius = 14
+//        imageView.layer.shadowOffset = CGSize(width: 0, height: 14)
+//        imageView.layer.shadowOpacity = 0.2
+        imageView.image = imageView.image?.roundedImage.addShadow()
     }
     
 }
@@ -58,7 +69,7 @@ class BrandController: UIViewController{
         super.viewDidLoad()
         
         
-        let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
+        let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
                 return String(index)
         })
         let viewSource = ClosureViewSource(viewUpdater: { (view: brandCell, data: brandCellObject, index: Int) in
@@ -66,22 +77,25 @@ class BrandController: UIViewController{
         })
         
         let sizeSource = { (index: Int, data: brandCellObject, collectionSize: CGSize) -> CGSize in
-            return CGSize(width: self.collectionView.frame.size.width / 2 - 20, height: self.collectionView.frame.size.width / 2 - 20)
+            let ratio = (UIImage(named: data.name)?.size.height)! / (UIImage(named: data.name)?.size.width)!
+            let width = self.collectionView.frame.size.width / 2 - 20
+            return CGSize(width: width, height: width * ratio)
         }
         
         let provider = BasicProvider(
             dataSource: dataSource,
             viewSource: viewSource,
             sizeSource: sizeSource,
+            animator: WobbleAnimator(),
             tapHandler: { [weak self] context in
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CatagoriesController") as? CatagoriesController
                 self?.present(vc!, animated: true, completion: nil)
             }
         )
-        provider.animator = FadeAnimator()
-        provider.layout =  FlowLayout(spacing: 10, justifyContent: .center)
+//        provider.presentation = ScaleAnimator()
+        provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)
         collectionView.provider = provider
-        collectionView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 40, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 90, left: 0, bottom: 40, right: 0)
         collectionView.delegate = self
         
     }
@@ -99,16 +113,16 @@ class BrandController: UIViewController{
     
     func layoutLogo() {
         let bounds = view.bounds
-        let progress = tween(offset: -collectionView.contentOffset.y, start: 100, end: 0)
+        let progress = tween(offset: -collectionView.contentOffset.y, start: 75, end: 0)
 //        print(progress)
         let clamped = min(1, max(0, progress))
         print(clamped)
         let fieldRect = mix(progress: clamped,
-                            start: CGRect(x: 30, y: 100, width: bounds.width - 40, height: 40),
-                            end: CGRect(x: 20, y: 50, width: bounds.width - 40, height: 40))
+                            start: CGRect(x: 30, y: 75, width: bounds.width - 40, height: 40),
+                            end: CGRect(x: 20, y: 75, width: bounds.width - 40, height: 40))
         let backgroundRect = mix(progress: clamped,
-                                 start: CGRect(x: 20, y: 0, width: bounds.width - 40, height: 100),
-                                 end: CGRect(x: 0, y: 0, width: bounds.width, height: 100))
+                                 start: CGRect(x: 20, y: 0, width: bounds.width - 40, height: 75),
+                                 end: CGRect(x: 0, y: 0, width: bounds.width, height: 75))
         if clamped != 1.0 {
             print("enter 0")
             if progress < 0.99 {
@@ -144,5 +158,41 @@ class BrandController: UIViewController{
 extension BrandController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         layoutLogo()
+    }
+}
+
+extension UIImage {
+    
+    func addShadow(blurSize: CGFloat = 2.0) -> UIImage {
+        
+        let shadowColor = UIColor(white:0.3, alpha:0.7).cgColor
+        
+        let context = CGContext(data: nil,
+                                width: Int(self.size.width + blurSize),
+                                height: Int(self.size.height + blurSize),
+                                bitsPerComponent: self.cgImage!.bitsPerComponent,
+                                bytesPerRow: 0,
+                                space: CGColorSpaceCreateDeviceRGB(),
+                                bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
+        
+        context.setShadow(offset: CGSize(width: blurSize/2,height: -blurSize/2),
+                          blur: blurSize,
+                          color: shadowColor)
+        context.draw(self.cgImage!,
+                     in: CGRect(x: 0, y: blurSize, width: self.size.width, height: self.size.height),
+                     byTiling:false)
+        
+        return UIImage(cgImage: context.makeImage()!)
+    }
+    
+    var roundedImage: UIImage {
+        let rect = CGRect(origin:CGPoint(x: 0, y: 0), size: self.size)
+        UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
+        UIBezierPath(
+            roundedRect: rect,
+            cornerRadius: 5
+            ).addClip()
+        self.draw(in: rect)
+        return UIGraphicsGetImageFromCurrentImageContext()!
     }
 }

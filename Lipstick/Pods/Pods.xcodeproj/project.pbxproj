@@ -87,6 +87,8 @@
 		6ADBA2C332A2BF5C317AA15EE609B8CC /* PINRemoteImageCategoryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C8C480EA1E52228DFA4AEE742E91B3 /* PINRemoteImageCategoryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CE66B52EA65DF5B232359DC23937968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7C147F9A16F81DBA41765B32A7BD7A /* Foundation.framework */; };
 		6D620ABFFEBD88D2FE82664B6D31EF08 /* DecayAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0ABEAB8056EFE890E65170A24388CC /* DecayAnimation.swift */; };
+		7080ACD521187E82006C2B60 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACD421187E82006C2B60 /* ZoomAnimator.swift */; };
+		7080ACD921187EE7006C2B60 /* EdgeShrinkAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACD821187EE7006C2B60 /* EdgeShrinkAnimator.swift */; };
 		71592C0CF93E90FA69E01D98AA6819F0 /* ViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D3C675D94FE498149C28CB80EAE7 /* ViewSource.swift */; };
 		736BF7CD8C5296498C3782743717D11A /* PINRemoteImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AC3F97CA4B6A2810A6955C61E6429AD1 /* PINRemoteImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73AF2EAF2720137ABC5418DCBE95817C /* ClosureLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D40BEF46CAF2C4E4B67ED8CEB030C9 /* ClosureLayout.swift */; };
@@ -312,6 +314,8 @@
 		6D369A17AD17C2B42F09753B13CFA68F /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Animator/Animator.swift; sourceTree = "<group>"; };
 		6D9A7AC8F9E4CDF5EA76A06751E9AC5B /* PINRemoteImageManagerResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerResult.m; path = Pod/Classes/PINRemoteImageManagerResult.m; sourceTree = "<group>"; };
 		6E09E49EC3569FCB9A268BB06276B3B1 /* Pods-Lipstick-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lipstick-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7080ACD421187E82006C2B60 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
+		7080ACD821187EE7006C2B60 /* EdgeShrinkAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeShrinkAnimator.swift; sourceTree = "<group>"; };
 		70EF8F261DE7096E0CA1DCDC09652781 /* SimpleViewProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleViewProvider.swift; path = Sources/Addon/SimpleViewProvider.swift; sourceTree = "<group>"; };
 		717D303ED1799414B0462BBEF06FB623 /* ChainOperator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChainOperator.swift; path = "Sources/Types & Operators/ChainOperator.swift"; sourceTree = "<group>"; };
 		72B4F861404F6E8D9A71A48D205236A0 /* PINRemoteImageProcessorTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageProcessorTask.h; path = Pod/Classes/PINRemoteImageProcessorTask.h; sourceTree = "<group>"; };
@@ -780,6 +784,8 @@
 		EED41EFF1E6DC951A65B87E44396E3BA /* CollectionKit */ = {
 			isa = PBXGroup;
 			children = (
+				7080ACD821187EE7006C2B60 /* EdgeShrinkAnimator.swift */,
+				7080ACD421187E82006C2B60 /* ZoomAnimator.swift */,
 				6D369A17AD17C2B42F09753B13CFA68F /* Animator.swift */,
 				ABB7F44122176C671B04AE8FD06293C2 /* AnyViewSource.swift */,
 				36EF8C97D66986162CCD70E56165C7C6 /* ArrayDataSource.swift */,
@@ -1172,6 +1178,7 @@
 				2F5A2CF6AE9D5622241EF27D87FA5959 /* Animator.swift in Sources */,
 				4B01447BE2B4AF873A11B4F2DC2B126F /* AnyViewSource.swift in Sources */,
 				18DA8F84FFAE5A099C59CD404B320A51 /* ArrayDataSource.swift in Sources */,
+				7080ACD921187EE7006C2B60 /* EdgeShrinkAnimator.swift in Sources */,
 				E954700CAAC47FA598155FAE86CA915E /* BaseSimpleAnimator.swift in Sources */,
 				6277B48B190D0BAD48184BCCBD0D4623 /* BasicProvider.swift in Sources */,
 				4BDF894ACADD348FCDB2C85BFABDCD24 /* ClosureDataSource.swift in Sources */,
@@ -1199,6 +1206,7 @@
 				4AD081B2D7F704181FE19DF8BDD1E1CD /* LayoutHelper.swift in Sources */,
 				23CBAD56A5D8564932114FAD293DA9BA /* OverlayLayout.swift in Sources */,
 				CE7CB3E987C37C26CE1AE5337BB3BBCC /* Provider.swift in Sources */,
+				7080ACD521187E82006C2B60 /* ZoomAnimator.swift in Sources */,
 				1CC9B1D745A70387B887CA7815AF9C61 /* RowLayout.swift in Sources */,
 				68944E65DC6567018F8B1D392D38C8C0 /* ScaleAnimator.swift in Sources */,
 				0C65F1ECC63BBA3D1CD97CD489ECC171 /* SectionProvider.swift in Sources */,

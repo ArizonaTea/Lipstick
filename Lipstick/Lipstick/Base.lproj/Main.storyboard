@@ -31,8 +31,8 @@
                             <constraint firstItem="zpK-Qe-tCx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rje-nP-HPS"/>
                             <constraint firstItem="gTw-dF-SNt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T05-xy-SvS"/>
                             <constraint firstItem="gTw-dF-SNt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xwe-66-Rd2"/>
-                            <constraint firstItem="gTw-dF-SNt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dVV-8P-fc1"/>
                             <constraint firstItem="zpK-Qe-tCx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="2" id="gqN-mB-7o9"/>
+                            <constraint firstItem="gTw-dF-SNt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iFY-kp-YX9"/>
                             <constraint firstItem="zpK-Qe-tCx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oVf-4c-udX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,6 +129,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Metron" width="660" height="75"/>
+        <image name="Metron" width="375" height="75"/>
     </resources>
 </document>
