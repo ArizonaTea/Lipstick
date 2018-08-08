@@ -1,0 +1,6 @@
+framework module DAOSearchBar {
+  umbrella header "DAOSearchBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

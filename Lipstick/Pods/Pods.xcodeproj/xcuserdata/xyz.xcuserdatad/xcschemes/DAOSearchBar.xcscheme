@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '18CDE811DB399DBEFCFF9050C361C7A7'
-               BlueprintName = 'YetAnotherAnimationLibrary'
+               BlueprintIdentifier = '501404F0508034A1ED47A0DF4142C86E'
+               BlueprintName = 'DAOSearchBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'YetAnotherAnimationLibrary.framework'>
+               BuildableName = 'DAOSearchBar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

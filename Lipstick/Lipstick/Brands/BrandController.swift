@@ -8,6 +8,8 @@
 
 import UIKit
 import CollectionKit
+import DAOSearchBar
+
 var brandsurl:[String] = ["Dior", "Chanel"]
 
 
@@ -21,9 +23,9 @@ class brandCell: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.cornerRadius = 5
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowRadius = 5
+        layer.cornerRadius = 10
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowRadius = 10
         layer.shadowOffset = CGSize(width: 0, height: 2)
         layer.shadowOpacity = 0.2
         addSubview(imageView)
@@ -64,10 +66,10 @@ class brandCell: UIView {
 class BrandController: UIViewController{
     @IBOutlet weak var collectionView: CollectionView!
     @IBOutlet weak var logoBackground: UIImageView!
-    
+    var searchBarDestinationFrame = CGRect.zero
+    var daoSearch: DAOSearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
                 return String(index)
@@ -92,11 +94,18 @@ class BrandController: UIViewController{
                 self?.present(vc!, animated: true, completion: nil)
             }
         )
-//        provider.presentation = ScaleAnimator()
         provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)
         collectionView.provider = provider
         collectionView.contentInset = UIEdgeInsets(top: 90, left: 0, bottom: 40, right: 0)
         collectionView.delegate = self
+        self.daoSearch = DAOSearchBar.init(frame: CGRect(x: self.view.frame.width - 53, y: 20, width: 45, height: 45))
+        self.daoSearch.searchOffColor = UIColor.white
+        self.daoSearch.searchOnColor = UIColor.darkGray
+        self.daoSearch.searchBarOffColor = UIColor.darkGray
+        self.daoSearch.searchBarOnColor = UIColor.white
+        self.daoSearch.delegate = self;
+        self.searchBarDestinationFrame = CGRect(x: 8, y: 20, width: self.view.bounds.width - 16, height: 45)
+        self.view.addSubview(daoSearch)
         
     }
     
@@ -114,17 +123,11 @@ class BrandController: UIViewController{
     func layoutLogo() {
         let bounds = view.bounds
         let progress = tween(offset: -collectionView.contentOffset.y, start: 75, end: 0)
-//        print(progress)
         let clamped = min(1, max(0, progress))
-        print(clamped)
-        let fieldRect = mix(progress: clamped,
-                            start: CGRect(x: 30, y: 75, width: bounds.width - 40, height: 40),
-                            end: CGRect(x: 20, y: 75, width: bounds.width - 40, height: 40))
         let backgroundRect = mix(progress: clamped,
                                  start: CGRect(x: 20, y: 0, width: bounds.width - 40, height: 75),
                                  end: CGRect(x: 0, y: 0, width: bounds.width, height: 75))
         if clamped != 1.0 {
-            print("enter 0")
             if progress < 0.99 {
                 logoBackground.image = UIImage(named: "Metron")
             }
@@ -133,27 +136,54 @@ class BrandController: UIViewController{
                                             width: backgroundRect.width,
                                             height: backgroundRect.height + -progress * 40)
             logoBackground.autoresizesSubviews = true
-            print(logoBackground.frame)
-            print("exit 0")
+            if self.daoSearch.state == DAOSearchBarState.searchBarVisible {
+                self.daoSearch.changeStateIfPossible()
+            }
+//            self.daoSearch.frame = CGRect(x: self.view.frame.width - 50, y: 20, width: 34, height: 34.0)
         } else {
-            print("enter 1")
             if progress > 1.02 {
                 logoBackground.image = UIImage(named: "topRed")
             }
             logoBackground.frame = CGRect(x: backgroundRect.minX,
                                           y: backgroundRect.minY - 10,
                                           width: backgroundRect.width,
-                                          height: backgroundRect.height - 40)
+                                          height: backgroundRect.height)
             logoBackground.autoresizesSubviews = true
-            print(logoBackground.frame)
-            print("exit 1")
+            if self.daoSearch.state == DAOSearchBarState.normal {
+                self.daoSearch.changeStateIfPossible()
+            }
+//            self.daoSearch.frame = self.searchBarDestinationFrame
             
         }
     }
-    
-
 
 }
+
+extension BrandController: DAOSearchBarDelegate {
+    // MARK: SearchBar Delegate
+    func destinationFrameForSearchBar(_ searchBar: DAOSearchBar) -> CGRect {
+        return self.searchBarDestinationFrame
+    }
+    
+    func searchBar(_ searchBar: DAOSearchBar, willStartTransitioningToState destinationState: DAOSearchBarState) {
+        // Do whatever you deem necessary.
+    }
+    
+    func searchBar(_ searchBar: DAOSearchBar, didEndTransitioningFromState previousState: DAOSearchBarState) {
+        // Do whatever you deem necessary.
+    }
+    
+    func searchBarDidTapReturn(_ searchBar: DAOSearchBar) {
+        // Do whatever you deem necessary.
+        // Access the text from the search bar like searchBar.searchField.text
+    }
+    
+    func searchBarTextDidChange(_ searchBar: DAOSearchBar) {
+        // Do whatever you deem necessary.
+        // Access the text from the search bar like searchBar.searchField.text
+    }
+}
+
 
 extension BrandController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -190,7 +220,7 @@ extension UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
         UIBezierPath(
             roundedRect: rect,
-            cornerRadius: 5
+            cornerRadius: 10
             ).addClip()
         self.draw(in: rect)
         return UIGraphicsGetImageFromCurrentImageContext()!
