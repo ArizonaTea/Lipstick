@@ -71,7 +71,7 @@ class BrandController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
+        let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Mac"),brandCellObject(name: "KatVonD"),brandCellObject(name: "TomFord"),brandCellObject(name: "Stila"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
                 return String(index)
         })
         let viewSource = ClosureViewSource(viewUpdater: { (view: brandCell, data: brandCellObject, index: Int) in
@@ -104,7 +104,7 @@ class BrandController: UIViewController{
         self.daoSearch.searchBarOffColor = UIColor.darkGray
         self.daoSearch.searchBarOnColor = UIColor.white
         self.daoSearch.delegate = self;
-        self.searchBarDestinationFrame = CGRect(x: 8, y: 20, width: self.view.bounds.width - 16, height: 45)
+        
         self.view.addSubview(daoSearch)
         
     }
@@ -162,7 +162,7 @@ class BrandController: UIViewController{
 extension BrandController: DAOSearchBarDelegate {
     // MARK: SearchBar Delegate
     func destinationFrameForSearchBar(_ searchBar: DAOSearchBar) -> CGRect {
-        return self.searchBarDestinationFrame
+        return CGRect(x: 8, y: 15, width: self.view.bounds.width - 16, height: max(45,(self.logoBackground.frame.height - 30)))
     }
     
     func searchBar(_ searchBar: DAOSearchBar, willStartTransitioningToState destinationState: DAOSearchBarState) {
