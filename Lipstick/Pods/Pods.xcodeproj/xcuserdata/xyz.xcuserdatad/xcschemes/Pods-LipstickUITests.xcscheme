@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3154D10BEF135D97343A8E6F4B3288D3"
+               BlueprintIdentifier = "6959677A1697D1D9D430A03CE9011053"
                BuildableName = "Pods_LipstickUITests.framework"
                BlueprintName = "Pods-LipstickUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3154D10BEF135D97343A8E6F4B3288D3"
+            BlueprintIdentifier = "6959677A1697D1D9D430A03CE9011053"
             BuildableName = "Pods_LipstickUITests.framework"
             BlueprintName = "Pods-LipstickUITests"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -103,7 +103,7 @@ class BrandController: UIViewController{
         self.daoSearch.searchOnColor = UIColor.darkGray
         self.daoSearch.searchBarOffColor = UIColor.darkGray
         self.daoSearch.searchBarOnColor = UIColor.white
-        self.daoSearch.delegate = self;
+        self.daoSearch.delegate = self
         
         self.view.addSubview(daoSearch)
         
@@ -225,4 +225,5 @@ extension UIImage {
         self.draw(in: rect)
         return UIGraphicsGetImageFromCurrentImageContext()!
     }
+    
 }

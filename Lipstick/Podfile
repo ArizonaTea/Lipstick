@@ -8,6 +8,10 @@ target 'Lipstick' do
   pod "PINRemoteImage"
   pod "YetAnotherAnimationLibrary"
   pod 'DAOSearchBar', '~> 1.2.5'
+  pod 'Firebase/Core'
+  pod 'ReactiveCocoa', '~> 7.0'
+
+
   # Pods for Lipstick
 
   target 'LipstickTests' do

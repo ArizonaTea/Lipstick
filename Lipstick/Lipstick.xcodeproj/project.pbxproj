@@ -20,6 +20,12 @@
 		709FDF2D210EC5B1000604C3 /* LipstickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF2C210EC5B1000604C3 /* LipstickTests.swift */; };
 		709FDF38210EC5B1000604C3 /* LipstickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF37210EC5B1000604C3 /* LipstickUITests.swift */; };
 		709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */; };
+		70AE24F721601C8500DC6907 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AE24F621601C8500DC6907 /* GoogleService-Info.plist */; };
+		70AE24FD2161E6A800DC6907 /* mainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE24FC2161E6A800DC6907 /* mainTab.swift */; };
+		70AE25002161EAB000DC6907 /* AllLipsticksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE24FF2161EAB000DC6907 /* AllLipsticksVC.swift */; };
+		70AE25042161ECF600DC6907 /* ColourboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE25032161ECF600DC6907 /* ColourboardVC.swift */; };
+		70AE25062161ED0800DC6907 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE25052161ED0800DC6907 /* FavoriteVC.swift */; };
+		70AE2509216424D300DC6907 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE2508216424D300DC6907 /* SettingsVC.swift */; };
 		A1D210FEACC1490862F36665 /* Pods_Lipstick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED924BD878E7A3FC90BFEE79 /* Pods_Lipstick.framework */; };
 		AEE14A100F520C1C60F7D7BA /* Pods_LipstickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2479714012616E945C8AFA40 /* Pods_LipstickUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +71,12 @@
 		709FDF37210EC5B1000604C3 /* LipstickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipstickUITests.swift; sourceTree = "<group>"; };
 		709FDF39210EC5B1000604C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709FDF46210ECFDC000604C3 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
+		70AE24F621601C8500DC6907 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70AE24FC2161E6A800DC6907 /* mainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTab.swift; sourceTree = "<group>"; };
+		70AE24FF2161EAB000DC6907 /* AllLipsticksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLipsticksVC.swift; sourceTree = "<group>"; };
+		70AE25032161ECF600DC6907 /* ColourboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourboardVC.swift; sourceTree = "<group>"; };
+		70AE25052161ED0800DC6907 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		70AE2508216424D300DC6907 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		9483F08E54ED67B662180B2E /* Pods-LipstickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0C9BBFB4ED0BF96879CEAA9 /* Pods-LipstickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1FBA2CE0355B4BD1B7C5977 /* Pods-Lipstick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lipstick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,13 +166,19 @@
 			isa = PBXGroup;
 			children = (
 				709FDF14210EC5B1000604C3 /* AppDelegate.swift */,
+				70AE2507216424BB00DC6907 /* Settings */,
+				70AE24FE2161EA8100DC6907 /* AllProducts */,
 				7080AC8821113BED006C2B60 /* LipstickDetail */,
 				7080AC8721113BD4006C2B60 /* Catagories */,
+				70AE25022161ECD800DC6907 /* Colourboard */,
+				70AE25012161ECB100DC6907 /* Favorite */,
 				709FDF45210ECF55000604C3 /* Brands */,
 				709FDF18210EC5B1000604C3 /* Main.storyboard */,
+				70AE24FC2161E6A800DC6907 /* mainTab.swift */,
 				709FDF1E210EC5B1000604C3 /* Assets.xcassets */,
 				709FDF20210EC5B1000604C3 /* LaunchScreen.storyboard */,
 				709FDF23210EC5B1000604C3 /* Info.plist */,
+				70AE24F621601C8500DC6907 /* GoogleService-Info.plist */,
 				709FDF1B210EC5B1000604C3 /* Lipstick.xcdatamodeld */,
 			);
 			path = Lipstick;
@@ -194,6 +212,38 @@
 			path = Brands;
 			sourceTree = "<group>";
 		};
+		70AE24FE2161EA8100DC6907 /* AllProducts */ = {
+			isa = PBXGroup;
+			children = (
+				70AE24FF2161EAB000DC6907 /* AllLipsticksVC.swift */,
+			);
+			path = AllProducts;
+			sourceTree = "<group>";
+		};
+		70AE25012161ECB100DC6907 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				70AE25052161ED0800DC6907 /* FavoriteVC.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		70AE25022161ECD800DC6907 /* Colourboard */ = {
+			isa = PBXGroup;
+			children = (
+				70AE25032161ECF600DC6907 /* ColourboardVC.swift */,
+			);
+			path = Colourboard;
+			sourceTree = "<group>";
+		};
+		70AE2507216424BB00DC6907 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				70AE2508216424D300DC6907 /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B4E783EE85046A80AC27AB6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +266,6 @@
 				709FDF0E210EC5B1000604C3 /* Frameworks */,
 				709FDF0F210EC5B1000604C3 /* Resources */,
 				968664374BA85CC216CC495D /* [CP] Embed Pods Frameworks */,
-				B0356E290379949B19600D8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,8 +284,6 @@
 				709FDF24210EC5B1000604C3 /* Sources */,
 				709FDF25210EC5B1000604C3 /* Frameworks */,
 				709FDF26210EC5B1000604C3 /* Resources */,
-				1C7B6A5B1A85D4B84E34E380 /* [CP] Embed Pods Frameworks */,
-				E0DBA97FB989A2BDFBE13780 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,8 +303,6 @@
 				709FDF2F210EC5B1000604C3 /* Sources */,
 				709FDF30210EC5B1000604C3 /* Frameworks */,
 				709FDF31210EC5B1000604C3 /* Resources */,
-				CDBD3AF63E50C1D80EF14F2B /* [CP] Embed Pods Frameworks */,
-				F63065CB38056D3A2A70397D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709FDF22210EC5B1000604C3 /* LaunchScreen.storyboard in Resources */,
+				70AE24F721601C8500DC6907 /* GoogleService-Info.plist in Resources */,
 				709FDF1F210EC5B1000604C3 /* Assets.xcassets in Resources */,
 				709FDF1A210EC5B1000604C3 /* Main.storyboard in Resources */,
 			);
@@ -379,21 +425,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1C7B6A5B1A85D4B84E34E380 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		968664374BA85CC216CC495D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,37 +435,32 @@
 				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DAOSearchBar/DAOSearchBar.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/YetAnotherAnimationLibrary/YetAnotherAnimationLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DAOSearchBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YetAnotherAnimationLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0356E290379949B19600D8A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C91A9FC394CD1206E9459C62 /* [CP] Check Pods Manifest.lock */ = {
@@ -455,51 +481,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CDBD3AF63E50C1D80EF14F2B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E0DBA97FB989A2BDFBE13780 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F63065CB38056D3A2A70397D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LipstickUITests/Pods-LipstickUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -509,11 +490,16 @@
 			files = (
 				709FDF1D210EC5B1000604C3 /* Lipstick.xcdatamodeld in Sources */,
 				709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */,
+				70AE25062161ED0800DC6907 /* FavoriteVC.swift in Sources */,
 				709FDF47210ECFDC000604C3 /* BrandCollectionViewCell.swift in Sources */,
 				709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */,
+				70AE2509216424D300DC6907 /* SettingsVC.swift in Sources */,
+				70AE25002161EAB000DC6907 /* AllLipsticksVC.swift in Sources */,
+				70AE24FD2161E6A800DC6907 /* mainTab.swift in Sources */,
 				7080ACDB21187F2A006C2B60 /* WobbleAnimator.swift in Sources */,
 				7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */,
 				7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */,
+				70AE25042161ECF600DC6907 /* ColourboardVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,7 +670,7 @@
 				DEVELOPMENT_TEAM = 5GKJXKA9NC;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = joylink.Lipstick;
+				PRODUCT_BUNDLE_IDENTIFIER = lipcolourpool.Lipstick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -700,7 +686,7 @@
 				DEVELOPMENT_TEAM = 5GKJXKA9NC;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = joylink.Lipstick;
+				PRODUCT_BUNDLE_IDENTIFIER = lipcolourpool.Lipstick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
