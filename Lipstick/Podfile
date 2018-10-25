@@ -10,7 +10,7 @@ target 'Lipstick' do
   pod 'DAOSearchBar', '~> 1.2.5'
   pod 'Firebase/Core'
   pod 'ReactiveCocoa', '~> 7.0'
-
+  pod 'expanding-collection'
 
   # Pods for Lipstick
 

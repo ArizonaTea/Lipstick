@@ -1,6 +1,7 @@
 PODS:
   - CollectionKit (2.0.1)
   - DAOSearchBar (1.2.5)
+  - expanding-collection (2.1.1)
   - Firebase/Core (5.6.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.1.1)
@@ -66,6 +67,7 @@ PODS:
 DEPENDENCIES:
   - CollectionKit
   - DAOSearchBar (~> 1.2.5)
+  - expanding-collection
   - Firebase/Core
   - PINRemoteImage
   - ReactiveCocoa (~> 7.0)
@@ -75,6 +77,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CollectionKit
     - DAOSearchBar
+    - expanding-collection
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -93,6 +96,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CollectionKit: c891976ede4e800e2102333df310edc06d8430f4
   DAOSearchBar: 2f731940dd353de111512012d331cc48eae28dde
+  expanding-collection: 9fde61f3b4e3e014578ea2dff9438b1a925a7fdb
   Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseCore: cb9ee75e0894def766167c95a4d5a14b1c138269
@@ -108,6 +112,6 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   YetAnotherAnimationLibrary: 3cb3e784cf1b4305095e0ef2c57965eb1b51b1c6
 
-PODFILE CHECKSUM: f6d16e7d847141ddccc987cb201b6a721f12128b
+PODFILE CHECKSUM: bc9c4fcfac565b5bcb8297f155659e8de37ca9c7
 
 COCOAPODS: 1.5.3
