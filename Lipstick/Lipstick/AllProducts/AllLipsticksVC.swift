@@ -36,6 +36,11 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return s[section]
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc1 = storyboard.instantiateViewController(withIdentifier: "LipstickDetailController")
+        self.present(vc1, animated: true, completion: nil)
+    }
     
 
     /*

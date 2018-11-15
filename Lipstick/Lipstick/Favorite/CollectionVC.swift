@@ -1,14 +1,14 @@
 //
-//  CatagoriesController.swift
+//  CollectionVC.swift
 //  Lipstick
 //
-//  Created by Marvin on 7/31/18.
+//  Created by Marvin on 11/14/18.
 //  Copyright © 2018 joylink. All rights reserved.
 //
 
 import UIKit
 
-class CatagoriesController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -17,20 +17,9 @@ class CatagoriesController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.dataSource = self;
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    
-    @IBAction func didTapDone(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "catagoryCell")
+        var cell : UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "LipstickCell")
         
         cell?.textLabel?.text = "Some lipstick"
         return cell!
@@ -45,7 +34,7 @@ class CatagoriesController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let s = ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"]
+        let s = ["Brand 1", "Brand 2", "Brand 3", "Brand 4", "Brand 5"]
         return s[section]
     }
     
@@ -60,7 +49,7 @@ class CatagoriesController: UIViewController, UITableViewDataSource, UITableView
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
+        // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
     */

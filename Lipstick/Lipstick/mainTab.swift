@@ -17,7 +17,7 @@ class mainTab: UITabBarController, UITabBarControllerDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc1 = storyboard.instantiateViewController(withIdentifier: "BrandController")
-        let vc2 = storyboard.instantiateViewController(withIdentifier: "FavoriteVC")
+        let vc2 = storyboard.instantiateViewController(withIdentifier: "CollectionVC")
         let vc3 = storyboard.instantiateViewController(withIdentifier: "ColourboardVC")
         self.viewControllers = [vc1, vc2, vc3]
         let tabBarItems = tabBar.items! as [UITabBarItem]
