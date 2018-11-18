@@ -9,8 +9,11 @@
 import UIKit
 import CollectionKit
 import DAOSearchBar
+import Firebase
+import FirebaseDatabase
 
 var brandsurl:[String] = ["Dior", "Chanel"]
+
 
 
 
@@ -66,39 +69,59 @@ class brandCell: UIView {
 class BrandController: UIViewController{
     @IBOutlet weak var collectionView: CollectionView!
     @IBOutlet weak var logoBackground: UIImageView!
+    var ref: DatabaseReference!
+    
     var searchBarDestinationFrame = CGRect.zero
     var daoSearch: DAOSearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Mac"),brandCellObject(name: "KatVonD"),brandCellObject(name: "TomFord"),brandCellObject(name: "Stila"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
-                return String(index)
-        })
-        let viewSource = ClosureViewSource(viewUpdater: { (view: brandCell, data: brandCellObject, index: Int) in
-            view.populate(brandName: data)
-        })
-        
-        let sizeSource = { (index: Int, data: brandCellObject, collectionSize: CGSize) -> CGSize in
-            let ratio = (UIImage(named: data.name)?.size.height)! / (UIImage(named: data.name)?.size.width)!
-            let width = self.collectionView.frame.size.width / 2 - 20
-            return CGSize(width: width, height: width * ratio)
-        }
-        
-        let provider = BasicProvider(
-            dataSource: dataSource,
-            viewSource: viewSource,
-            sizeSource: sizeSource,
-            animator: WobbleAnimator(),
-            tapHandler: { [weak self] context in
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CatagoriesController") as? CatagoriesController
-                self?.present(vc!, animated: true, completion: nil)
+        ref = Database.database().reference()
+        ref.observe(DataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            let dataSource = ArrayDataSource<brandCellObject>()
+            for i in 0..<5 {
+                for (key, value) in postDict {
+                    dataSource.data.append(brandCellObject(name: key))
+                }
             }
-        )
-        provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)
-        collectionView.provider = provider
-        collectionView.contentInset = UIEdgeInsets(top: 90, left: 0, bottom: 40, right: 0)
-        collectionView.delegate = self
-        self.daoSearch = DAOSearchBar.init(frame: CGRect(x: self.view.frame.width - 53, y: 20, width: 45, height: 45))
+//            dataSource.identifierMapper: { (index； Int, data； bandCellObject) in
+//                return String(index)
+//            }
+//
+//            let dataSource = ArrayDataSource(data: [brandCellObject(name: "Chanel1"),brandCellObject(name: "Dior"),brandCellObject(name: "Mac"),brandCellObject(name: "KatVonD"),brandCellObject(name: "TomFord"),brandCellObject(name: "Stila"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior"),brandCellObject(name: "Chanel"),brandCellObject(name: "Dior")], identifierMapper: { (index: Int, data: brandCellObject) in
+//                return String(index)
+//            })
+            
+            let viewSource = ClosureViewSource(viewUpdater: { (view: brandCell, data: brandCellObject, index: Int) in
+                view.populate(brandName: data)
+            })
+            
+            let sizeSource = { (index: Int, data: brandCellObject, collectionSize: CGSize) -> CGSize in
+                let ratio = (UIImage(named: data.name)?.size.height)! / (UIImage(named: data.name)?.size.width)!
+                let width = self.collectionView.frame.size.width / 2 - 20
+                return CGSize(width: width, height: width * ratio)
+            }
+            
+            let provider = BasicProvider(
+                dataSource: dataSource,
+                viewSource: viewSource,
+                sizeSource: sizeSource,
+                animator: WobbleAnimator(),
+                tapHandler: { [weak self] context in
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CatagoriesController") as? CatagoriesController
+                    vc?.brand = context.data.name
+                    self?.present(vc!, animated: true, completion: nil)
+                }
+            )
+            provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)
+            self.collectionView.provider = provider
+            self.collectionView.contentInset = UIEdgeInsets(top: 90, left: 0, bottom: 40, right: 0)
+            self.collectionView.delegate = self
+        })
+        
+        let keyWindow = UIApplication.shared.delegate!.window;
+        self.daoSearch = DAOSearchBar.init(frame: CGRect(x: self.view.frame.width - 53, y: 30 + keyWindow!!.safeAreaInsets.top , width: 40, height: 40))
         self.daoSearch.searchOffColor = UIColor.white
         self.daoSearch.searchOnColor = UIColor.darkGray
         self.daoSearch.searchBarOffColor = UIColor.darkGray
@@ -125,16 +148,16 @@ class BrandController: UIViewController{
         let progress = tween(offset: -collectionView.contentOffset.y, start: 75, end: 0)
         let clamped = min(1, max(0, progress))
         let backgroundRect = mix(progress: clamped,
-                                 start: CGRect(x: 20, y: 0, width: bounds.width - 40, height: 75),
+                                 start: CGRect(x: 20, y: 50, width: bounds.width - 40, height: 75),
                                  end: CGRect(x: 0, y: 0, width: bounds.width, height: 75))
         if clamped != 1.0 {
             if progress < 0.99 {
                 logoBackground.image = UIImage(named: "Metron")
             }
             logoBackground.frame = CGRect(x: backgroundRect.minX,
-                                            y: backgroundRect.minY + -progress * 10,
+                                            y: UIApplication.shared.keyWindow!.safeAreaInsets.top,
                                             width: backgroundRect.width,
-                                            height: backgroundRect.height + -progress * 40)
+                                            height: backgroundRect.height + -progress * 35)
             logoBackground.autoresizesSubviews = true
             if self.daoSearch.state == DAOSearchBarState.searchBarVisible {
                 self.daoSearch.changeStateIfPossible()
@@ -147,7 +170,7 @@ class BrandController: UIViewController{
             logoBackground.frame = CGRect(x: backgroundRect.minX,
                                           y: backgroundRect.minY - 10,
                                           width: backgroundRect.width,
-                                          height: backgroundRect.height)
+                                          height: backgroundRect.height + UIApplication.shared.keyWindow!.safeAreaInsets.top / 1.5)
             logoBackground.autoresizesSubviews = true
             if self.daoSearch.state == DAOSearchBarState.normal {
                 self.daoSearch.changeStateIfPossible()
@@ -162,7 +185,7 @@ class BrandController: UIViewController{
 extension BrandController: DAOSearchBarDelegate {
     // MARK: SearchBar Delegate
     func destinationFrameForSearchBar(_ searchBar: DAOSearchBar) -> CGRect {
-        return CGRect(x: 8, y: 15, width: self.view.bounds.width - 16, height: max(45,(self.logoBackground.frame.height - 30)))
+        return CGRect(x: 8, y: UIApplication.shared.keyWindow!.safeAreaInsets.top, width: self.view.bounds.width - 16, height: min(45,(self.logoBackground.frame.height - 30)))
     }
     
     func searchBar(_ searchBar: DAOSearchBar, willStartTransitioningToState destinationState: DAOSearchBarState) {

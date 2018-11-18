@@ -7,6 +7,9 @@ PODS:
     - FirebaseAnalytics (= 5.1.1)
   - Firebase/CoreOnly (5.6.0):
     - FirebaseCore (= 5.1.1)
+  - Firebase/Database (5.6.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.2)
   - FirebaseAnalytics (5.1.1):
     - FirebaseCore (~> 5.1)
     - FirebaseInstanceID (~> 3.2)
@@ -18,6 +21,9 @@ PODS:
     - nanopb (~> 0.3)
   - FirebaseCore (5.1.1):
     - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseDatabase (5.0.2):
+    - FirebaseCore (~> 5.0)
+    - leveldb-library (~> 1.18)
   - FirebaseInstanceID (3.2.1):
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.2)
@@ -44,6 +50,7 @@ PODS:
   - "GoogleUtilities/NSData+zlib (5.2.2)"
   - GoogleUtilities/Reachability (5.2.2):
     - GoogleUtilities/Logger
+  - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -62,6 +69,7 @@ PODS:
   - ReactiveSwift (3.1.0):
     - Result (~> 3.2)
   - Result (3.2.4)
+  - UIEmptyState (3.2.0)
   - YetAnotherAnimationLibrary (1.2.0)
 
 DEPENDENCIES:
@@ -69,8 +77,10 @@ DEPENDENCIES:
   - DAOSearchBar (~> 1.2.5)
   - expanding-collection
   - Firebase/Core
+  - Firebase/Database
   - PINRemoteImage
   - ReactiveCocoa (~> 7.0)
+  - UIEmptyState
   - YetAnotherAnimationLibrary
 
 SPEC REPOS:
@@ -81,16 +91,19 @@ SPEC REPOS:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
+    - FirebaseDatabase
     - FirebaseInstanceID
     - FLAnimatedImage
     - GoogleAppMeasurement
     - GoogleUtilities
+    - leveldb-library
     - nanopb
     - PINCache
     - PINRemoteImage
     - ReactiveCocoa
     - ReactiveSwift
     - Result
+    - UIEmptyState
     - YetAnotherAnimationLibrary
 
 SPEC CHECKSUMS:
@@ -100,18 +113,21 @@ SPEC CHECKSUMS:
   Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseCore: cb9ee75e0894def766167c95a4d5a14b1c138269
+  FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   ReactiveCocoa: 476dae7ca790f40d30d186a1bd7ebae4290395d5
   ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  UIEmptyState: cc6ff21e9f1a42e5795bd6b08dcaa1f5ec61d33c
   YetAnotherAnimationLibrary: 3cb3e784cf1b4305095e0ef2c57965eb1b51b1c6
 
-PODFILE CHECKSUM: bc9c4fcfac565b5bcb8297f155659e8de37ca9c7
+PODFILE CHECKSUM: 4691d81737b8af8469d41e8b16bece1f729dd597
 
 COCOAPODS: 1.5.3

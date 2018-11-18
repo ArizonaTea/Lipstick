@@ -7,15 +7,47 @@
 //
 
 import UIKit
+import UIEmptyState
 
-class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Set the initial state of the tableview, called here because cells should be done loading by now
+        // Number of cells are used to determine if the view should be shown or not
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
+//        self.tableView.delegate = self;
+//        self.tableView.dataSource = self;
         // Do any additional setup after loading the view.
+        
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
+        // Optionally remove seperator lines from empty cells
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        self.reloadEmptyStateForTableView(self.tableView)
+    }
+    
+    var emptyStateTitle: NSAttributedString {
+        let attrs = [NSAttributedString.Key.foregroundColor: UIColor(red: 0.882, green: 0.890, blue: 0.859, alpha: 1.00),
+                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22)]
+        return NSAttributedString(string: "No favorite yet!", attributes: attrs)
+    }
+    
+    var emptyStateButtonTitle: NSAttributedString? {
+        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+        return NSAttributedString(string: "Catch'em All", attributes: attrs)
+    }
+    
+    var emptyStateImage: UIImage? {
+        return UIImage(named: "all")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

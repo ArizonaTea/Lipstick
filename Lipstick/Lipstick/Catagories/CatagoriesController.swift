@@ -7,14 +7,48 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class CatagoriesController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    var brand: String!
+    var ref: DatabaseReference!
+    var series: Array<String>!
+    var dic: Dictionary<String,  Array<String>>!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
+        ref = Database.database().reference().child(brand).child("Series")
+        series = Array()
+        dic = Dictionary()
+        ref.observe(DataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as! [String : Dictionary<String, Any>]
+            
+            for key in postDict.keys {
+                self.series.append(key)
+                for (k, v) in postDict[key]! {
+                    if k as! String == "Discription" {
+                        
+                    } else if k as! String == "RefNumber" {
+                        
+                    } else {
+                        let pdic = v as! NSDictionary
+                        if self.dic[key] == nil {
+                            self.dic[key] = []
+                        }
+                        self.dic[key]?.append(pdic.object(forKey: "Name") as! String)
+                    }
+                }
+                
+//                    self.dic[key]!.append(v["Name"])
+                
+                
+            }
+            self.tableView.reloadData()
+        })
         // Do any additional setup after loading the view.
     }
 
@@ -32,21 +66,26 @@ class CatagoriesController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell : UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "catagoryCell")
         
-        cell?.textLabel?.text = "Some lipstick"
+        let dic = self.dic![self.series[indexPath.section]]
+        
+        let intIndex = indexPath.row // where intIndex < myDictionary.count
+        
+        cell?.textLabel?.text = self.dic[self.series[indexPath.section]]?[indexPath.row]
         return cell!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return self.series.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        let seriesName = self.series[section] as! String
+        let arr = self.dic[seriesName]
+        return arr!.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let s = ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"]
-        return s[section]
+        return self.series?[section] as! String
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

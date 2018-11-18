@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A07681DBAA05C95180BE374BDBE9D2F6"
+               BlueprintIdentifier = "080B09EB2D12EE0A7B98014CCD3FD88F"
                BuildableName = "Pods_Lipstick.framework"
                BlueprintName = "Pods-Lipstick"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A07681DBAA05C95180BE374BDBE9D2F6"
+            BlueprintIdentifier = "080B09EB2D12EE0A7B98014CCD3FD88F"
             BuildableName = "Pods_Lipstick.framework"
             BlueprintName = "Pods-Lipstick"
             ReferencedContainer = "container:Pods.xcodeproj">
