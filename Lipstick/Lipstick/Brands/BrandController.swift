@@ -11,12 +11,8 @@ import CollectionKit
 import DAOSearchBar
 import Firebase
 import FirebaseDatabase
-
+import SwiftyJSON
 var brandsurl:[String] = ["Dior", "Chanel"]
-
-
-
-
 struct brandCellObject: Codable {
     let name: String
 }
@@ -78,7 +74,30 @@ class BrandController: UIViewController{
         
         ref = Database.database().reference()
         ref.observe(DataEventType.value, with: { (snapshot) in
+            
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            let json = JSON(postDict)
+            let str = json.description
+            
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                
+                let fileURL = dir.appendingPathComponent("Firebase")
+                
+                //writing
+                do {
+                    try str.write(to: fileURL, atomically: false, encoding: .utf8)
+                }
+                catch {/* error handling here */}
+                
+                //reading
+                do {
+                    let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                }
+                catch {/* error handling here */}
+            }
+           
+            
             let dataSource = ArrayDataSource<brandCellObject>()
             for i in 0..<5 {
                 for (key, value) in postDict {

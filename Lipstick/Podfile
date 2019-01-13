@@ -13,6 +13,9 @@ target 'Lipstick' do
   pod 'ReactiveCocoa', '~> 7.0'
   pod 'expanding-collection'
   pod 'UIEmptyState'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'FaveButton'
   # Pods for Lipstick
 
   target 'LipstickTests' do

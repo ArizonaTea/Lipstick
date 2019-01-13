@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "733B62FD55D70893DBC7A0FEB859A738"
+               BlueprintIdentifier = "8D8F7AC711C00036C492F1EFCF288B93"
                BlueprintName = "UIEmptyState"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "UIEmptyState.framework">

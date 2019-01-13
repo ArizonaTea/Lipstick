@@ -2,6 +2,7 @@ PODS:
   - CollectionKit (2.0.1)
   - DAOSearchBar (1.2.5)
   - expanding-collection (2.1.1)
+  - FaveButton (2.0.3)
   - Firebase/Core (5.6.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.1.1)
@@ -69,6 +70,10 @@ PODS:
   - ReactiveSwift (3.1.0):
     - Result (~> 3.2)
   - Result (3.2.4)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SwiftyJSON (4.1.0)
   - UIEmptyState (3.2.0)
   - YetAnotherAnimationLibrary (1.2.0)
 
@@ -76,10 +81,13 @@ DEPENDENCIES:
   - CollectionKit
   - DAOSearchBar (~> 1.2.5)
   - expanding-collection
+  - FaveButton
   - Firebase/Core
   - Firebase/Database
   - PINRemoteImage
   - ReactiveCocoa (~> 7.0)
+  - SDWebImage (~> 4.0)
+  - SwiftyJSON (~> 4.0)
   - UIEmptyState
   - YetAnotherAnimationLibrary
 
@@ -88,6 +96,7 @@ SPEC REPOS:
     - CollectionKit
     - DAOSearchBar
     - expanding-collection
+    - FaveButton
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -103,6 +112,8 @@ SPEC REPOS:
     - ReactiveCocoa
     - ReactiveSwift
     - Result
+    - SDWebImage
+    - SwiftyJSON
     - UIEmptyState
     - YetAnotherAnimationLibrary
 
@@ -110,6 +121,7 @@ SPEC CHECKSUMS:
   CollectionKit: c891976ede4e800e2102333df310edc06d8430f4
   DAOSearchBar: 2f731940dd353de111512012d331cc48eae28dde
   expanding-collection: 9fde61f3b4e3e014578ea2dff9438b1a925a7fdb
+  FaveButton: cfcbc5e73da159c4f916613da5687357b5bb4783
   Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseCore: cb9ee75e0894def766167c95a4d5a14b1c138269
@@ -125,9 +137,11 @@ SPEC CHECKSUMS:
   ReactiveCocoa: 476dae7ca790f40d30d186a1bd7ebae4290395d5
   ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   UIEmptyState: cc6ff21e9f1a42e5795bd6b08dcaa1f5ec61d33c
   YetAnotherAnimationLibrary: 3cb3e784cf1b4305095e0ef2c57965eb1b51b1c6
 
-PODFILE CHECKSUM: 4691d81737b8af8469d41e8b16bece1f729dd597
+PODFILE CHECKSUM: ef885c9527d0fb188217c66275c23d14c079c0d3
 
 COCOAPODS: 1.5.3

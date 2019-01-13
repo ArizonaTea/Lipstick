@@ -30,8 +30,8 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.emptyStateDelegate = self
         // Optionally remove seperator lines from empty cells
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-        
         self.reloadEmptyStateForTableView(self.tableView)
+
     }
     
     var emptyStateTitle: NSAttributedString {

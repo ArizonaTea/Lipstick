@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import SDWebImage
 
 class LipstickDetailController: UIViewController {
-
+    var lipStickName: String!
+    var price: String!
+    var priceUnit: String!
+    var desc: String!
+    var imge: String!
+    var colors: Array<String>!
+    var refNum: String!
+    var disPlaySticks: Dictionary<String, NSMutableArray>? = [:]
+    
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageLipstick: UIImageView!
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var textViewDesc: UITextView!
+    @IBOutlet weak var imageColor: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imageColor.sd_setImage(with: URL(string: colors[0]), placeholderImage: UIImage(named: "Placeholder"))
+        imageLipstick.sd_setImage(with: URL(string: imge), placeholderImage: UIImage(named: "Placeholder"))
+        self.labelName.text = lipStickName
+        self.textViewDesc.text = desc
+        self.labelPrice.text = "$" + "\(price!)"
     }
 
     override func didReceiveMemoryWarning() {
