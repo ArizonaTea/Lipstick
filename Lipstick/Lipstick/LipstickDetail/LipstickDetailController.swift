@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import FaveButton
 
 class LipstickDetailController: UIViewController {
     var lipStickName: String!
@@ -19,6 +20,7 @@ class LipstickDetailController: UIViewController {
     var refNum: String!
     var disPlaySticks: Dictionary<String, NSMutableArray>? = [:]
     
+    @IBOutlet weak var btnLike: FaveButton!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageLipstick: UIImageView!
     @IBOutlet weak var labelPrice: UILabel!
@@ -32,6 +34,15 @@ class LipstickDetailController: UIViewController {
         self.labelName.text = lipStickName
         self.textViewDesc.text = desc
         self.labelPrice.text = "$" + "\(price!)"
+        
+        let defaults = UserDefaults.standard
+        var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
+        let list = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum]}
+        if list == array {
+            btnLike.isSelected = false
+        } else {
+            btnLike.isSelected = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +54,16 @@ class LipstickDetailController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func didTapLike(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
+        if(btnLike.isSelected) {
+            array.append([lipStickName, price, priceUnit, desc, imge, refNum]);
+        } else {
+            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum]}
+        }
+        defaults.set(array, forKey: "LikedLipsticks")
+    }
     /*
     // MARK: - Navigation
 
