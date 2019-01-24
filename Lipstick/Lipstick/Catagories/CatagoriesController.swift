@@ -20,7 +20,7 @@ class CatagoriesController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        
+        self.definesPresentationContext = true
         ref = Database.database().reference().child(brand).child("Series")
         series = Array()
         dic = Dictionary()

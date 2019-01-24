@@ -19,6 +19,11 @@ class mainTab: UITabBarController, UITabBarControllerDelegate {
         let vc1 = storyboard.instantiateViewController(withIdentifier: "BrandController")
         let vc2 = storyboard.instantiateViewController(withIdentifier: "CollectionVC")
         let vc3 = storyboard.instantiateViewController(withIdentifier: "ColourboardVC")
+        
+//        let navController1 = UINavigationController(rootViewController: vc!)
+//        let navController1 = UINavigationController(rootViewController: vc!)
+//        let navController1 = UINavigationController(rootViewController: vc!)
+
         self.viewControllers = [vc1, vc2, vc3]
         let tabBarItems = tabBar.items! as [UITabBarItem]
         tabBarItems[0].title = "Brands"

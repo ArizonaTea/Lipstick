@@ -8,15 +8,24 @@
 
 import UIKit
 import expanding_collection
-
+import SwiftyJSON
 
 class FavoriteVC: ExpandingViewController {
 
-    typealias ItemInfo = (imageName: String, title: String)
+    
+    
+    @IBAction func didTapDone(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+     
+    typealias ItemInfo = ( imageURL: String,  title: String)
     fileprivate var cellsIsOpen = [Bool]()
-    fileprivate let items: [ItemInfo] = [("item0", "Boston"), ("item1", "New York"), ("item2", "San Francisco"), ("item3", "Washington")]
+    fileprivate var items: [ItemInfo] = []
 
     @IBOutlet var pageLabel: UILabel!
+    var brand: String!
+    
+    
 }
 
 // MARK: - Lifecycle 🌎
@@ -26,12 +35,48 @@ extension FavoriteVC {
     override func viewDidLoad() {
         itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
-
+        loadSeries()
         registerCell()
         fillCellIsOpenArray()
         addGesture(to: collectionView!)
         configureNavBar()
     }
+    
+    func loadSeries() {
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent("Firebase")
+            //reading
+            do {
+                self.items.removeAll()
+                let jsonString = try String(contentsOf: fileURL, encoding: .utf8)
+                if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+                    let json = try JSON(data: dataFromString) as JSON
+                    let dic = json.dictionary
+                    for key in (dic?.keys)! {
+                        if key != self.brand {
+                            continue
+                        }
+                        var series = dic![key]!["Series"]
+                        for val in series {
+                            let dval = val.1
+                            for lip in dval {
+                                if lip.0 == "Discription" || lip.0 == "RefNumber" {
+                                    continue
+                                }
+                                let url = lip.1["Product Image"].rawString()
+                                self.items.append(( url ?? "", val.0))
+                                break
+                            }
+                        }
+                    }
+                }
+            }
+            catch  {/* error handling here */}
+        }
+    }
+    
 }
 
 // MARK: Helpers
@@ -49,8 +94,14 @@ extension FavoriteVC {
     }
 
     fileprivate func getViewController() -> ExpandingTableViewController {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "favoriteTBC") as? favoriteTBC
-        return vc!
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let toViewController: favoriteTBC = storyboard.instantiateViewController(withIdentifier: "favoriteTBC") as! favoriteTBC
+        return toViewController
+//
+//
+//        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteTBC") as? favoriteTBC
+//        return vc!
     }
 
     fileprivate func configureNavBar() {
@@ -116,7 +167,8 @@ extension FavoriteVC {
 
         let index = indexPath.row % items.count
         let info = items[index]
-        cell.backgroundImageView?.image = UIImage(named: info.imageName)
+        
+        cell.backgroundImageView.sd_setImage(with: URL(string: info.imageURL), placeholderImage: UIImage(named: "Placeholder"))
         cell.customTitle.text = info.title
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }

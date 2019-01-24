@@ -64,7 +64,6 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
                         if self.disPlaySticks?[key] == nil {
                             self.disPlaySticks?[key] = NSMutableArray()
                         }
-                        
                         var series = dic![key]!["Series"]
                         for val in series {
                             let dval = val.1
@@ -74,13 +73,7 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
                                 }
                                 self.allLipSticks?[key]?.add(lip.1)
                                 self.disPlaySticks?[key]?.add(lip.1)
-//                                self.allLipSticks?[key]?.add(lip)
-//                                self.disPlaySticks?[key]?.add(lip)
                             }
-//                            for lipstick in val{
-//                                self.allLipSticks?[key]?.add(lipstick)
-//                                self.disPlaySticks?[key]?.add(lipstick)
-//                            }
                         }
                     }
                 }

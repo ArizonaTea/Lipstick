@@ -128,9 +128,15 @@ class BrandController: UIViewController{
                 sizeSource: sizeSource,
                 animator: WobbleAnimator(),
                 tapHandler: { [weak self] context in
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CatagoriesController") as? CatagoriesController
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FavoriteVC") as? FavoriteVC
                     vc?.brand = context.data.name
-                    self?.present(vc!, animated: true, completion: nil)
+                    self?.definesPresentationContext = true
+                    
+                    let navController1 = UINavigationController(rootViewController: vc!)
+                    navController1.modalPresentationStyle = .overCurrentContext
+                    self?.present(navController1, animated: true, completion: nil)
+                    
+                    
                 }
             )
             provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)
