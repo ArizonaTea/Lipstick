@@ -9,6 +9,7 @@
 import UIKit
 import expanding_collection
 import SwiftyJSON
+import SDWebImage
 
 import UIKit
 
@@ -57,8 +58,7 @@ class favoriteTBC: ExpandingTableViewController {
 
                                 
                                 self.allLipSticks?.append([lip.1["Name"].rawString() ?? "", lip.1["Price"].rawString() ?? "", lip.1["Price Unit"].rawString() ?? "", lip.1["Discription"].rawString() ?? "", lip.1["Product Image"].rawString() ?? "", lip.1["Colour Image"].rawString() ?? "", lip.1["Colour Code"].rawString() ?? ""])
-//                                self.allLipSticks?.append([lip.5, lip.0, lip.1, lip.3, lip.5, lip.2])
-                                print(lip)
+
                             }
                         }
                     }
@@ -66,6 +66,7 @@ class favoriteTBC: ExpandingTableViewController {
             }
             catch {/* error handling here */}
         }
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,11 +77,23 @@ class favoriteTBC: ExpandingTableViewController {
         return self.allLipSticks?.count ?? 0
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "TBCCell") as? TBCCell
+        cell?.productImg.sd_setImage(with: URL(string: self.allLipSticks?[indexPath.row][4] ?? ""), placeholderImage: UIImage(named: "Placeholder"))
+        cell?.labelName.text = self.allLipSticks?[indexPath.row][0]
+//        cell!.textLabel!.text = data[indexPath.row]
+        
+        return cell!
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         configureNavBar()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 263
     }
 }
 
