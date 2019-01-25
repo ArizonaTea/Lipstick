@@ -33,12 +33,16 @@ extension FavoriteVC {
     override func viewDidLoad() {
         itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         loadSeries()
         registerCell()
         fillCellIsOpenArray()
         addGesture(to: collectionView!)
         configureNavBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func loadSeries() {
@@ -99,6 +103,7 @@ extension FavoriteVC {
         let indexPath = IndexPath(row: currentIndex, section: 0)
         toViewController.styleNumber = self.items[indexPath.row].1
         toViewController.brandName = self.brand
+        
         return toViewController
 //
 //

@@ -110,7 +110,7 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         vc1.priceUnit = json["Price Unit"].rawString()
         vc1.desc = json["Discription"].rawString()
         vc1.imge = json["Product Image"].rawString()
-        vc1.colors = [json["Colour Image"].rawString()] as! Array<String>
+        vc1.colors = json["Colour Image"].rawString()
         vc1.refNum = json["Ref Number"].rawString()
         self.present(vc1, animated: true, completion: nil)
     }

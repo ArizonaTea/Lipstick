@@ -90,7 +90,7 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         vc1.priceUnit = likelipsticks[2][0]
         vc1.desc = likelipsticks[3][0]
         vc1.imge = likelipsticks[4][0]
-        vc1.colors = []
+        vc1.colors = likelipsticks[6][0]
         vc1.refNum = likelipsticks[5][0]
         self.present(vc1, animated: true, completion: nil)
     }

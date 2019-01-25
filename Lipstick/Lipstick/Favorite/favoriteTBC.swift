@@ -8,23 +8,79 @@
 
 import UIKit
 import expanding_collection
+import SwiftyJSON
 
 import UIKit
 
 class favoriteTBC: ExpandingTableViewController {
     
-    @IBOutlet weak var btnBack: AnimatingBarButton!
     
     var brandName: String = ""
     var styleNumber: String = ""
+    var allLipSticks: Array<Array<String>>? = []
+    
     fileprivate var scrollOffsetY: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavBar()
-        
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
+        
+        loadProducts()
+    }
+    
+    fileprivate func loadProducts() {
+        self.allLipSticks?.removeAll()
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent("Firebase")
+            //reading
+            do {
+                self.allLipSticks?.removeAll()
+                let jsonString = try String(contentsOf: fileURL, encoding: .utf8)
+                if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+                    let json = try JSON(data: dataFromString) as JSON
+                    let dic = json.dictionary
+                    for key in (dic?.keys)! {
+                        if key != self.brandName {
+                            continue
+                        }
+                        var series = dic![key]!["Series"]
+                        for val in series {
+                            if val.0 != self.styleNumber {
+                                continue
+                            }
+                            let dval = val.1
+                            for lip in dval {
+                                if lip.0 == "Discription" || lip.0 == "RefNumber" {
+                                    continue
+                                }
+
+                                
+                                self.allLipSticks?.append([lip.1["Name"].rawString() ?? "", lip.1["Price"].rawString() ?? "", lip.1["Price Unit"].rawString() ?? "", lip.1["Discription"].rawString() ?? "", lip.1["Product Image"].rawString() ?? "", lip.1["Colour Image"].rawString() ?? "", lip.1["Colour Code"].rawString() ?? ""])
+//                                self.allLipSticks?.append([lip.5, lip.0, lip.1, lip.3, lip.5, lip.2])
+                                print(lip)
+                            }
+                        }
+                    }
+                }
+            }
+            catch {/* error handling here */}
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.allLipSticks?.count ?? 0
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        configureNavBar()
     }
 }
 

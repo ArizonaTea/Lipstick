@@ -22,7 +22,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBu-IJ-On4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238.28125" y="-212.109375"/>
+            <point key="canvasLocation" x="1144.9275362318842" y="-212.77173913043481"/>
         </scene>
         <!--CollectionVC-->
         <scene sceneID="u2q-9R-eey">
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac9-iz-GaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078.90625" y="-213.28125"/>
+            <point key="canvasLocation" x="1985.5072463768117" y="-213.58695652173915"/>
         </scene>
         <!--FavoriteVC-->
         <scene sceneID="WER-sC-YRC">
@@ -101,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzi-R2-8fg">
-                                <rect key="frame" x="130" y="20" width="153" height="30"/>
+                                <rect key="frame" x="130" y="64" width="153" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ssc-a4-NTK"/>
                                 </constraints>
@@ -110,7 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-P2-a3l">
-                                <rect key="frame" x="321" y="20" width="77" height="30"/>
+                                <rect key="frame" x="321" y="64" width="77" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="8i3-ye-lT8"/>
                                     <constraint firstAttribute="height" constant="30" id="Sah-di-Nyx"/>
@@ -142,11 +142,12 @@
                     <navigationItem key="navigationItem" id="t5f-Hz-59a"/>
                     <connections>
                         <outlet property="pageLabel" destination="RoS-9C-4vC" id="DSB-yY-7wP"/>
+                        <segue destination="xfe-Bz-r3d" kind="show" id="HVy-aY-6Ff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz1-wM-BfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-582.8125" y="-213.28125"/>
+            <point key="canvasLocation" x="323.1884057971015" y="-213.58695652173915"/>
         </scene>
         <!--All LipsticksVC-->
         <scene sceneID="6Rj-fa-FQL">
@@ -197,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvH-aC-EyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5212.5" y="-232.03124999999997"/>
+            <point key="canvasLocation" x="6118.840579710145" y="-232.33695652173915"/>
         </scene>
         <!--FavoriteTBC-->
         <scene sceneID="IZK-N8-N7h">
@@ -265,20 +266,17 @@
                                 <constraint firstItem="XIM-l5-lb2" firstAttribute="centerX" secondItem="sY0-6V-Vkx" secondAttribute="centerX" id="lJ2-Q3-GGz"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="CloseButton" width="10" id="oPW-bi-dPU" customClass="AnimatingBarButton" customModule="Lipstick" customModuleProvider="target">
+                        <barButtonItem key="rightBarButtonItem" image="setting" id="oPW-bi-dPU">
                             <connections>
-                                <action selector="backButtonHandler:" destination="xfe-Bz-r3d" id="H6u-we-8NK"/>
+                                <action selector="backButtonHandler:" destination="xfe-Bz-r3d" id="Zwy-ta-A9a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="btnBack" destination="oPW-bi-dPU" id="tfJ-w0-a3h"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE8-jY-a9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-442.02898550724643" y="474.45652173913049"/>
+            <point key="canvasLocation" x="-474" y="589"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="TcW-CW-M5H">
@@ -365,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4373.4375" y="-232.03124999999997"/>
+            <point key="canvasLocation" x="5279.7101449275369" y="-232.33695652173915"/>
         </scene>
         <!--Colourboard-->
         <scene sceneID="IiQ-Sg-NRf">
@@ -494,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mF-TN-GU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6837.68115942029" y="-18.75"/>
+            <point key="canvasLocation" x="7744.9275362318849" y="-18.75"/>
         </scene>
         <!--Lipstick Detail Controller-->
         <scene sceneID="cZm-Vq-Whr">
@@ -636,35 +634,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxV-rL-K4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7500.0000000000009" y="-27.717391304347828"/>
+            <point key="canvasLocation" x="8407.246376811594" y="-27.717391304347828"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ch7-hD-wY9">
+        <scene sceneID="0hp-M9-goh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JJf-qd-fcK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="081-zd-Get" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3w-8l-jgh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hxb-UD-gwB">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xfe-Bz-r3d" kind="relationship" relationship="rootViewController" id="9yk-wo-yfg"/>
+                        <segue destination="k6h-SJ-Q9E" kind="relationship" relationship="rootViewController" id="IZZ-ja-srv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hMT-fD-W04" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjv-Yl-fwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1349.2753623188407" y="474.45652173913049"/>
+            <point key="canvasLocation" x="-584.05797101449275" y="-213.58695652173915"/>
         </scene>
     </scenes>
     <resources>
         <image name="BackgroundImage" width="750" height="1334"/>
-        <image name="CloseButton" width="16" height="16"/>
         <image name="Metron" width="375" height="75"/>
         <image name="Title" width="16" height="16"/>
         <image name="colors" width="20" height="20"/>
         <image name="heart" width="1200" height="1200"/>
         <image name="lipstickDetail" width="2000" height="2000"/>
         <image name="searchIcon" width="16" height="16"/>
+        <image name="setting" width="37.5" height="37.5"/>
     </resources>
 </document>
