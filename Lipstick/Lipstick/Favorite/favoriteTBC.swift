@@ -13,10 +13,15 @@ import UIKit
 
 class favoriteTBC: ExpandingTableViewController {
     
+    @IBOutlet weak var btnBack: AnimatingBarButton!
+    
+    var brandName: String = ""
+    var styleNumber: String = ""
     fileprivate var scrollOffsetY: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
+        
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
@@ -36,12 +41,13 @@ extension favoriteTBC {
 // MARK: Actions
 
 extension favoriteTBC {
-    
     @IBAction func backButtonHandler(_: AnyObject) {
         // buttonAnimation
-        let viewControllers: [favoriteTBC?] = navigationController?.viewControllers.map { $0 as? favoriteTBC } ?? []
         
-        for viewController in viewControllers {
+//        btnBack.animationSelected(false)
+        
+        let vcs: [favoriteTBC?] = navigationController?.viewControllers.map {$0 as? favoriteTBC} ?? []
+        for viewController in vcs {
             if let rightButton = viewController?.navigationItem.rightBarButtonItem as? AnimatingBarButton {
                 rightButton.animationSelected(false)
             }

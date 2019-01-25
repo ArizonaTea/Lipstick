@@ -29,12 +29,11 @@ class FavoriteVC: ExpandingViewController {
 }
 
 // MARK: - Lifecycle 🌎
-
 extension FavoriteVC {
-
     override func viewDidLoad() {
         itemSize = CGSize(width: 256, height: 460)
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         loadSeries()
         registerCell()
         fillCellIsOpenArray()
@@ -97,6 +96,9 @@ extension FavoriteVC {
         
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let toViewController: favoriteTBC = storyboard.instantiateViewController(withIdentifier: "favoriteTBC") as! favoriteTBC
+        let indexPath = IndexPath(row: currentIndex, section: 0)
+        toViewController.styleNumber = self.items[indexPath.row].1
+        toViewController.brandName = self.brand
         return toViewController
 //
 //

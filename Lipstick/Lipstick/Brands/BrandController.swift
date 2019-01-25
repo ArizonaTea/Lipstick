@@ -131,12 +131,9 @@ class BrandController: UIViewController{
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FavoriteVC") as? FavoriteVC
                     vc?.brand = context.data.name
                     self?.definesPresentationContext = true
-                    
                     let navController1 = UINavigationController(rootViewController: vc!)
                     navController1.modalPresentationStyle = .overCurrentContext
                     self?.present(navController1, animated: true, completion: nil)
-                    
-                    
                 }
             )
             provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)

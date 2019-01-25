@@ -66,6 +66,7 @@ public extension ExpandingViewController {
         let stausBarHeight = insets == true ? UIApplication.shared.statusBarFrame.size.height : 0
         let backImage = getBackImage(viewController, headerHeight: viewController.headerHeight)
 
+        
         transitionDriver?.pushTransitionAnimationIndex(currentIndex,
                                                        collecitionView: collectionView,
                                                        backImage: backImage,
