@@ -14,6 +14,7 @@
 		582E97AE218153FB00B226FD /* favoriteTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E97AD218153FB00B226FD /* favoriteTBC.swift */; };
 		582E97B3218155C700B226FD /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E97B0218155C700B226FD /* AnimationBarButton.swift */; };
 		582E97B4218155C700B226FD /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E97B2218155C700B226FD /* Rotatable.swift */; };
+		5893049A21FBD5250076CD20 /* AllLipsticksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893049921FBD5250076CD20 /* AllLipsticksCell.swift */; };
 		7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080AC8921117A5F006C2B60 /* CatagoriesController.swift */; };
 		7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACC621119071006C2B60 /* LipstickDetailController.swift */; };
 		7080ACDB21187F2A006C2B60 /* WobbleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACDA21187F29006C2B60 /* WobbleAnimator.swift */; };
@@ -64,6 +65,7 @@
 		582E97AD218153FB00B226FD /* favoriteTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteTBC.swift; sourceTree = "<group>"; };
 		582E97B0218155C700B226FD /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
 		582E97B2218155C700B226FD /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
+		5893049921FBD5250076CD20 /* AllLipsticksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLipsticksCell.swift; sourceTree = "<group>"; };
 		68336328352F54441C9F71E0 /* Pods-LipstickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69664916DCD62A4A1D2871D9 /* Pods-LipstickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests.release.xcconfig"; sourceTree = "<group>"; };
 		7080AC8921117A5F006C2B60 /* CatagoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				70AE24FF2161EAB000DC6907 /* AllLipsticksVC.swift */,
+				5893049921FBD5250076CD20 /* AllLipsticksCell.swift */,
 			);
 			path = AllProducts;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				70AE24FD2161E6A800DC6907 /* mainTab.swift in Sources */,
 				7080ACDB21187F2A006C2B60 /* WobbleAnimator.swift in Sources */,
 				7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */,
+				5893049A21FBD5250076CD20 /* AllLipsticksCell.swift in Sources */,
 				582E97AC217FD16000B226FD /* FavoriteVC.swift in Sources */,
 				7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */,
 				70AE25042161ECF600DC6907 /* ColourboardVC.swift in Sources */,
@@ -731,7 +735,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GKJXKA9NC;
+				DEVELOPMENT_TEAM = 822TXGJNLG;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lipcolourpool.Lipstick;
@@ -747,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GKJXKA9NC;
+				DEVELOPMENT_TEAM = 822TXGJNLG;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lipcolourpool.Lipstick;

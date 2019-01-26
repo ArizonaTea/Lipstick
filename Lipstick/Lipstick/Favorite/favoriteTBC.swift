@@ -21,6 +21,7 @@ class favoriteTBC: ExpandingTableViewController {
     var allLipSticks: Array<Array<String>>? = []
     
     fileprivate var scrollOffsetY: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 11.0, *) {
@@ -86,6 +87,29 @@ class favoriteTBC: ExpandingTableViewController {
         return cell!
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc1 = storyboard.instantiateViewController(withIdentifier: "LipstickDetailController") as! LipstickDetailController
+        vc1.lipStickName = self.allLipSticks?[indexPath.row][0]
+        vc1.price = self.allLipSticks?[indexPath.row][1]
+        vc1.priceUnit = self.allLipSticks?[indexPath.row][2]
+        vc1.desc = self.allLipSticks?[indexPath.row][3]
+        vc1.imge = self.allLipSticks?[indexPath.row][4]
+        vc1.colors = self.allLipSticks?[indexPath.row][5]
+        vc1.refNum = self.allLipSticks?[indexPath.row][6]
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        self.definesPresentationContext = true
+        let navController1 = UINavigationController(rootViewController: vc1)
+        navController1.modalPresentationStyle = .overCurrentContext
+//        self.present(navController1, animated: true, completion: {self.navigationController?.setNavigationBarHidden(true, animated: true)})
+        
+        self.present(navController1, animated: true, completion: nil)
+        
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -103,7 +127,7 @@ extension favoriteTBC {
     
     fileprivate func configureNavBar() {
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        navigationItem.rightBarButtonItem?.image = navigationItem.rightBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+//        navigationItem.rightBarButtonItem?.image = navigationItem.rightBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
     }
 }
 

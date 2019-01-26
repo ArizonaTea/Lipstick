@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import FaveButton
+import expanding_collection
 
 class LipstickDetailController: UIViewController {
     var lipStickName: String!
@@ -27,9 +28,16 @@ class LipstickDetailController: UIViewController {
     @IBOutlet weak var textViewDesc: UITextView!
     @IBOutlet weak var imageColor: UIImageView!
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presentingViewController?.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageColor.sd_setImage(with: URL(string: colors), placeholderImage: UIImage(named: "Placeholder"))
+        
+//        imageColor.sd_setImage(with: URL(string: colors), placeholderImage: UIImage(named: "Placeholder"))
+        
         imageLipstick.sd_setImage(with: URL(string: imge), placeholderImage: UIImage(named: "Placeholder"))
         self.labelName.text = lipStickName
         self.textViewDesc.text = desc
@@ -44,11 +52,14 @@ class LipstickDetailController: UIViewController {
             btnLike.isSelected = true
         }
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func didTapDone(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

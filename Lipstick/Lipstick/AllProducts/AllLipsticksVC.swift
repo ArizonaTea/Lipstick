@@ -24,10 +24,12 @@ extension String {
 
 class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "LipstickCell")
+        var cell : AllLipsticksCell? = tableView.dequeueReusableCell(withIdentifier: "AllLipsticksCell") as! AllLipsticksCell
         let text = (self.disPlaySticks![Array((self.disPlaySticks?.keys)!)[indexPath.section]]![indexPath.row] as! AnyObject)
         let json = JSON(text)
-        cell?.textLabel?.text = json["Name"].rawString()
+        cell!.labelName.text = json["Name"].rawString()
+        cell?.imageProduct.sd_setImage(with: URL(string: json["Product Image"].rawString()!), placeholderImage: UIImage(named: "Placeholder"))
+//        cell?.text = json["Name"].rawString()
 //        if let dataFromString = text!.data(using: .utf8, allowLossyConversion: false) {
 //            do {
 //                let json = try JSON(data: dataFromString) as JSON
@@ -39,6 +41,10 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
 //        }
         
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 279
     }
     
     @IBOutlet weak var tableview: UITableView!
@@ -112,7 +118,29 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         vc1.imge = json["Product Image"].rawString()
         vc1.colors = json["Colour Image"].rawString()
         vc1.refNum = json["Ref Number"].rawString()
-        self.present(vc1, animated: true, completion: nil)
+        
+        
+        self.definesPresentationContext = true
+        let navController1 = UINavigationController(rootViewController: vc1)
+        navController1.modalPresentationStyle = .overCurrentContext
+        
+        var b = UIBarButtonItem(
+            title: "Done",
+            style: .plain,
+            target: vc1,
+            action: nil
+        )
+        
+        navController1.navigationController?.navigationBar.topItem?.rightBarButtonItem = b
+        
+        self.present(navController1, animated: true, completion: nil)
+        
+        
+//        self.definesPresentationContext = true
+//        let navController1 = UINavigationController(rootViewController: vc1)
+//        navController1.modalPresentationStyle = .overCurrentContext
+////        self.navigationController?.pushViewController(vc1, animated: true)
+//        self.present(vc1, animated: true, completion: nil)
     }
     
     /*

@@ -86,13 +86,18 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc1 = storyboard.instantiateViewController(withIdentifier: "LipstickDetailController") as! LipstickDetailController
         vc1.lipStickName = likelipsticks[0][0]
-        vc1.price = likelipsticks[1][0]
-        vc1.priceUnit = likelipsticks[2][0]
-        vc1.desc = likelipsticks[3][0]
-        vc1.imge = likelipsticks[4][0]
-        vc1.colors = likelipsticks[6][0]
-        vc1.refNum = likelipsticks[5][0]
-        self.present(vc1, animated: true, completion: nil)
+        vc1.price = likelipsticks[0][1]
+        vc1.priceUnit = likelipsticks[0][2]
+        vc1.desc = likelipsticks[0][3]
+        vc1.imge = likelipsticks[0][4]
+//        vc1.colors = likelipsticks[0][5]
+        vc1.refNum = likelipsticks[0][5]
+        
+        self.definesPresentationContext = true
+        let navController1 = UINavigationController(rootViewController: vc1)
+        navController1.modalPresentationStyle = .overCurrentContext
+        self.present(navController1, animated: true, completion: nil)
+        
     }
     
     /*
