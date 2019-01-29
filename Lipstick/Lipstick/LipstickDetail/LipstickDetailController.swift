@@ -62,7 +62,7 @@ class LipstickDetailController: UIViewController {
     
     
     @IBAction func didTapDone(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func didTapLike(_ sender: Any) {

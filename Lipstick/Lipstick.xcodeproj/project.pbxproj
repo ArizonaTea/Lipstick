@@ -15,6 +15,8 @@
 		582E97B3218155C700B226FD /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E97B0218155C700B226FD /* AnimationBarButton.swift */; };
 		582E97B4218155C700B226FD /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E97B2218155C700B226FD /* Rotatable.swift */; };
 		5893049A21FBD5250076CD20 /* AllLipsticksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893049921FBD5250076CD20 /* AllLipsticksCell.swift */; };
+		589304EF21FFF3420076CD20 /* ColourboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589304EE21FFF3420076CD20 /* ColourboardCell.swift */; };
+		589304F121FFFBA10076CD20 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589304F021FFFBA10076CD20 /* CollectionCell.swift */; };
 		7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080AC8921117A5F006C2B60 /* CatagoriesController.swift */; };
 		7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACC621119071006C2B60 /* LipstickDetailController.swift */; };
 		7080ACDB21187F2A006C2B60 /* WobbleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACDA21187F29006C2B60 /* WobbleAnimator.swift */; };
@@ -66,6 +68,8 @@
 		582E97B0218155C700B226FD /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
 		582E97B2218155C700B226FD /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		5893049921FBD5250076CD20 /* AllLipsticksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLipsticksCell.swift; sourceTree = "<group>"; };
+		589304EE21FFF3420076CD20 /* ColourboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourboardCell.swift; sourceTree = "<group>"; };
+		589304F021FFFBA10076CD20 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		68336328352F54441C9F71E0 /* Pods-LipstickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69664916DCD62A4A1D2871D9 /* Pods-LipstickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipstickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LipstickTests/Pods-LipstickTests.release.xcconfig"; sourceTree = "<group>"; };
 		7080AC8921117A5F006C2B60 /* CatagoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesController.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				582E97A9217FD16000B226FD /* FavoriteVC.swift */,
 				582E97AD218153FB00B226FD /* favoriteTBC.swift */,
 				70EB782F219D416100593291 /* CollectionVC.swift */,
+				589304F021FFFBA10076CD20 /* CollectionCell.swift */,
 				70FDBA5721FAC5AD00D27726 /* TBCCell.swift */,
 			);
 			path = Favorite;
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				70AE25032161ECF600DC6907 /* ColourboardVC.swift */,
+				589304EE21FFF3420076CD20 /* ColourboardCell.swift */,
 			);
 			path = Colourboard;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftReorder/SwiftReorder.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIEmptyState/UIEmptyState.framework",
 				"${BUILT_PRODUCTS_DIR}/YetAnotherAnimationLibrary/YetAnotherAnimationLibrary.framework",
@@ -512,6 +519,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftReorder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIEmptyState.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YetAnotherAnimationLibrary.framework",
@@ -549,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589304EF21FFF3420076CD20 /* ColourboardCell.swift in Sources */,
 				582E97AB217FD16000B226FD /* DemoCollectionViewCell.swift in Sources */,
 				709FDF1D210EC5B1000604C3 /* Lipstick.xcdatamodeld in Sources */,
 				709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */,
@@ -559,6 +568,7 @@
 				70AE25002161EAB000DC6907 /* AllLipsticksVC.swift in Sources */,
 				582E97B3218155C700B226FD /* AnimationBarButton.swift in Sources */,
 				582E97B4218155C700B226FD /* Rotatable.swift in Sources */,
+				589304F121FFFBA10076CD20 /* CollectionCell.swift in Sources */,
 				70EB7830219D416100593291 /* CollectionVC.swift in Sources */,
 				582E97AE218153FB00B226FD /* favoriteTBC.swift in Sources */,
 				70AE24FD2161E6A800DC6907 /* mainTab.swift in Sources */,

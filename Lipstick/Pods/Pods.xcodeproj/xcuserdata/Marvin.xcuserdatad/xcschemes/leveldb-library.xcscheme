@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FE53A90437205C22F5880CC54FF70B9"
-               BuildableName = "Pods_Lipstick.framework"
-               BlueprintName = "Pods-Lipstick"
+               BlueprintIdentifier = "5036616F3ABA44E7227EF6F0B86A0445"
+               BuildableName = "leveldb.framework"
+               BlueprintName = "leveldb-library"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7FE53A90437205C22F5880CC54FF70B9"
-            BuildableName = "Pods_Lipstick.framework"
-            BlueprintName = "Pods-Lipstick"
+            BlueprintIdentifier = "5036616F3ABA44E7227EF6F0B86A0445"
+            BuildableName = "leveldb.framework"
+            BlueprintName = "leveldb-library"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

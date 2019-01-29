@@ -15,9 +15,9 @@ class FavoriteVC: ExpandingViewController {
     
     
     @IBAction func didTapDone(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-     
+    
     typealias ItemInfo = ( imageURL: String,  title: String)
     fileprivate var cellsIsOpen = [Bool]()
     fileprivate var items: [ItemInfo] = []

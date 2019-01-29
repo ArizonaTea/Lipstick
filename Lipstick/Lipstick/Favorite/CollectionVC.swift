@@ -11,6 +11,8 @@ import UIEmptyState
 
 class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
+    
+
     @IBOutlet weak var tableView: UITableView!
     var likelipsticks: [[String]]!
     override func viewDidAppear(_ animated: Bool) {
@@ -60,8 +62,9 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "LipstickCell")
-        cell?.textLabel?.text = likelipsticks?[indexPath.row][0]
+        var cell : CollectionCell? = tableView.dequeueReusableCell(withIdentifier: "CollectionCell") as! CollectionCell
+        cell?.labelName?.text = likelipsticks?[indexPath.row][0]
+        cell?.imageProduct.sd_setImage(with: URL(string: likelipsticks[indexPath.row][4]), placeholderImage: UIImage(named: "Placeholder"))
         return cell!
     }
     
