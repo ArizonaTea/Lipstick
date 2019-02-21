@@ -10,6 +10,31 @@ import UIKit
 import SwiftReorder
 import SDWebImage
 
+extension UIColor{
+    func HexToColor(hexString: String, alpha:CGFloat? = 1.0) -> UIColor {
+        // Convert hex string to an integer
+        let hexint = Int(self.intFromHexString(hexStr: hexString))
+        let red = CGFloat((hexint & 0xff0000) >> 16) / 255.0
+        let green = CGFloat((hexint & 0xff00) >> 8) / 255.0
+        let blue = CGFloat((hexint & 0xff) >> 0) / 255.0
+        let alpha = alpha!
+        // Create color object, specifying alpha as well
+        let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        return color
+    }
+    
+    func intFromHexString(hexStr: String) -> UInt32 {
+        var hexInt: UInt32 = 0
+        // Create scanner
+        let scanner: Scanner = Scanner(string: hexStr)
+        // Tell scanner to skip the # character
+        scanner.charactersToBeSkipped = NSCharacterSet(charactersIn: "#") as CharacterSet
+        // Scan hex value
+        scanner.scanHexInt32(&hexInt)
+        return hexInt
+    }
+}
+
 class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewReorderDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let spacer = tableView.reorder.spacerCell(for: indexPath) {
@@ -17,7 +42,13 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ColourboardCell", for: indexPath) as! ColourboardCell
-        cell.imageColor.sd_setImage(with: URL(string: series[indexPath.row]), placeholderImage: UIImage(named: "Placeholder"))
+        
+        //[lipStickName, price, priceUnit, desc, imge, refNum, colors]
+        
+//        var img = UIColor().HexToColor(hexString: series[indexPath.row][6], alpha: 1.0)
+//
+        cell.imageColor.sd_setImage(with: URL(string: series[indexPath.row][6]), placeholderImage: UIImage(named: "Placeholder"))
+        cell.labelLipName.text = series[indexPath.row][0]
         return cell
         
     }
@@ -31,19 +62,27 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         return 50
     }
 
-    var series: Array<String>!
+    var series: Array<Array<String>>!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnClear: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        series = Array()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         
         let headerHeight: CGFloat = (view.frame.size.height - CGFloat(Int(tableView.rowHeight) * tableView.numberOfRows(inSection: 0))) / 2
         tableView.contentInset = UIEdgeInsetsMake(headerHeight, 0, -headerHeight, 0)
         
+        let defaults = UserDefaults.standard
+        var array = defaults.array(forKey: "CompareLipsticks")  as? [[String]] ?? [[String]]()
         
-        series = ["https://www.chanel.com/fnbv3/image/full/shades/rouge-allure-luminous-intense-lip-colour-96-excentrique-35g.0160960_S.jpg", "https://www.chanel.com/fnbv3/image/full/shades/rouge-allure-luminous-intense-lip-colour-99-pirate-35g.0160990_S.jpg"]
+        
+        series = array
+        self.tableView.reloadData()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        series = Array()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.reorder.delegate = self
@@ -60,6 +99,9 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBAction func didTapClear(_ sender: Any) {
         self.series .removeAll()
         self.tableView.reloadData()
+        
+        let defaults = UserDefaults.standard
+        defaults.set(nil, forKey: "CompareLipsticks")
     }
     
     /*

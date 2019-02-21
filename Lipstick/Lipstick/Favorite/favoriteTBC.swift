@@ -98,14 +98,14 @@ class favoriteTBC: ExpandingTableViewController {
         vc1.colors = self.allLipSticks?[indexPath.row][5]
         vc1.refNum = self.allLipSticks?[indexPath.row][6]
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        self.definesPresentationContext = true
-        let navController1 = UINavigationController(rootViewController: vc1)
-        navController1.modalPresentationStyle = .overCurrentContext
-//        self.present(navController1, animated: true, completion: {self.navigationController?.setNavigationBarHidden(true, animated: true)})
-        
-        self.present(navController1, animated: true, completion: nil)
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.pushViewController(vc1, animated: true)
+//        self.definesPresentationContext = true
+//        let navController1 = UINavigationController(rootViewController: vc1)
+//        navController1.modalPresentationStyle = .overCurrentContext
+////        self.present(navController1, animated: true, completion: {self.navigationController?.setNavigationBarHidden(true, animated: true)})
+//
+//        self.present(navController1, animated: true, completion: nil)
         
     }
     

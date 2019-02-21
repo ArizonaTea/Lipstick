@@ -21,6 +21,7 @@ class LipstickDetailController: UIViewController {
     var refNum: String!
     var disPlaySticks: Dictionary<String, NSMutableArray>? = [:]
     
+    @IBOutlet weak var btnCompare: FaveButton!
     @IBOutlet weak var btnLike: FaveButton!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageLipstick: UIImageView!
@@ -45,14 +46,13 @@ class LipstickDetailController: UIViewController {
         
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
-        let list = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum]}
+        let list = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors]}
         if list == array {
             btnLike.isSelected = false
         } else {
             btnLike.isSelected = true
         }
     }
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -62,16 +62,27 @@ class LipstickDetailController: UIViewController {
     
     
     @IBAction func didTapDone(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func didTapCompare(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        var array = defaults.array(forKey: "CompareLipsticks")  as? [[String]] ?? [[String]]()
+        if(btnCompare.isSelected) {
+            array.append([lipStickName, price, priceUnit, desc, imge, refNum, colors]);
+        } else {
+            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors]}
+        }
+        defaults.set(array, forKey: "CompareLipsticks")
+        
+    }
     @IBAction func didTapLike(_ sender: Any) {
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
         if(btnLike.isSelected) {
-            array.append([lipStickName, price, priceUnit, desc, imge, refNum]);
+            array.append([lipStickName, price, priceUnit, desc, imge, refNum, colors]);
         } else {
-            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum]}
+            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors]}
         }
         defaults.set(array, forKey: "LikedLipsticks")
     }

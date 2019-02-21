@@ -15,7 +15,8 @@ class FavoriteVC: ExpandingViewController {
     
     
     @IBAction func didTapDone(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        	self.navigationController?.popViewController(animated: true)
+//            self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     typealias ItemInfo = ( imageURL: String,  title: String)

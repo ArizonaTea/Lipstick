@@ -22,6 +22,13 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        self.dismiss(animated: true) {
+            super.viewWillDisappear(animated)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let defaults = UserDefaults.standard
@@ -96,10 +103,13 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 //        vc1.colors = likelipsticks[0][5]
         vc1.refNum = likelipsticks[0][5]
         
-        self.definesPresentationContext = true
-        let navController1 = UINavigationController(rootViewController: vc1)
-        navController1.modalPresentationStyle = .overCurrentContext
-        self.present(navController1, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc1, animated: true)
+        
+//        
+//        self.definesPresentationContext = true
+//        let navController1 = UINavigationController(rootViewController: vc1)
+//        navController1.modalPresentationStyle = .overCurrentContext
+//        self.present(navController1, animated: true, completion: nil)
         
     }
     

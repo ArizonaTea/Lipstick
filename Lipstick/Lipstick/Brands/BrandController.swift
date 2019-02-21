@@ -69,6 +69,12 @@ class BrandController: UIViewController{
     
     var searchBarDestinationFrame = CGRect.zero
     var daoSearch: DAOSearchBar!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -130,10 +136,12 @@ class BrandController: UIViewController{
                 tapHandler: { [weak self] context in
                     let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FavoriteVC") as? FavoriteVC
                     vc?.brand = context.data.name
-                    self?.definesPresentationContext = true
-                    let navController1 = UINavigationController(rootViewController: vc!)
-                    navController1.modalPresentationStyle = .overCurrentContext
-                    self?.present(navController1, animated: true, completion: nil)
+                    self?.navigationController?.pushViewController(vc!, animated: true)
+//
+//                    self?.definesPresentationContext = true
+//                    let navController1 = UINavigationController(rootViewController: vc!)
+//                    navController1.modalPresentationStyle = .overCurrentContext
+//                    self?.present(navController1, animated: true, completion: nil)
                 }
             )
             provider.layout = WaterfallLayout(columns: 2, spacing: 10) // FlowLayout(spacing: 10, justifyContent: .center)
@@ -272,3 +280,5 @@ extension UIImage {
     }
     
 }
+
+//口红来源，功能模块优化，单次购买比较，看重品牌，或者颜色，价格

@@ -10,6 +10,7 @@ import UIKit
 
 class ColourboardCell: UITableViewCell {
 
+    @IBOutlet weak var labelLipName: UILabel!
     @IBOutlet weak var imageColor: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
