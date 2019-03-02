@@ -19,6 +19,7 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidAppear(animated)
         // Set the initial state of the tableview, called here because cells should be done loading by now
         // Number of cells are used to determine if the view should be shown or not
+        self.title = "Favourite"
         
     }
     
@@ -100,9 +101,10 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         vc1.priceUnit = likelipsticks[0][2]
         vc1.desc = likelipsticks[0][3]
         vc1.imge = likelipsticks[0][4]
-//        vc1.colors = likelipsticks[0][5]
         vc1.refNum = likelipsticks[0][5]
-        
+        vc1.colors = likelipsticks[0][6]
+        vc1.colorCode = likelipsticks[0][7]
+        vc1.purchaseLink = likelipsticks[0][8]
         self.navigationController?.pushViewController(vc1, animated: true)
         
 //        

@@ -13,6 +13,9 @@ import Firebase
 import FirebaseDatabase
 import SwiftyJSON
 var brandsurl:[String] = ["Dior", "Chanel"]
+
+var postDictionary = Dictionary<String, AnyObject>()
+
 struct brandCellObject: Codable {
     let name: String
 }
@@ -78,11 +81,13 @@ class BrandController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         ref = Database.database().reference()
         ref.observe(DataEventType.value, with: { (snapshot) in
             
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            
+            postDictionary = postDict
             let json = JSON(postDict)
             let str = json.description
             
@@ -105,11 +110,11 @@ class BrandController: UIViewController{
            
             
             let dataSource = ArrayDataSource<brandCellObject>()
-            for i in 0..<5 {
-                for (key, value) in postDict {
-                    dataSource.data.append(brandCellObject(name: key))
-                }
+//            for i in 0..<5 {
+            for (key, value) in postDict {
+                dataSource.data.append(brandCellObject(name: key))
             }
+//            }
 //            dataSource.identifierMapper: { (index； Int, data； bandCellObject) in
 //                return String(index)
 //            }
@@ -227,13 +232,19 @@ extension BrandController: DAOSearchBarDelegate {
     }
     
     func searchBarDidTapReturn(_ searchBar: DAOSearchBar) {
-        // Do whatever you deem necessary.
-        // Access the text from the search bar like searchBar.searchField.text
+        self.view.endEditing(true)
     }
     
     func searchBarTextDidChange(_ searchBar: DAOSearchBar) {
-        // Do whatever you deem necessary.
-        // Access the text from the search bar like searchBar.searchField.text
+        let dataSource = ArrayDataSource<brandCellObject>()
+        //            for i in 0..<5 {
+        for (key, value) in postDictionary {
+            if searchBar.searchField.text?.count == 0 || key.lowercased().range(of:(searchBar.searchField.text?.lowercased())!) != nil {
+                dataSource.data.append(brandCellObject(name: key))
+            }
+        }
+        
+        (self.collectionView.provider as! BasicProvider<Lipstick.brandCellObject, Lipstick.brandCell>).dataSource = dataSource
     }
 }
 

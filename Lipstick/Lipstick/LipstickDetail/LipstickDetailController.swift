@@ -10,6 +10,25 @@ import UIKit
 import SDWebImage
 import FaveButton
 import expanding_collection
+import SafariServices
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+}
 
 class LipstickDetailController: UIViewController {
     var lipStickName: String!
@@ -20,6 +39,9 @@ class LipstickDetailController: UIViewController {
     var colors: String!
     var refNum: String!
     var disPlaySticks: Dictionary<String, NSMutableArray>? = [:]
+    var colorCode: String!
+    var keyWord: String!
+    var purchaseLink: String!
     
     @IBOutlet weak var btnCompare: FaveButton!
     @IBOutlet weak var btnLike: FaveButton!
@@ -36,8 +58,16 @@ class LipstickDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        imageColor.sd_setImage(with: URL(string: colors), placeholderImage: UIImage(named: "Placeholder"))
+        if(self.colors.count > 0) {
+        imageColor.sd_setImage(with: URL(string: colors), placeholderImage: UIImage(named: "Placeholder"))
+        } else if(self.colorCode.count > 0) {
+            
+            let index = colorCode.index(colorCode.startIndex, offsetBy: 1)
+            let mySubstring = String(colorCode.suffix(from: index)) as String // playground
+            
+            var hexInt = UInt64(strtoul(mySubstring, nil, 16))
+            self.imageColor.backgroundColor = UIColor(rgb: Int(hexInt) )
+        }
         
         imageLipstick.sd_setImage(with: URL(string: imge), placeholderImage: UIImage(named: "Placeholder"))
         self.labelName.text = lipStickName
@@ -46,7 +76,7 @@ class LipstickDetailController: UIViewController {
         
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
-        let list = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors]}
+        let list = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]}
         if list == array {
             btnLike.isSelected = false
         } else {
@@ -60,6 +90,12 @@ class LipstickDetailController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didTapBuy(_ sender: Any) {
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        let vc = SFSafariViewController(url: (URL.init(string: purchaseLink) ?? nil)!, configuration: config)
+        present(vc, animated: true)
+    }
     
     @IBAction func didTapDone(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
@@ -69,9 +105,9 @@ class LipstickDetailController: UIViewController {
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "CompareLipsticks")  as? [[String]] ?? [[String]]()
         if(btnCompare.isSelected) {
-            array.append([lipStickName, price, priceUnit, desc, imge, refNum, colors]);
+            array.append([lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]);
         } else {
-            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors]}
+            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]}
         }
         defaults.set(array, forKey: "CompareLipsticks")
         
@@ -80,9 +116,9 @@ class LipstickDetailController: UIViewController {
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
         if(btnLike.isSelected) {
-            array.append([lipStickName, price, priceUnit, desc, imge, refNum, colors]);
+            array.append([lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]);
         } else {
-            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors]}
+            array = array.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]}
         }
         defaults.set(array, forKey: "LikedLipsticks")
     }

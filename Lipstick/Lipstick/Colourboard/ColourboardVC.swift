@@ -10,32 +10,23 @@ import UIKit
 import SwiftReorder
 import SDWebImage
 
-extension UIColor{
-    func HexToColor(hexString: String, alpha:CGFloat? = 1.0) -> UIColor {
-        // Convert hex string to an integer
-        let hexint = Int(self.intFromHexString(hexStr: hexString))
-        let red = CGFloat((hexint & 0xff0000) >> 16) / 255.0
-        let green = CGFloat((hexint & 0xff00) >> 8) / 255.0
-        let blue = CGFloat((hexint & 0xff) >> 0) / 255.0
-        let alpha = alpha!
-        // Create color object, specifying alpha as well
-        let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        return color
-    }
-    
-    func intFromHexString(hexStr: String) -> UInt32 {
-        var hexInt: UInt32 = 0
-        // Create scanner
-        let scanner: Scanner = Scanner(string: hexStr)
-        // Tell scanner to skip the # character
-        scanner.charactersToBeSkipped = NSCharacterSet(charactersIn: "#") as CharacterSet
-        // Scan hex value
-        scanner.scanHexInt32(&hexInt)
-        return hexInt
-    }
-}
 
 class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewReorderDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc1 = storyboard.instantiateViewController(withIdentifier: "LipstickDetailController") as! LipstickDetailController
+        vc1.lipStickName = series[indexPath.row][0]
+        vc1.price = series[indexPath.row][1]
+        vc1.priceUnit = series[indexPath.row][2]
+        vc1.desc = series[indexPath.row][3]
+        vc1.imge = series[indexPath.row][4]
+        vc1.refNum = series[indexPath.row][5]
+        vc1.colors = series[indexPath.row][6]
+        vc1.colorCode = series[indexPath.row][7]
+        vc1.purchaseLink = series[indexPath.row][8]
+        self.navigationController?.pushViewController(vc1, animated: true)
+        
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let spacer = tableView.reorder.spacerCell(for: indexPath) {
             return spacer
@@ -59,7 +50,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 80
     }
 
     var series: Array<Array<String>>!
@@ -68,10 +59,10 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.title = "Colorboard"
         
-        
-        let headerHeight: CGFloat = (view.frame.size.height - CGFloat(Int(tableView.rowHeight) * tableView.numberOfRows(inSection: 0))) / 2
-        tableView.contentInset = UIEdgeInsetsMake(headerHeight, 0, -headerHeight, 0)
+//        let headerHeight: CGFloat = (view.frame.size.height - CGFloat(Int(tableView.rowHeight) * tableView.numberOfRows(inSection: 0))) / 2
+//        tableView.contentInset = UIEdgeInsetsMake(headerHeight, 0, -headerHeight, 0)
         
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "CompareLipsticks")  as? [[String]] ?? [[String]]()
@@ -79,6 +70,11 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         series = array
         self.tableView.reloadData()
+        if(series.count == 0) {
+            self.btnClear.isHidden = true
+        } else {
+            self.btnClear.isHidden = false
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +82,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.reorder.delegate = self
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,6 +99,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         let defaults = UserDefaults.standard
         defaults.set(nil, forKey: "CompareLipsticks")
+        self.btnClear.isHidden = true
     }
     
     /*

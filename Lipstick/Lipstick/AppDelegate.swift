@@ -96,17 +96,19 @@ extension AppDelegate {
     
     fileprivate func configureNavigationTabBar() {
         //transparent background
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().isTranslucent = true
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+//        UINavigationBar.appearance().shadowImage = UIImage()
+//        UINavigationBar.appearance().isTranslucent = true
         
         let shadow = NSShadow()
         shadow.shadowOffset = CGSize(width: 0, height: 2)
-        shadow.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+        shadow.shadowColor = UIColor.lightGray
         
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.foregroundColor: UIColor(red: 255, green: 52, blue: 102),
             NSAttributedString.Key.shadow: shadow,
         ]
+        
+        UINavigationBar.appearance().tintColor = UIColor(red: 255, green: 52, blue: 102)
     }
 }

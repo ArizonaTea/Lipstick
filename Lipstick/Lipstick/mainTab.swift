@@ -36,7 +36,7 @@ class mainTab: UITabBarController, UITabBarControllerDelegate {
         tabBarItems[0].image = UIImage.init(named: "lipstick")
         tabBarItems[1].title = "Favorite"
         tabBarItems[1].image = UIImage.init(named: "favorite")
-        tabBarItems[2].title = "Colourboard"
+        tabBarItems[2].title = "Colorboard"
         tabBarItems[2].image = UIImage.init(named: "colors")
         
     }

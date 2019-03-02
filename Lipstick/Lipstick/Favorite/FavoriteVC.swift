@@ -14,6 +14,7 @@ class FavoriteVC: ExpandingViewController {
 
     
     
+    @IBOutlet weak var labelSeries: UILabel!
     @IBAction func didTapDone(_ sender: Any) {
         	self.navigationController?.popViewController(animated: true)
 //            self.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -39,6 +40,8 @@ extension FavoriteVC {
         fillCellIsOpenArray()
         addGesture(to: collectionView!)
         configureNavBar()
+        
+        self.labelSeries.text = "Series " + brand
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,7 +69,7 @@ extension FavoriteVC {
                         for val in series {
                             let dval = val.1
                             for lip in dval {
-                                if lip.0 == "Discription" || lip.0 == "RefNumber" {
+                                if lip.0 == "Description" || lip.0 == "RefNumber" {
                                     continue
                                 }
                                 let url = lip.1["Product Image"].rawString()

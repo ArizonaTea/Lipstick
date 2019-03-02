@@ -53,12 +53,12 @@ class favoriteTBC: ExpandingTableViewController {
                             }
                             let dval = val.1
                             for lip in dval {
-                                if lip.0 == "Discription" || lip.0 == "RefNumber" {
+                                if lip.0 == "Description" || lip.0 == "RefNumber" {
                                     continue
                                 }
 
                                 
-                                self.allLipSticks?.append([lip.1["Name"].rawString() ?? "", lip.1["Price"].rawString() ?? "", lip.1["Price Unit"].rawString() ?? "", lip.1["Discription"].rawString() ?? "", lip.1["Product Image"].rawString() ?? "", lip.1["Colour Image"].rawString() ?? "", lip.1["Colour Code"].rawString() ?? ""])
+                                self.allLipSticks?.append([lip.1["Name"].rawString() ?? "", lip.1["Price"].rawString() ?? "", lip.1["Price Unit"].rawString() ?? "", lip.1["Description"].rawString() ?? "", lip.1["Product Image"].rawString() ?? "", lip.1["Colour Image"].rawString() ?? "", lip.1["Colour Code"].rawString() ?? "", lip.1["Ref Number"].rawString() ?? "", lip.1["Key Words"].rawString() ?? "", lip.1["Purchase Link"].rawString() ?? ""])
 
                             }
                         }
@@ -96,8 +96,10 @@ class favoriteTBC: ExpandingTableViewController {
         vc1.desc = self.allLipSticks?[indexPath.row][3]
         vc1.imge = self.allLipSticks?[indexPath.row][4]
         vc1.colors = self.allLipSticks?[indexPath.row][5]
-        vc1.refNum = self.allLipSticks?[indexPath.row][6]
-        
+        vc1.refNum = self.allLipSticks?[indexPath.row][7]
+        vc1.colorCode = self.allLipSticks?[indexPath.row][6]
+        vc1.keyWord = self.allLipSticks?[indexPath.row][8]
+        vc1.purchaseLink = self.allLipSticks?[indexPath.row][9]
 //        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.navigationController?.pushViewController(vc1, animated: true)
 //        self.definesPresentationContext = true

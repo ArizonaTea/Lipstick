@@ -88,6 +88,11 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.title = "All"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.delegate = self
@@ -114,33 +119,31 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         vc1.lipStickName = json["Name"].rawString()
         vc1.price = json["Price"].rawString()
         vc1.priceUnit = json["Price Unit"].rawString()
-        vc1.desc = json["Discription"].rawString()
+        vc1.desc = json["Description"].rawString()
         vc1.imge = json["Product Image"].rawString()
         vc1.colors = json["Colour Image"].rawString()
         vc1.refNum = json["Ref Number"].rawString()
+        vc1.colorCode = json["Colour Code"].rawString()
+        vc1.purchaseLink = json["Purchase Link"].rawString()
+        vc1.keyWord = json["Key Words"].rawString()
         
         
         self.definesPresentationContext = true
-        let navController1 = UINavigationController(rootViewController: vc1)
-        navController1.modalPresentationStyle = .overCurrentContext
-        
-        var b = UIBarButtonItem(
-            title: "Done",
-            style: .plain,
-            target: vc1,
-            action: nil
-        )
-        
-        navController1.navigationController?.navigationBar.topItem?.rightBarButtonItem = b
-        
-        self.present(navController1, animated: true, completion: nil)
-        
-        
-//        self.definesPresentationContext = true
 //        let navController1 = UINavigationController(rootViewController: vc1)
+        self.navigationController?.pushViewController(vc1, animated: true)
 //        navController1.modalPresentationStyle = .overCurrentContext
-////        self.navigationController?.pushViewController(vc1, animated: true)
-//        self.present(vc1, animated: true, completion: nil)
+//
+//        var b = UIBarButtonItem(
+//            title: "Done",
+//            style: .plain,
+//            target: vc1,
+//            action: nil
+//        )
+//
+//        navController1.navigationController?.navigationBar.topItem?.rightBarButtonItem = b
+//
+//        self.present(navController1, animated: true, completion: nil)
+        
     }
     
     /*
