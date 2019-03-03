@@ -179,7 +179,11 @@ extension FavoriteVC {
         let index = indexPath.row % items.count
         let info = items[index]
         
-        cell.backgroundImageView.sd_setImage(with: URL(string: info.imageURL), placeholderImage: UIImage(named: "Placeholder"))
+        var url = info.imageURL
+        if !(url.starts(with: "https:")) {
+            url = "https:" + url
+        }
+        cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
         cell.customTitle.text = info.title
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }

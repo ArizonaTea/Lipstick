@@ -59,7 +59,11 @@ class LipstickDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if(self.colors.count > 0) {
-        imageColor.sd_setImage(with: URL(string: colors), placeholderImage: UIImage(named: "Placeholder"))
+        var url = colors
+            if !(url?.starts(with: "htpps:"))! {
+                url  = "https:" + url!
+        }
+        imageColor.sd_setImage(with: URL(string: url!), placeholderImage: UIImage(named: "Placeholder"))
         } else if(self.colorCode.count > 0) {
             
             let index = colorCode.index(colorCode.startIndex, offsetBy: 1)
@@ -67,6 +71,10 @@ class LipstickDetailController: UIViewController {
             
             var hexInt = UInt64(strtoul(mySubstring, nil, 16))
             self.imageColor.backgroundColor = UIColor(rgb: Int(hexInt) )
+        }
+        
+        if !(imge.starts(with: "https:")) {
+            imge = "https:" + imge
         }
         
         imageLipstick.sd_setImage(with: URL(string: imge), placeholderImage: UIImage(named: "Placeholder"))

@@ -80,7 +80,12 @@ class favoriteTBC: ExpandingTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "TBCCell") as? TBCCell
-        cell?.productImg.sd_setImage(with: URL(string: self.allLipSticks?[indexPath.row][4] ?? ""), placeholderImage: UIImage(named: "Placeholder"))
+        
+        var url = self.allLipSticks?[indexPath.row][4]
+        if !((url?.starts(with: "https:"))!) {
+            url = "https:" + url!
+        }
+        cell?.productImg.sd_setImage(with: URL(string: url ?? ""), placeholderImage: UIImage(named: "Placeholder"))
         cell?.labelName.text = self.allLipSticks?[indexPath.row][0]
 //        cell!.textLabel!.text = data[indexPath.row]
         

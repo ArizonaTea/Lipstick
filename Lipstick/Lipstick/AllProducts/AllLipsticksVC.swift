@@ -28,7 +28,11 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let text = (self.disPlaySticks![Array((self.disPlaySticks?.keys)!)[indexPath.section]]![indexPath.row] as! AnyObject)
         let json = JSON(text)
         cell!.labelName.text = json["Name"].rawString()
-        cell?.imageProduct.sd_setImage(with: URL(string: json["Product Image"].rawString()!), placeholderImage: UIImage(named: "Placeholder"))
+        var url = json["Product Image"].rawString()
+        if !(url?.starts(with: "https:"))! {
+            url = "https:" + url!
+        }
+        cell?.imageProduct.sd_setImage(with: URL(string: url!), placeholderImage: UIImage(named: "Placeholder"))
 //        cell?.text = json["Name"].rawString()
 //        if let dataFromString = text!.data(using: .utf8, allowLossyConversion: false) {
 //            do {

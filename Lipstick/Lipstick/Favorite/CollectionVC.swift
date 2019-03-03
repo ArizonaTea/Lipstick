@@ -96,7 +96,11 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell : CollectionCell? = tableView.dequeueReusableCell(withIdentifier: "CollectionCell") as! CollectionCell
         cell?.labelName?.text = likelipsticks?[indexPath.row][0]
-        cell?.imageProduct.sd_setImage(with: URL(string: likelipsticks[indexPath.row][4]), placeholderImage: UIImage(named: "Placeholder"))
+        var url = likelipsticks[indexPath.row][4]
+        if !(url.starts(with: "https:")) {
+            url = "https:" + url
+        }
+        cell?.imageProduct.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
         return cell!
     }
     

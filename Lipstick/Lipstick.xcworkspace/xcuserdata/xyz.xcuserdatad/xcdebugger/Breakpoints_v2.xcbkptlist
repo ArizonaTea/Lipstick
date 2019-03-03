@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.192148"
+            timestampString = "573292071.381735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "AllLipsticksVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -344,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.19287"
+            timestampString = "573292071.382206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -360,11 +360,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.192915"
+            timestampString = "573292071.382501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -376,11 +376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.192957"
+            timestampString = "573292071.382746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -392,7 +392,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.1929981"
+            timestampString = "573292071.3829679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -408,7 +408,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.193037"
+            timestampString = "573292071.383185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
+            timestampString = "573292071.383425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -424,27 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.193076"
+            timestampString = "573292071.383642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Lipstick/AllProducts/AllLipsticksVC.swift"
-            timestampString = "573199607.193114"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -456,11 +456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/LipstickDetail/LipstickDetailController.swift"
-            timestampString = "573199607.1931551"
+            timestampString = "573292071.383895"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -482,11 +482,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/Favorite/favoriteTBC.swift"
-            timestampString = "573199607.193211"
+            timestampString = "573292071.383968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -514,11 +514,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/LipstickDetail/LipstickDetailController.swift"
-            timestampString = "573199607.1932991"
+            timestampString = "573292071.3840261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -530,7 +530,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/LipstickDetail/LipstickDetailController.swift"
-            timestampString = "573199607.193342"
+            timestampString = "573292071.3840719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -546,7 +546,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/Colourboard/ColourboardVC.swift"
-            timestampString = "573199607.1933841"
+            timestampString = "573292071.384129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -578,7 +578,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lipstick/Favorite/CollectionVC.swift"
-            timestampString = "573199607.19368"
+            timestampString = "573292071.384199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"

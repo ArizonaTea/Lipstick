@@ -38,7 +38,11 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
 //        var img = UIColor().HexToColor(hexString: series[indexPath.row][6], alpha: 1.0)
 //
-        cell.imageColor.sd_setImage(with: URL(string: series[indexPath.row][6]), placeholderImage: UIImage(named: "Placeholder"))
+        var url = series[indexPath.row][6]
+        if !(url.starts(with: "https:")) {
+            url = "https:" + url
+        }
+        cell.imageColor.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
         cell.labelLipName.text = series[indexPath.row][0]
         return cell
         
