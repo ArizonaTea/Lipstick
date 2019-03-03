@@ -102,6 +102,7 @@
                     <navigationItem key="navigationItem" id="DKV-nu-Hwn"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="searchTextField" destination="HOk-tY-zrc" id="Ooj-ZQ-SBi"/>
                         <outlet property="tableView" destination="0ke-SW-Pkt" id="tn3-jh-aWD"/>
                     </connections>
                 </viewController>

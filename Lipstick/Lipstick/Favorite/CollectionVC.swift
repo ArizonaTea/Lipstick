@@ -9,8 +9,9 @@
 import UIKit
 import UIEmptyState
 
-class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIEmptyStateDataSource, UIEmptyStateDelegate {
+class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIEmptyStateDataSource, UIEmptyStateDelegate, UISearchBarDelegate {
 
+    @IBOutlet weak var searchTextField: UISearchBar!
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -40,10 +41,14 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-        // Do any additional setup after loading the view.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.searchTextField.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
         
+       
 //        self.emptyStateDataSource = self
 //        self.emptyStateDelegate = self
 //        // Optionally remove seperator lines from empty cells
@@ -51,6 +56,25 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 //        self.reloadEmptyStateForTableView(self.tableView)
 
         
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let defaults = UserDefaults.standard
+        var array = defaults.array(forKey: "LikedLipsticks")  as? [[String]] ?? [[String]]()
+        likelipsticks.removeAll()
+        
+        //[lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]
+        for value in likelipsticks {
+            if searchText.count == 0 || value[0].lowercased().contains(searchText) ||
+                value[3].lowercased().contains(searchText) {
+                likelipsticks.append(value)
+            }
+        }
+        likelipsticks = array
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
     var emptyStateTitle: NSAttributedString {
