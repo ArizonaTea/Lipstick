@@ -190,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="c2M-Eh-iDg">
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="c2M-Eh-iDg">
                                 <rect key="frame" x="0.0" y="80" width="414" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ZYR-l1-S5e"/>
@@ -261,6 +261,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="N5Z-5f-vDD"/>
                     <connections>
+                        <outlet property="barSearch" destination="c2M-Eh-iDg" id="WtC-pj-DmA"/>
                         <outlet property="tableview" destination="Tpb-GK-aqL" id="NGC-ai-iHR"/>
                     </connections>
                 </viewController>
@@ -424,7 +425,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTw-dF-SNt" customClass="CollectionView" customModule="CollectionKit">
                                 <rect key="frame" x="0.0" y="33" width="414" height="703"/>
                             </scrollView>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Metron" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpK-Qe-tCx">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColorPool" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpK-Qe-tCx">
                                 <rect key="frame" x="0.0" y="20" width="414" height="75"/>
                             </imageView>
                         </subviews>
@@ -684,6 +685,9 @@
                                 <state key="normal" title="Share">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShare:" destination="d2L-yf-uwP" eventType="touchUpInside" id="1en-jI-MS2"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SUH-UM-XKl">
                                 <rect key="frame" x="215" y="562" width="35" height="35"/>
@@ -730,8 +734,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnBuy" destination="Ea1-fB-xDn" id="FKA-5E-JWH"/>
                         <outlet property="btnCompare" destination="GM8-dQ-EWq" id="Jys-0k-pNP"/>
                         <outlet property="btnLike" destination="Enb-Pg-LGP" id="9XH-YW-hAE"/>
+                        <outlet property="btnShare" destination="HgK-AN-jkA" id="MYx-8U-VoC"/>
                         <outlet property="imageColor" destination="SUH-UM-XKl" id="GlG-oV-jIv"/>
                         <outlet property="imageLipstick" destination="wzQ-ae-ujC" id="Hbl-eJ-COZ"/>
                         <outlet property="labelName" destination="HEa-hn-j3d" id="2s7-QP-E0U"/>
@@ -800,6 +806,7 @@
     </scenes>
     <resources>
         <image name="BackgroundImage" width="750" height="1334"/>
+        <image name="ColorPool" width="375" height="75"/>
         <image name="Metron" width="375" height="75"/>
         <image name="Title" width="16" height="16"/>
         <image name="colors" width="20" height="20"/>

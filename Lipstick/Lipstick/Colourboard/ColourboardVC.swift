@@ -9,6 +9,7 @@
 import UIKit
 import SwiftReorder
 import SDWebImage
+import SafariServices
 
 
 class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewReorderDelegate {
@@ -33,17 +34,25 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ColourboardCell", for: indexPath) as! ColourboardCell
-        
-        //[lipStickName, price, priceUnit, desc, imge, refNum, colors]
-        
-//        var img = UIColor().HexToColor(hexString: series[indexPath.row][6], alpha: 1.0)
-//
         var url = series[indexPath.row][6]
-        if !(url.starts(with: "https:")) {
+        if url.count > 0 && !(url.starts(with: "https:")) {
             url = "https:" + url
         }
-        cell.imageColor.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
+        if url.count > 0 {
+     cell.imageColor.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
+        } else {
+            let colorCode = series[indexPath.row][7]
+            let index = colorCode.index(colorCode.startIndex, offsetBy: 1)
+            let mySubstring = String(colorCode.suffix(from: index)) as String // playground
+            
+            var hexInt = UInt64(strtoul(mySubstring, nil, 16))
+            cell.imageColor.backgroundColor = UIColor(rgb: Int(hexInt) )
+        
+        }
+        cell.imageColor.layer.cornerRadius = 30
+        cell.imageColor.clipsToBounds = true
         cell.labelLipName.text = series[indexPath.row][0]
+//        cell.accessoryView = UIImageView(image:UIImage(named:"dragable")!)
         return cell
         
     }
@@ -80,8 +89,20 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             self.btnClear.isHidden = false
         }
     }
+    
+    @objc func didTapRightBtn() {
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        let vc = SFSafariViewController(url: (URL.init(string: "https://docs.google.com/forms/d/e/1FAIpQLSfQv_EuV85XTsTRL863yMLWgCcM-Cs0p9GKTlE6i9L1k1yNEQ/viewform") ?? nil)!, configuration: config)
+        present(vc, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let image = UIImage(named: "feedback")?.withRenderingMode(.alwaysOriginal)
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapRightBtn))
+        self.navigationItem.rightBarButtonItem = button
         series = Array()
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -98,12 +119,27 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     @IBAction func didTapClear(_ sender: Any) {
-        self.series .removeAll()
-        self.tableView.reloadData()
+        let alertController = UIAlertController(title: "Alert", message: "Are you sure to clear the colors?", preferredStyle: .alert)
         
-        let defaults = UserDefaults.standard
-        defaults.set(nil, forKey: "CompareLipsticks")
-        self.btnClear.isHidden = true
+        let action1 = UIAlertAction(title: "YES", style: .default) { (action:UIAlertAction) in
+            self.series .removeAll()
+            self.tableView.reloadData()
+            
+            let defaults = UserDefaults.standard
+            defaults.set(nil, forKey: "CompareLipsticks")
+            self.btnClear.isHidden = true
+            
+            
+        }
+        
+        let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
+            
+        }
+        
+    alertController.addAction(action1)
+    alertController.addAction(action2)
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     /*

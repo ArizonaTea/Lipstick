@@ -46,6 +46,7 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.searchTextField.delegate = self
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
         
        
@@ -64,16 +65,22 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         likelipsticks.removeAll()
         
         //[lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]
-        for value in likelipsticks {
-            if searchText.count == 0 || value[0].lowercased().contains(searchText) ||
-                value[3].lowercased().contains(searchText) {
+        for value in array {
+            if searchText.count == 0 || value[0].lowercased().contains(searchText.lowercased()) ||
+                value[3].lowercased().contains(searchText.lowercased()) {
                 likelipsticks.append(value)
             }
         }
-        likelipsticks = array
+//        likelipsticks = array
+        self.tableView.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
     }
     
     @objc func hideKeyboard() {
+        
         view.endEditing(true)
     }
     
@@ -101,6 +108,7 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             url = "https:" + url
         }
         cell?.imageProduct.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
+        
         return cell!
     }
     

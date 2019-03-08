@@ -22,7 +22,8 @@ extension String {
     }
 }
 
-class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell : AllLipsticksCell? = tableView.dequeueReusableCell(withIdentifier: "AllLipsticksCell") as! AllLipsticksCell
         let text = (self.disPlaySticks![Array((self.disPlaySticks?.keys)!)[indexPath.section]]![indexPath.row] as! AnyObject)
@@ -33,17 +34,6 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
             url = "https:" + url!
         }
         cell?.imageProduct.sd_setImage(with: URL(string: url!), placeholderImage: UIImage(named: "Placeholder"))
-//        cell?.text = json["Name"].rawString()
-//        if let dataFromString = text!.data(using: .utf8, allowLossyConversion: false) {
-//            do {
-//                let json = try JSON(data: dataFromString) as JSON
-//                let dic = json.dictionary
-//                cell?.textLabel?.text = dic!["Name"] as! String
-//            } catch {
-//                print(error)
-//            }
-//        }
-        
         return cell!
     }
     
@@ -51,6 +41,7 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return 279
     }
     
+    @IBOutlet weak var barSearch: UISearchBar!
     @IBOutlet weak var tableview: UITableView!
     var allLipSticks: Dictionary<String, NSMutableArray>? = [:]
     var disPlaySticks: Dictionary<String, NSMutableArray>? = [:]
@@ -97,10 +88,44 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidAppear(animated)
         self.title = "All"
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.disPlaySticks?.removeAll()
+        if(searchText.count == 0) {
+            self.disPlaySticks = self.allLipSticks
+        } else {
+            for (key, value) in self.allLipSticks! {
+                if key.lowercased().contains(searchText.lowercased()) {
+                    self.disPlaySticks![key] = value
+                } else {
+                    for anyval in value {
+                        let val = JSON(anyval).dictionary
+                        let v1 = val!["Description"]?.rawString()
+                        let v2 = val!["Name"]?.rawString()
+                        let v3 = val!["Key Words"]?.rawString()
+                        if (v1?.lowercased().contains(searchText.lowercased()))! || (v2?.lowercased().contains(searchText.lowercased()))! || (v3?.lowercased().contains(searchText.lowercased()))! {
+                            if self.disPlaySticks?[key] == nil {
+                                self.disPlaySticks![key] = NSMutableArray()
+                            }
+                            self.disPlaySticks![key]!.add(anyval)
+                        }
+                    }
+
+                }
+            }
+            
+        }
+        self.tableview.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        self.barSearch.delegate = self
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

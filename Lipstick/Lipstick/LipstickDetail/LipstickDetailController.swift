@@ -47,6 +47,9 @@ class LipstickDetailController: UIViewController {
     @IBOutlet weak var btnLike: FaveButton!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageLipstick: UIImageView!
+    
+    @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var btnBuy: UIButton!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var textViewDesc: UITextView!
     @IBOutlet weak var imageColor: UIImageView!
@@ -58,9 +61,14 @@ class LipstickDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.btnBuy.layer.cornerRadius = 5
+        self.btnShare.layer.cornerRadius = 5
+        self.imageColor.layer.cornerRadius = 17.5
+        self.imageColor.clipsToBounds = true
+        
         if(self.colors.count > 0) {
         var url = colors
-            if !(url?.starts(with: "htpps:"))! {
+            if !(url?.starts(with: "https:"))! {
                 url  = "https:" + url!
         }
         imageColor.sd_setImage(with: URL(string: url!), placeholderImage: UIImage(named: "Placeholder"))
@@ -90,6 +98,16 @@ class LipstickDetailController: UIViewController {
         } else {
             btnLike.isSelected = true
         }
+        
+        
+        var array2 = defaults.array(forKey: "CompareLipsticks")  as? [[String]] ?? [[String]]()
+        let list2 = array2.filter{$0 != [lipStickName, price, priceUnit, desc, imge, refNum, colors, colorCode, purchaseLink]}
+        if list2 == array2 {
+            btnCompare.isSelected = false
+        } else {
+            btnCompare.isSelected = true
+        }
+
     }
     
     
@@ -98,6 +116,12 @@ class LipstickDetailController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didTapShare(_ sender: Any) {
+        
+        let items = ["Your Sharing Content"];
+        let activity = UIActivityViewController(activityItems: items, applicationActivities: nil);
+        self.present(activity, animated: true, completion: nil)
+    }
     @IBAction func didTapBuy(_ sender: Any) {
         let config = SFSafariViewController.Configuration()
         config.entersReaderIfAvailable = true

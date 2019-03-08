@@ -187,7 +187,7 @@ class BrandController: UIViewController{
                                  end: CGRect(x: 0, y: 0, width: bounds.width, height: 75))
         if clamped != 1.0 {
             if progress < 0.99 {
-                logoBackground.image = UIImage(named: "Metron")
+                logoBackground.image = UIImage(named: "ColorPool")
             }
             logoBackground.frame = CGRect(x: backgroundRect.minX,
                                             y: UIApplication.shared.keyWindow!.safeAreaInsets.top,
