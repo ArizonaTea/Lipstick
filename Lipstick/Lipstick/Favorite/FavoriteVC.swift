@@ -20,7 +20,7 @@ class FavoriteVC: ExpandingViewController {
 //            self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    typealias ItemInfo = ( imageURL: String,  title: String)
+    typealias ItemInfo = ( imageURL: String,  title: String, price: String, totalColors: String)
     fileprivate var cellsIsOpen = [Bool]()
     fileprivate var items: [ItemInfo] = []
 
@@ -73,7 +73,11 @@ extension FavoriteVC {
                                     continue
                                 }
                                 let url = lip.1["Product Image"].rawString()
-                                self.items.append(( url ?? "", val.0))
+                                
+                                let unit = val.1.first!.1["Unit"].rawString()
+                                let price = val.1.first!.1["Price"].rawString()
+                                let colorsCount = String(val.1.count)
+                                self.items.append(( url ?? "", val.0, unit! + " " + price!, colorsCount + " Colors"))
                                 break
                             }
                         }
@@ -185,6 +189,9 @@ extension FavoriteVC {
         }
         cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
         cell.customTitle.text = info.title
+        cell.labelPrice.text = info.price
+        cell.LabelColorCount.text = info.totalColors
+        
         cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
 
@@ -195,6 +202,7 @@ extension FavoriteVC {
         if cell.isOpened == false {
             cell.cellIsOpen(true)
         } else {
+       
             pushToViewController(getViewController())
 
             if let rightButton = navigationItem.rightBarButtonItem as? AnimatingBarButton {

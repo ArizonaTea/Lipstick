@@ -120,6 +120,8 @@ class favoriteTBC: ExpandingTableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
         configureNavBar()
     }
     

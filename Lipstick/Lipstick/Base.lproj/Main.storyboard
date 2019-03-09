@@ -594,7 +594,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lipstickDetail" translatesAutoresizingMaskIntoConstraints="NO" id="wzQ-ae-ujC">
                                 <rect key="frame" x="69" y="157" width="279" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="195" id="VxU-Kb-iKm"/>
+                                    <constraint firstAttribute="width" secondItem="wzQ-ae-ujC" secondAttribute="height" multiplier="93:65" id="WCo-Sm-8j7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lipstick name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEa-hn-j3d">
@@ -607,14 +607,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysA-VQ-0my">
-                                <rect key="frame" x="12" y="434" width="390" height="91"/>
+                                <rect key="frame" x="12" y="398" width="390" height="148"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="91" id="sj3-3l-15t"/>
+                                    <constraint firstAttribute="height" constant="148" id="sj3-3l-15t"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -635,15 +635,6 @@
                                     <action selector="didTapBuy:" destination="d2L-yf-uwP" eventType="touchUpInside" id="Hsj-tK-i1L"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx8-jo-9f8">
-                                <rect key="frame" x="117" y="396" width="183" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="d1E-49-7Df"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-Pg-LGP" customClass="FaveButton" customModule="FaveButton">
                                 <rect key="frame" x="344" y="554" width="50" height="50"/>
                                 <constraints>
@@ -696,19 +687,28 @@
                                     <constraint firstAttribute="height" constant="35" id="UTe-lD-VSe"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx8-jo-9f8">
+                                <rect key="frame" x="117" y="360" width="183" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="d1E-49-7Df"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ysA-VQ-0my" firstAttribute="leading" secondItem="FB7-Ve-x4n" secondAttribute="leading" constant="12" id="0ha-wZ-c1g"/>
                             <constraint firstItem="Ea1-fB-xDn" firstAttribute="top" secondItem="SUH-UM-XKl" secondAttribute="bottom" constant="35" id="0vM-vU-84g"/>
                             <constraint firstItem="lx8-jo-9f8" firstAttribute="leading" secondItem="FB7-Ve-x4n" secondAttribute="leading" constant="117" id="29Y-qe-Xli"/>
-                            <constraint firstItem="Enb-Pg-LGP" firstAttribute="top" secondItem="ysA-VQ-0my" secondAttribute="bottom" constant="29" id="2uV-pg-1EC"/>
+                            <constraint firstItem="Enb-Pg-LGP" firstAttribute="top" secondItem="ysA-VQ-0my" secondAttribute="bottom" constant="8" id="2uV-pg-1EC"/>
                             <constraint firstItem="FB7-Ve-x4n" firstAttribute="bottom" secondItem="HgK-AN-jkA" secondAttribute="bottom" constant="9" id="3Ez-Mk-Qkd"/>
                             <constraint firstItem="ysA-VQ-0my" firstAttribute="top" secondItem="lx8-jo-9f8" secondAttribute="bottom" constant="8" id="3YR-KV-1Ce"/>
                             <constraint firstItem="FB7-Ve-x4n" firstAttribute="trailing" secondItem="wzQ-ae-ujC" secondAttribute="trailing" constant="66" id="4bO-mS-fFi"/>
                             <constraint firstItem="FB7-Ve-x4n" firstAttribute="trailing" secondItem="HgK-AN-jkA" secondAttribute="trailing" constant="12" id="4xz-gz-L6f"/>
                             <constraint firstItem="HgK-AN-jkA" firstAttribute="top" secondItem="GM8-dQ-EWq" secondAttribute="bottom" constant="28" id="9SS-wi-KP6"/>
-                            <constraint firstItem="lx8-jo-9f8" firstAttribute="top" secondItem="wzQ-ae-ujC" secondAttribute="bottom" constant="44" id="CSp-tF-F2C"/>
+                            <constraint firstItem="lx8-jo-9f8" firstAttribute="top" secondItem="wzQ-ae-ujC" secondAttribute="bottom" constant="8" id="CSp-tF-F2C"/>
                             <constraint firstItem="wzQ-ae-ujC" firstAttribute="top" secondItem="HEa-hn-j3d" secondAttribute="bottom" constant="17" id="HO8-vv-D1g"/>
                             <constraint firstItem="FB7-Ve-x4n" firstAttribute="trailing" secondItem="HEa-hn-j3d" secondAttribute="trailing" constant="38" id="Nfi-47-HAW"/>
                             <constraint firstItem="HgK-AN-jkA" firstAttribute="top" secondItem="Enb-Pg-LGP" secondAttribute="bottom" constant="28" id="SSf-tE-iTZ"/>
