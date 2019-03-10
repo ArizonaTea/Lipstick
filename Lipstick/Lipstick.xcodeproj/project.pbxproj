@@ -20,6 +20,7 @@
 		7080AC8A21117A5F006C2B60 /* CatagoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080AC8921117A5F006C2B60 /* CatagoriesController.swift */; };
 		7080ACC721119071006C2B60 /* LipstickDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACC621119071006C2B60 /* LipstickDetailController.swift */; };
 		7080ACDB21187F2A006C2B60 /* WobbleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080ACDA21187F29006C2B60 /* WobbleAnimator.swift */; };
+		708262352234C10F00DE9458 /* InitialPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 708262342234C10F00DE9458 /* InitialPage.png */; };
 		709FDF15210EC5B1000604C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF14210EC5B1000604C3 /* AppDelegate.swift */; };
 		709FDF17210EC5B1000604C3 /* BrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDF16210EC5B1000604C3 /* BrandController.swift */; };
 		709FDF1A210EC5B1000604C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709FDF18210EC5B1000604C3 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		7080AC8921117A5F006C2B60 /* CatagoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesController.swift; sourceTree = "<group>"; };
 		7080ACC621119071006C2B60 /* LipstickDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipstickDetailController.swift; sourceTree = "<group>"; };
 		7080ACDA21187F29006C2B60 /* WobbleAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WobbleAnimator.swift; sourceTree = "<group>"; };
+		708262342234C10F00DE9458 /* InitialPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InitialPage.png; path = Lipstick/Assets.xcassets/InitialPage.imageset/InitialPage.png; sourceTree = "<group>"; };
 		709FDF11210EC5B1000604C3 /* Lipstick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lipstick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709FDF14210EC5B1000604C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709FDF16210EC5B1000604C3 /* BrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		709FDF08210EC5B1000604C3 = {
 			isa = PBXGroup;
 			children = (
+				708262342234C10F00DE9458 /* InitialPage.png */,
 				709FDF13210EC5B1000604C3 /* Lipstick */,
 				709FDF2B210EC5B1000604C3 /* LipstickTests */,
 				709FDF36210EC5B1000604C3 /* LipstickUITests */,
@@ -419,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				708262352234C10F00DE9458 /* InitialPage.png in Resources */,
 				582E97AA217FD16000B226FD /* DemoCollectionViewCell.xib in Resources */,
 				709FDF22210EC5B1000604C3 /* LaunchScreen.storyboard in Resources */,
 				70AE24F721601C8500DC6907 /* GoogleService-Info.plist in Resources */,

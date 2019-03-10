@@ -140,10 +140,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-P2-a3l">
-                                <rect key="frame" x="11" y="74" width="77" height="30"/>
+                                <rect key="frame" x="337" y="64" width="77" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7hF-oa-rId"/>
-                                    <constraint firstAttribute="width" constant="77" id="cE3-Ts-oDN"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nx0-9N-Yud"/>
+                                    <constraint firstAttribute="width" constant="77" id="iu2-bu-OJz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done">
@@ -157,17 +157,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="arC-9h-BeP" firstAttribute="trailing" secondItem="RoS-9C-4vC" secondAttribute="trailing" constant="131" id="CZB-AQ-3oV"/>
+                            <constraint firstItem="arC-9h-BeP" firstAttribute="trailing" secondItem="mw7-P2-a3l" secondAttribute="trailing" id="O6F-Oo-DCg"/>
                             <constraint firstItem="UJS-wT-yhj" firstAttribute="leading" secondItem="arC-9h-BeP" secondAttribute="leading" id="VKC-PI-s3t"/>
                             <constraint firstItem="arC-9h-BeP" firstAttribute="trailing" secondItem="Wzi-R2-8fg" secondAttribute="trailing" constant="20" id="YVv-Uw-aqn"/>
+                            <constraint firstItem="mw7-P2-a3l" firstAttribute="top" secondItem="arC-9h-BeP" secondAttribute="top" id="a6C-rH-0rX"/>
                             <constraint firstItem="UJS-wT-yhj" firstAttribute="bottom" secondItem="arC-9h-BeP" secondAttribute="bottom" id="bKj-hf-1BX"/>
-                            <constraint firstItem="mw7-P2-a3l" firstAttribute="leading" secondItem="arC-9h-BeP" secondAttribute="leading" constant="11" id="gni-c3-sQs"/>
                             <constraint firstItem="Wzi-R2-8fg" firstAttribute="top" secondItem="arC-9h-BeP" secondAttribute="top" constant="35" id="hZ8-nk-p43"/>
                             <constraint firstItem="UJS-wT-yhj" firstAttribute="top" secondItem="6QW-od-xn0" secondAttribute="top" id="iuh-xn-Cl0"/>
                             <constraint firstItem="UJS-wT-yhj" firstAttribute="trailing" secondItem="arC-9h-BeP" secondAttribute="trailing" id="jYt-YR-gRJ"/>
                             <constraint firstItem="arC-9h-BeP" firstAttribute="bottom" secondItem="RoS-9C-4vC" secondAttribute="bottom" constant="20" id="q7O-zy-0gB"/>
                             <constraint firstItem="RoS-9C-4vC" firstAttribute="leading" secondItem="arC-9h-BeP" secondAttribute="leading" constant="130" id="qSf-7L-Xdr"/>
                             <constraint firstItem="Wzi-R2-8fg" firstAttribute="leading" secondItem="arC-9h-BeP" secondAttribute="leading" constant="20" id="rey-FH-oQR"/>
-                            <constraint firstItem="mw7-P2-a3l" firstAttribute="top" secondItem="arC-9h-BeP" secondAttribute="top" constant="10" id="z9j-qK-BaA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="arC-9h-BeP"/>
                     </view>
