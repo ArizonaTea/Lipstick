@@ -130,7 +130,8 @@ class BrandController: UIViewController{
             let sizeSource = { (index: Int, data: brandCellObject, collectionSize: CGSize) -> CGSize in
                 let ratio = (UIImage(named: data.name)?.size.height)! / (UIImage(named: data.name)?.size.width)!
                 let width = self.collectionView.frame.size.width / 2 - 20
-                return CGSize(width: width, height: width * ratio)
+//                return CGSize(width: width, height: width * ratio)
+                return CGSize(width: width, height: width)
             }
             
             let provider = BasicProvider(
@@ -187,7 +188,7 @@ class BrandController: UIViewController{
                                  end: CGRect(x: 0, y: 0, width: bounds.width, height: 75))
         if clamped != 1.0 {
             if progress < 0.99 {
-                logoBackground.image = UIImage(named: "ColorPool")
+                logoBackground.image = UIImage(named: "Title")
             }
             logoBackground.frame = CGRect(x: backgroundRect.minX,
                                             y: UIApplication.shared.keyWindow!.safeAreaInsets.top,

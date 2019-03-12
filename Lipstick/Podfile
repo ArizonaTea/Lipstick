@@ -16,7 +16,7 @@ target 'Lipstick' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage', '~> 4.0'
   pod 'FaveButton'
-  pod 'SwiftReorder'
+  
   # Pods for Lipstick
 
   target 'LipstickTests' do

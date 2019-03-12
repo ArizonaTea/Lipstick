@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import SwiftReorder
 import SDWebImage
 import SafariServices
 
-
-class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewReorderDelegate {
+class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc1 = storyboard.instantiateViewController(withIdentifier: "LipstickDetailController") as! LipstickDetailController
@@ -29,10 +27,6 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let spacer = tableView.reorder.spacerCell(for: indexPath) {
-            return spacer
-        }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ColourboardCell", for: indexPath) as! ColourboardCell
         var url = series[indexPath.row][6]
         if url.count > 0 && !(url.starts(with: "https:")) {
@@ -40,6 +34,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
         if url.count > 0 {
      cell.imageColor.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
+            print(url)
         } else {
             let colorCode = series[indexPath.row][7]
             let index = colorCode.index(colorCode.startIndex, offsetBy: 1)
@@ -49,7 +44,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.imageColor.backgroundColor = UIColor(rgb: Int(hexInt) )
         
         }
-        cell.imageColor.layer.cornerRadius = 30
+        cell.imageColor.layer.cornerRadius = 20
         cell.imageColor.clipsToBounds = true
         cell.labelLipName.text = series[indexPath.row][0]
 //        cell.accessoryView = UIImageView(image:UIImage(named:"dragable")!)
@@ -58,12 +53,13 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, reorderRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        (self.series[sourceIndexPath.row], self.series[destinationIndexPath.row]) = (self.series[destinationIndexPath.row], self.series[sourceIndexPath.row])
+        series.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+        self.tableView.reloadData()
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 60
     }
 
     var series: Array<Array<String>>!
@@ -96,9 +92,26 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         let vc = SFSafariViewController(url: (URL.init(string: "https://docs.google.com/forms/d/e/1FAIpQLSfQv_EuV85XTsTRL863yMLWgCcM-Cs0p9GKTlE6i9L1k1yNEQ/viewform") ?? nil)!, configuration: config)
         present(vc, animated: true)
     }
+    
+     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    
+    
+     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = self.series[sourceIndexPath.row]
+        series.remove(at: sourceIndexPath.row)
+        series.insert(movedObject, at: destinationIndexPath.row)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.isEditing = true
         
         let image = UIImage(named: "feedback")?.withRenderingMode(.alwaysOriginal)
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapRightBtn))
@@ -106,7 +119,6 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         series = Array()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.reorder.delegate = self
         
     }
     

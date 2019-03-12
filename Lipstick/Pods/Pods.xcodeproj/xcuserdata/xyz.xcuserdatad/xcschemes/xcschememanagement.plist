@@ -116,11 +116,6 @@
 			<key>orderHint</key>
 			<integer>18</integer>
 		</dict>
-		<key>SwiftReorder.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>23</integer>
-		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>

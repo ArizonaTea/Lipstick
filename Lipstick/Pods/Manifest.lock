@@ -73,7 +73,6 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
-  - SwiftReorder (5.0.0)
   - SwiftyJSON (4.1.0)
   - UIEmptyState (3.2.0)
   - YetAnotherAnimationLibrary (1.2.0)
@@ -88,7 +87,6 @@ DEPENDENCIES:
   - PINRemoteImage
   - ReactiveCocoa (~> 7.0)
   - SDWebImage (~> 4.0)
-  - SwiftReorder
   - SwiftyJSON (~> 4.0)
   - UIEmptyState
   - YetAnotherAnimationLibrary
@@ -115,7 +113,6 @@ SPEC REPOS:
     - ReactiveSwift
     - Result
     - SDWebImage
-    - SwiftReorder
     - SwiftyJSON
     - UIEmptyState
     - YetAnotherAnimationLibrary
@@ -141,11 +138,10 @@ SPEC CHECKSUMS:
   ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SwiftReorder: 66c81f33321629715c53a8f8214a1e892a9f0fdd
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   UIEmptyState: cc6ff21e9f1a42e5795bd6b08dcaa1f5ec61d33c
   YetAnotherAnimationLibrary: 3cb3e784cf1b4305095e0ef2c57965eb1b51b1c6
 
-PODFILE CHECKSUM: 63f7e0daaa7a835c9d3f3b27bd6e2b1e39cc33ac
+PODFILE CHECKSUM: 89864cd517a8b0fee59b3b9ad0004ecaaf9c6008
 
 COCOAPODS: 1.5.3
