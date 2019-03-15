@@ -29,22 +29,24 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ColourboardCell", for: indexPath) as! ColourboardCell
         var url = series[indexPath.row][6]
+        url = url.replacingOccurrences(of: "\\", with: "")
         if url.count > 0 && !(url.starts(with: "https:")) {
             url = "https:" + url
         }
         if url.count > 0 {
-     cell.imageColor.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
-            print(url)
+            cell.imageColor.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Placeholder"))
+            cell.imageColor.layer.cornerRadius = 0
         } else {
             let colorCode = series[indexPath.row][7]
             let index = colorCode.index(colorCode.startIndex, offsetBy: 1)
             let mySubstring = String(colorCode.suffix(from: index)) as String // playground
             
             var hexInt = UInt64(strtoul(mySubstring, nil, 16))
+            
             cell.imageColor.backgroundColor = UIColor(rgb: Int(hexInt) )
-        
+            cell.imageColor.layer.cornerRadius = 22
         }
-        cell.imageColor.layer.cornerRadius = 20
+        
         cell.imageColor.clipsToBounds = true
         cell.labelLipName.text = series[indexPath.row][0]
 //        cell.accessoryView = UIImageView(image:UIImage(named:"dragable")!)
@@ -65,7 +67,17 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     var series: Array<Array<String>>!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnClear: UIButton!
+    @IBOutlet weak var btnReorder: UIButton!
     
+    
+    @IBAction func didTapReorder(_ sender: Any) {
+        self.tableView.isEditing = !self.tableView.isEditing
+        if self.tableView.isEditing {
+            self.btnReorder.setTitle("Done", for: .normal)
+        } else {
+            self.btnReorder.setTitle("Reorder", for: .normal)
+        }
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.title = "Colorboard"
@@ -111,7 +123,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.isEditing = true
+//        self.tableView.isEditing = true
         
         let image = UIImage(named: "feedback")?.withRenderingMode(.alwaysOriginal)
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapRightBtn))

@@ -184,6 +184,7 @@ extension FavoriteVC {
         let info = items[index]
         
         var url = info.imageURL
+        url = url.replacingOccurrences(of: "\\", with: "")
         if !(url.starts(with: "https:")) {
             url = "https:" + url
         }

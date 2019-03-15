@@ -334,7 +334,7 @@
                             <rect key="frame" x="92.666666666666686" y="5.6666666666666679" width="229" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-l5-lb2">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-l5-lb2">
                                     <rect key="frame" x="89" y="8.6666666666666643" width="51" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="Eas-a0-GBw"/>
@@ -426,7 +426,7 @@
                                 <rect key="frame" x="0.0" y="33" width="414" height="703"/>
                             </scrollView>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpK-Qe-tCx">
-                                <rect key="frame" x="0.0" y="20" width="414" height="2"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -460,7 +460,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m60-gj-Lvv">
-                                <rect key="frame" x="20" y="20" width="374" height="638"/>
+                                <rect key="frame" x="20" y="20" width="374" height="652"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColourboardCell" rowHeight="73" id="yEG-KH-Bxe" customClass="ColourboardCell" customModule="Lipstick" customModuleProvider="target">
@@ -471,10 +471,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-bP-5F5">
-                                                    <rect key="frame" x="5" y="10.000000000000004" width="364" height="52.333333333333343"/>
+                                                    <rect key="frame" x="317" y="10" width="52" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="52" id="ZZW-eC-n2C"/>
+                                                        <constraint firstAttribute="height" constant="52" id="n3c-52-82U"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Lip Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wno-Zo-mXK">
-                                                    <rect key="frame" x="20" y="11" width="326" height="51"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="326" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -483,7 +487,6 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Mb4-bP-5F5" secondAttribute="trailing" constant="5" id="4as-1b-GIs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="wno-Zo-mXK" secondAttribute="bottom" id="Q7b-1f-rLo"/>
-                                                <constraint firstItem="Mb4-bP-5F5" firstAttribute="leading" secondItem="ane-K4-dr4" secondAttribute="leading" constant="5" id="Smn-U2-jgI"/>
                                                 <constraint firstItem="Mb4-bP-5F5" firstAttribute="top" secondItem="ane-K4-dr4" secondAttribute="top" constant="10" id="Um3-qG-6FE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="wno-Zo-mXK" secondAttribute="trailing" constant="8" id="kan-pE-HgV"/>
                                                 <constraint firstAttribute="bottom" secondItem="Mb4-bP-5F5" secondAttribute="bottom" constant="10.666666666666671" id="m6T-68-tnp"/>
@@ -498,26 +501,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-VZ-S6g">
-                                <rect key="frame" x="20" y="666" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Tb4-5P-dwK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="didTapClear:" destination="Omf-8C-uw5" eventType="touchUpInside" id="lZb-3l-L7G"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QFq-ji-ea3">
+                                <rect key="frame" x="20" y="680" width="374" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-VZ-S6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="didTapClear:" destination="Omf-8C-uw5" eventType="touchUpInside" id="lZb-3l-L7G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7w-NR-cvL">
+                                        <rect key="frame" x="191" y="0.0" width="183" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Reorder"/>
+                                        <connections>
+                                            <action selector="didTapReorder:" destination="Omf-8C-uw5" eventType="touchUpInside" id="JOh-7Z-XcP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zyD-VZ-S6g" firstAttribute="top" secondItem="m60-gj-Lvv" secondAttribute="bottom" constant="8" id="1HR-HL-xAB"/>
+                            <constraint firstItem="Sts-Kd-bXk" firstAttribute="trailing" secondItem="QFq-ji-ea3" secondAttribute="trailing" constant="20" id="5gS-CO-kyq"/>
+                            <constraint firstItem="QFq-ji-ea3" firstAttribute="top" secondItem="m60-gj-Lvv" secondAttribute="bottom" constant="8" id="A8x-ch-RJr"/>
                             <constraint firstItem="m60-gj-Lvv" firstAttribute="leading" secondItem="Sts-Kd-bXk" secondAttribute="leading" constant="20" id="DCl-Q6-9Xc"/>
-                            <constraint firstItem="zyD-VZ-S6g" firstAttribute="leading" secondItem="Sts-Kd-bXk" secondAttribute="leading" constant="20" id="NhJ-cw-n7o"/>
+                            <constraint firstItem="QFq-ji-ea3" firstAttribute="leading" secondItem="Sts-Kd-bXk" secondAttribute="leading" constant="20" id="p17-9Y-PTv"/>
                             <constraint firstItem="Sts-Kd-bXk" firstAttribute="trailing" secondItem="m60-gj-Lvv" secondAttribute="trailing" constant="20" id="phV-mT-29r"/>
-                            <constraint firstItem="Sts-Kd-bXk" firstAttribute="trailing" secondItem="zyD-VZ-S6g" secondAttribute="trailing" constant="20" id="s7X-wF-vHn"/>
-                            <constraint firstItem="Sts-Kd-bXk" firstAttribute="bottom" secondItem="zyD-VZ-S6g" secondAttribute="bottom" constant="20" id="snk-Ut-1OE"/>
+                            <constraint firstItem="Sts-Kd-bXk" firstAttribute="bottom" secondItem="QFq-ji-ea3" secondAttribute="bottom" constant="20" id="vS2-br-gY6"/>
                             <constraint firstItem="m60-gj-Lvv" firstAttribute="top" secondItem="Sts-Kd-bXk" secondAttribute="top" id="wKx-pG-Ktn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sts-Kd-bXk"/>
@@ -525,6 +538,7 @@
                     <tabBarItem key="tabBarItem" title="Colourboard" image="colors" id="Jiq-t7-ndg"/>
                     <connections>
                         <outlet property="btnClear" destination="zyD-VZ-S6g" id="AdR-S8-koM"/>
+                        <outlet property="btnReorder" destination="c7w-NR-cvL" id="OxA-qe-m0S"/>
                         <outlet property="tableView" destination="m60-gj-Lvv" id="R6e-cB-gPq"/>
                     </connections>
                 </viewController>
@@ -807,7 +821,7 @@
     <resources>
         <image name="BackgroundImage" width="750" height="1334"/>
         <image name="Metron" width="375" height="75"/>
-        <image name="Title" width="26.3671875" height="2.1796875"/>
+        <image name="Title" width="26.3671875" height="5.2734375"/>
         <image name="colors" width="20" height="20"/>
         <image name="compare" width="512" height="512"/>
         <image name="heart" width="1200" height="1200"/>

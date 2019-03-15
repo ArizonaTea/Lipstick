@@ -30,6 +30,7 @@ class AllLipsticksVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let json = JSON(text)
         cell!.labelName.text = json["Name"].rawString()
         var url = json["Product Image"].rawString()
+        url = url!.replacingOccurrences(of: "\\", with: "")
         if !(url?.starts(with: "https:"))! {
             url = "https:" + url!
         }

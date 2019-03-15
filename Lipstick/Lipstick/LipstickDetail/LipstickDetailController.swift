@@ -68,8 +68,9 @@ class LipstickDetailController: UIViewController {
         
         if(self.colors.count > 0) {
         var url = colors
-            if !(url?.starts(with: "https:"))! {
-                url  = "https:" + url!
+        url = url!.replacingOccurrences(of: "\\", with: "")
+        if !(url?.starts(with: "https:"))! {
+            url  = "https:" + url!
         }
         imageColor.sd_setImage(with: URL(string: url!), placeholderImage: UIImage(named: "Placeholder"))
         } else if(self.colorCode.count > 0) {
@@ -81,6 +82,7 @@ class LipstickDetailController: UIViewController {
             self.imageColor.backgroundColor = UIColor(rgb: Int(hexInt) )
         }
         
+        imge = imge.replacingOccurrences(of: "\\", with: "")
         if !(imge.starts(with: "https:")) {
             imge = "https:" + imge
         }

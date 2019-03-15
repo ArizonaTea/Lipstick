@@ -104,6 +104,7 @@ class CollectionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         var cell : CollectionCell? = tableView.dequeueReusableCell(withIdentifier: "CollectionCell") as! CollectionCell
         cell?.labelName?.text = likelipsticks?[indexPath.row][0]
         var url = likelipsticks[indexPath.row][4]
+        url = url.replacingOccurrences(of: "\\", with: "")
         if !(url.starts(with: "https:")) {
             url = "https:" + url
         }

@@ -82,6 +82,7 @@ class favoriteTBC: ExpandingTableViewController {
         var cell = tableView.dequeueReusableCell(withIdentifier: "TBCCell") as? TBCCell
         
         var url = self.allLipSticks?[indexPath.row][4]
+        url = url!.replacingOccurrences(of: "\\", with: "")
         if !((url?.starts(with: "https:"))!) {
             url = "https:" + url!
         }
