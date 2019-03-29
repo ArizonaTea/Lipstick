@@ -93,8 +93,10 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         self.tableView.reloadData()
         if(series.count == 0) {
             self.btnClear.isHidden = true
+            self.btnReorder.isHidden = true
         } else {
             self.btnClear.isHidden = false
+            self.btnReorder.isHidden = false
         }
     }
     
@@ -152,7 +154,7 @@ class ColourboardVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             let defaults = UserDefaults.standard
             defaults.set(nil, forKey: "CompareLipsticks")
             self.btnClear.isHidden = true
-            
+            self.btnReorder.isHidden = true
             
         }
         
