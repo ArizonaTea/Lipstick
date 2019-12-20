@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7C08227B6E14D87F0F5B0FD6DFFA1A3E"
+               BlueprintIdentifier = "5E6A4B14CA023C808656D9DC438729B2"
+               BuildableName = "FaveButton.framework"
                BlueprintName = "FaveButton"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "FaveButton.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

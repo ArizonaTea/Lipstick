@@ -486,7 +486,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Lipstick/Pods-Lipstick-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DAOSearchBar/DAOSearchBar.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
@@ -527,7 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lipstick/Pods-Lipstick-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lipstick/Pods-Lipstick-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C91A9FC394CD1206E9459C62 /* [CP] Check Pods Manifest.lock */ = {
@@ -743,7 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QGB7PXC2C2;
+				DEVELOPMENT_TEAM = NPWM6D4GT8;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lipcolourpool.Lipstick.com;
@@ -759,7 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QGB7PXC2C2;
+				DEVELOPMENT_TEAM = NPWM6D4GT8;
 				INFOPLIST_FILE = Lipstick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lipcolourpool.Lipstick.com;

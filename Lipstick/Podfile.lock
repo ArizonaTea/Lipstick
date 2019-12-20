@@ -1,62 +1,83 @@
 PODS:
-  - CollectionKit (2.0.1)
+  - CollectionKit (2.4.0):
+    - CollectionKit/Core (= 2.4.0)
+  - CollectionKit/Core (2.4.0)
   - DAOSearchBar (1.2.5)
-  - expanding-collection (2.1.1)
-  - FaveButton (2.0.3)
-  - Firebase/Core (5.6.0):
+  - expanding-collection (3.1.0)
+  - FaveButton (3.2.1)
+  - Firebase/Core (6.14.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.1.1)
-  - Firebase/CoreOnly (5.6.0):
-    - FirebaseCore (= 5.1.1)
-  - Firebase/Database (5.6.0):
+    - FirebaseAnalytics (= 6.1.7)
+  - Firebase/CoreOnly (6.14.0):
+    - FirebaseCore (= 6.5.0)
+  - Firebase/Database (6.14.0):
     - Firebase/CoreOnly
-    - FirebaseDatabase (= 5.0.2)
-  - FirebaseAnalytics (5.1.1):
-    - FirebaseCore (~> 5.1)
-    - FirebaseInstanceID (~> 3.2)
-    - GoogleAppMeasurement (~> 5.1)
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2.0)
-    - GoogleUtilities/MethodSwizzler (~> 5.2.0)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
-    - nanopb (~> 0.3)
-  - FirebaseCore (5.1.1):
-    - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseDatabase (5.0.2):
-    - FirebaseCore (~> 5.0)
-    - leveldb-library (~> 1.18)
-  - FirebaseInstanceID (3.2.1):
-    - FirebaseCore (~> 5.1)
-    - GoogleUtilities/Environment (~> 5.2)
+    - FirebaseDatabase (~> 6.1.3)
+  - FirebaseAnalytics (6.1.7):
+    - FirebaseCore (~> 6.5)
+    - FirebaseInstanceID (~> 4.2)
+    - GoogleAppMeasurement (= 6.1.7)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - FirebaseAuthInterop (1.0.0)
+  - FirebaseCore (6.5.0):
+    - FirebaseCoreDiagnostics (~> 1.0)
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.4)
+    - GoogleUtilities/Logger (~> 6.4)
+  - FirebaseCoreDiagnostics (1.1.2):
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleDataTransportCCTSupport (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+    - nanopb (~> 0.3.901)
+  - FirebaseCoreDiagnosticsInterop (1.1.0)
+  - FirebaseDatabase (6.1.3):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - leveldb-library (~> 1.22)
+  - FirebaseInstanceID (4.2.8):
+    - FirebaseCore (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.4)
+    - GoogleUtilities/UserDefaults (~> 6.4)
   - FLAnimatedImage (1.0.12)
-  - GoogleAppMeasurement (5.1.1):
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2.0)
-    - GoogleUtilities/MethodSwizzler (~> 5.2.0)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
-    - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (5.2.2):
+  - GoogleAppMeasurement (6.1.7):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - GoogleDataTransport (3.2.0)
+  - GoogleDataTransportCCTSupport (1.2.3):
+    - GoogleDataTransport (~> 3.2)
+    - nanopb (~> 0.3.901)
+  - GoogleUtilities/AppDelegateSwizzler (6.4.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (5.2.2)
-  - GoogleUtilities/Logger (5.2.2):
+  - GoogleUtilities/Environment (6.4.0)
+  - GoogleUtilities/Logger (6.4.0):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (5.2.2):
+  - GoogleUtilities/MethodSwizzler (6.4.0):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (5.2.2):
+  - GoogleUtilities/Network (6.4.0):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (5.2.2)"
-  - GoogleUtilities/Reachability (5.2.2):
+  - "GoogleUtilities/NSData+zlib (6.4.0)"
+  - GoogleUtilities/Reachability (6.4.0):
     - GoogleUtilities/Logger
-  - leveldb-library (1.20)
-  - nanopb (0.3.8):
-    - nanopb/decode (= 0.3.8)
-    - nanopb/encode (= 0.3.8)
-  - nanopb/decode (0.3.8)
-  - nanopb/encode (0.3.8)
+  - GoogleUtilities/UserDefaults (6.4.0):
+    - GoogleUtilities/Logger
+  - leveldb-library (1.22)
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
   - PINCache (2.3)
   - PINRemoteImage (2.1.4):
     - PINRemoteImage/FLAnimatedImage (= 2.1.4)
@@ -70,12 +91,12 @@ PODS:
   - ReactiveSwift (3.1.0):
     - Result (~> 3.2)
   - Result (3.2.4)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
-  - SwiftyJSON (4.1.0)
-  - UIEmptyState (3.2.0)
-  - YetAnotherAnimationLibrary (1.2.0)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
+  - SwiftyJSON (4.3.0)
+  - UIEmptyState (4.0.1)
+  - YetAnotherAnimationLibrary (1.4.0)
 
 DEPENDENCIES:
   - CollectionKit
@@ -92,18 +113,23 @@ DEPENDENCIES:
   - YetAnotherAnimationLibrary
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - CollectionKit
     - DAOSearchBar
     - expanding-collection
     - FaveButton
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAuthInterop
     - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
     - FirebaseDatabase
     - FirebaseInstanceID
     - FLAnimatedImage
     - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - leveldb-library
     - nanopb
@@ -118,30 +144,35 @@ SPEC REPOS:
     - YetAnotherAnimationLibrary
 
 SPEC CHECKSUMS:
-  CollectionKit: c891976ede4e800e2102333df310edc06d8430f4
+  CollectionKit: 8f01e7629185bb81072c4aa734d105df5c2d1c8b
   DAOSearchBar: 2f731940dd353de111512012d331cc48eae28dde
-  expanding-collection: 9fde61f3b4e3e014578ea2dff9438b1a925a7fdb
-  FaveButton: cfcbc5e73da159c4f916613da5687357b5bb4783
-  Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
-  FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
-  FirebaseCore: cb9ee75e0894def766167c95a4d5a14b1c138269
-  FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
-  FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
+  expanding-collection: 7eb1fc48c6ec5e00c8887fe46c595c31b81b578a
+  FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
+  Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
+  FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
+  FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
+  FirebaseCore: 632e05cc5e1199d9147122c16d92305eb04c34bd
+  FirebaseCoreDiagnostics: 511f4f3ed7d440bb69127e8b97c2bc8befae639e
+  FirebaseCoreDiagnosticsInterop: e9b1b023157e3a2fc6418b5cb601e79b9af7b3a0
+  FirebaseDatabase: 9db0c9bb6d3308870cc831a8a6d70c82fd169f37
+  FirebaseInstanceID: ce993a3c3670a8f5d47ce371ac5d143c560608c5
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
-  GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
-  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
+  GoogleDataTransport: 8e9b210c97d55fbff306cc5468ff91b9cb32dcf5
+  GoogleDataTransportCCTSupport: 202d7cdf9c4a7d81a2bb7f7e7e1ba6faa421b1f2
+  GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
+  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   ReactiveCocoa: 476dae7ca790f40d30d186a1bd7ebae4290395d5
   ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
-  UIEmptyState: cc6ff21e9f1a42e5795bd6b08dcaa1f5ec61d33c
-  YetAnotherAnimationLibrary: 3cb3e784cf1b4305095e0ef2c57965eb1b51b1c6
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  UIEmptyState: 767376694d9402452fb3c0a5a5283176c6a53c92
+  YetAnotherAnimationLibrary: 7f808b10c2d193dd3e82407e722fa60aa0bdff2d
 
 PODFILE CHECKSUM: 89864cd517a8b0fee59b3b9ad0004ecaaf9c6008
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

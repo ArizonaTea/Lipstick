@@ -8,44 +8,44 @@
 
 import UIKit
 
+public struct HeaderData {
+  public let index: Int
+  public let section: Provider
+}
+
 open class ComposedHeaderProvider<HeaderView: UIView>:
   SectionProvider, ItemProvider, LayoutableProvider, CollectionReloadable {
-
-  public struct HeaderData {
-    public let index: Int
-    public let section: Provider
-  }
 
   public typealias HeaderViewSource = ViewSource<HeaderData, HeaderView>
   public typealias HeaderSizeSource = SizeSource<HeaderData>
 
-  public var identifier: String?
+  open var identifier: String?
 
-  public var sections: [Provider] {
+  open var sections: [Provider] {
     didSet { setNeedsReload() }
   }
 
-  public var animator: Animator? {
+  open var animator: Animator? {
     didSet { setNeedsReload() }
   }
 
-  public var headerViewSource: HeaderViewSource {
+  open var headerViewSource: HeaderViewSource {
     didSet { setNeedsReload() }
   }
 
-  public var headerSizeSource: HeaderSizeSource {
-    didSet { setNeedsReload() }
+  open var headerSizeSource: HeaderSizeSource {
+    didSet { setNeedsInvalidateLayout() }
   }
 
-  public var layout: Layout {
+  open var layout: Layout {
     get { return stickyLayout.rootLayout }
     set {
       stickyLayout.rootLayout = newValue
-      setNeedsReload()
+      setNeedsInvalidateLayout()
     }
   }
 
-  public var isSticky = true {
+  open var isSticky = true {
     didSet {
       if isSticky {
         stickyLayout.isStickyFn = { $0 % 2 == 0 }
@@ -56,14 +56,14 @@ open class ComposedHeaderProvider<HeaderView: UIView>:
     }
   }
 
-  public var tapHandler: TapHandler?
+  open var tapHandler: TapHandler?
 
   public typealias TapHandler = (TapContext) -> Void
 
   public struct TapContext {
-    let view: HeaderView
-    let index: Int
-    let section: Provider
+    public let view: HeaderView
+    public let index: Int
+    public let section: Provider
   }
 
   private var stickyLayout: StickyLayout
@@ -73,7 +73,7 @@ open class ComposedHeaderProvider<HeaderView: UIView>:
               layout: Layout = FlowLayout(),
               animator: Animator? = nil,
               headerViewSource: HeaderViewSource,
-              headerSizeSource: @escaping HeaderSizeSource,
+              headerSizeSource: HeaderSizeSource,
               sections: [Provider] = [],
               tapHandler: TapHandler? = nil) {
     self.animator = animator
@@ -118,21 +118,22 @@ open class ComposedHeaderProvider<HeaderView: UIView>:
     return animator
   }
 
-  public func view(at: Int) -> UIView {
+  open func view(at: Int) -> UIView {
     let index = at / 2
     return headerViewSource.view(data: HeaderData(index: index, section: sections[index]), index: index)
   }
 
-  public func update(view: UIView, at: Int) {
+  open func update(view: UIView, at: Int) {
     let index = at / 2
     headerViewSource.update(view: view as! HeaderView,
                               data: HeaderData(index: index, section: sections[index]),
                               index: index)
   }
 
-  public func didTap(view: UIView, at: Int) {
+  open func didTap(view: UIView, at: Int) {
     if let tapHandler = tapHandler {
-      let context = TapContext(view: view as! HeaderView, index: at, section: sections[at])
+      let index = at / 2
+      let context = TapContext(view: view as! HeaderView, index: index, section: sections[index])
       tapHandler(context)
     }
   }
@@ -151,7 +152,8 @@ open class ComposedHeaderProvider<HeaderView: UIView>:
 
   // MARK: private stuff
   open func hasReloadable(_ reloadable: CollectionReloadable) -> Bool {
-    return reloadable === self || sections.contains(where: { $0.hasReloadable(reloadable) })
+    return reloadable === self || reloadable === headerSizeSource
+      || sections.contains(where: { $0.hasReloadable(reloadable) })
   }
 
   open func flattenedProvider() -> ItemProvider {
@@ -181,12 +183,14 @@ open class ComposedHeaderProvider<HeaderView: UIView>:
         return sectionIdentifier
       }
     }
-    func size(at: Int, collectionSize: CGSize) -> CGSize {
-      if at % 2 == 0 {
-        return headerSizeSource(at / 2, data(at: at) as! HeaderData, collectionSize)
+    func size(at index: Int, collectionSize: CGSize) -> CGSize {
+      if index % 2 == 0 {
+        return headerSizeSource.size(at: index / 2,
+                                     data: data(at: index) as! HeaderData,
+                                     collectionSize: collectionSize)
       } else {
-        sections[at / 2].layout(collectionSize: collectionSize)
-        return sections[at / 2].contentSize
+        sections[index / 2].layout(collectionSize: collectionSize)
+        return sections[index / 2].contentSize
       }
     }
   }

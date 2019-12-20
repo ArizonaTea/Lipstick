@@ -10,13 +10,13 @@ import UIKit
 
 open class BasicProvider<Data, View: UIView>: ItemProvider, LayoutableProvider, CollectionReloadable {
 
-  public var identifier: String?
-  public var dataSource: DataSource<Data> { didSet { setNeedsReload() } }
-  public var viewSource: ViewSource<Data, View> { didSet { setNeedsReload() } }
-  public var sizeSource: SizeSource<Data> { didSet { setNeedsReload() } }
-  public var layout: Layout { didSet { setNeedsReload() } }
-  public var animator: Animator? { didSet { setNeedsReload() } }
-  public var tapHandler: TapHandler?
+  open var identifier: String?
+  open var dataSource: DataSource<Data> { didSet { setNeedsReload() } }
+  open var viewSource: ViewSource<Data, View> { didSet { setNeedsReload() } }
+  open var sizeSource: SizeSource<Data> { didSet { setNeedsInvalidateLayout() } }
+  open var layout: Layout { didSet { setNeedsInvalidateLayout() } }
+  open var animator: Animator? { didSet { setNeedsReload() } }
+  open var tapHandler: TapHandler?
 
   public typealias TapHandler = (TapContext) -> Void
 
@@ -37,7 +37,7 @@ open class BasicProvider<Data, View: UIView>: ItemProvider, LayoutableProvider, 
   public init(identifier: String? = nil,
               dataSource: DataSource<Data>,
               viewSource: ViewSource<Data, View>,
-              sizeSource: @escaping SizeSource<Data> = defaultSizeSource,
+              sizeSource: SizeSource<Data> = SizeSource<Data>(),
               layout: Layout = FlowLayout(),
               animator: Animator? = nil,
               tapHandler: TapHandler? = nil) {
@@ -77,7 +77,7 @@ open class BasicProvider<Data, View: UIView>: ItemProvider, LayoutableProvider, 
     }
   }
   open func hasReloadable(_ reloadable: CollectionReloadable) -> Bool {
-    return reloadable === self || reloadable === dataSource
+    return reloadable === self || reloadable === dataSource || reloadable === sizeSource
   }
 }
 
@@ -95,7 +95,7 @@ struct BasicProviderLayoutContext<Data>: LayoutContext {
   func identifier(at: Int) -> String {
     return dataSource.identifier(at: at)
   }
-  func size(at: Int, collectionSize: CGSize) -> CGSize {
-    return sizeSource(at, dataSource.data(at: at), collectionSize)
+  func size(at index: Int, collectionSize: CGSize) -> CGSize {
+    return sizeSource.size(at: index, data: dataSource.data(at: index), collectionSize: collectionSize)
   }
 }

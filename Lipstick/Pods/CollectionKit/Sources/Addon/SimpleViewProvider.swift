@@ -8,108 +8,57 @@
 
 import UIKit
 
-open class SimpleViewProvider: ItemProvider, CollectionReloadable {
+open class SimpleViewProvider: BasicProvider<UIView, UIView> {
 
-  public enum ViewSizeStrategy {
-    case fill
-    case fit
-    case absolute(CGFloat)
+  open var views: [UIView] {
+    get { return viewDataSource.data }
+    set { viewDataSource.data = newValue }
   }
 
-  public var identifier: String?
-  public var layout: Layout
-  public var views: [UIView] { didSet { setNeedsReload() } }
-  public var sizeStrategy: (width: ViewSizeStrategy, height: ViewSizeStrategy) {
-    didSet { setNeedsReload() }
+  open var identifierMapper: IdentifierMapperFn<UIView> {
+    get { return viewDataSource.identifierMapper }
+    set { viewDataSource.identifierMapper = newValue }
   }
-  public var sizeStrategyOverride: [UIView: (width: ViewSizeStrategy, height: ViewSizeStrategy)] = [:] {
-    didSet { setNeedsReload() }
+
+  private let viewDataSource: ArrayDataSource<UIView>
+
+  private class SimpleViewProviderViewSource: ViewSource<UIView, UIView> {
+    override func view(data: UIView, index: Int) -> UIView {
+      return data
+    }
   }
-  public var animator: Animator? { didSet { setNeedsReload() } }
 
   public init(identifier: String? = nil,
               views: [UIView] = [],
-              sizeStrategy: (width: ViewSizeStrategy, height: ViewSizeStrategy) = (.fit, .fit),
-              layout: Layout = FlowLayout()) {
-    self.identifier = identifier
-    self.layout = layout
-    self.sizeStrategy = sizeStrategy
-    self.views = views
+              identifierMapper: @escaping IdentifierMapperFn<UIView> = { return "\($1.hash)" },
+              sizeSource: SizeSource<UIView> = SizeSource<UIView>(),
+              layout: Layout = FlowLayout(),
+              animator: Animator? = nil,
+              tapHandler: TapHandler? = nil) {
+
+    viewDataSource = ArrayDataSource(data: views, identifierMapper: identifierMapper)
+
+    super.init(identifier: identifier,
+               dataSource: viewDataSource,
+               viewSource: SimpleViewProviderViewSource(),
+               sizeSource: sizeSource,
+               layout: layout,
+               animator: animator,
+               tapHandler: tapHandler)
   }
 
-  public var numberOfItems: Int {
-    return views.count
-  }
-
-  public func identifier(at: Int) -> String {
-    return "\(views[at].hash)"
-  }
-
-  public func layout(collectionSize: CGSize) {
-    let context = SimpleViewLayoutContext(
-      collectionSize: collectionSize,
-      views: views,
-      sizeStrategy: sizeStrategy,
-      sizeStrategyOverride: sizeStrategyOverride
-      )
-    layout.layout(context: context)
-  }
-
-  public func visibleIndexes(visibleFrame: CGRect) -> [Int] {
-    return layout.visibleIndexes(visibleFrame: visibleFrame)
-  }
-
-  public var contentSize: CGSize {
-    return layout.contentSize
-  }
-
-  public func frame(at: Int) -> CGRect {
-    return layout.frame(at: at)
-  }
-
-  public func view(at: Int) -> UIView {
-    return views[at]
-  }
-
-  public func animator(at: Int) -> Animator? {
-    return animator
-  }
-
-  public func update(view: UIView, at: Int) {}
-  public func didTap(view: UIView, at: Int) {}
-
-  struct SimpleViewLayoutContext: LayoutContext {
-    let collectionSize: CGSize
-    let views: [UIView]
-    let sizeStrategy: (width: ViewSizeStrategy, height: ViewSizeStrategy)
-    let sizeStrategyOverride: [UIView: (width: ViewSizeStrategy, height: ViewSizeStrategy)]
-    var numberOfItems: Int {
-      return views.count
-    }
-    func data(at: Int) -> Any {
-      return views[at]
-    }
-    func identifier(at: Int) -> String {
-      return "\(views[at].hash)"
-    }
-    func size(at: Int, collectionSize: CGSize) -> CGSize {
-      let view = views[at]
-      let fitSize = view.sizeThatFits(collectionSize)
-      let sizeStrategy = sizeStrategyOverride[view] ?? self.sizeStrategy
-      let width: CGFloat, height: CGFloat
-
-      switch sizeStrategy.width {
-      case .fit: width = fitSize.width
-      case .fill: width = collectionSize.width
-      case .absolute(let value): width = value
-      }
-      switch sizeStrategy.height {
-      case .fit: height = fitSize.height
-      case .fill: height = collectionSize.height
-      case .absolute(let value): height = value
-      }
-
-      return CGSize(width: width, height: height)
-    }
+  public convenience init(identifier: String? = nil,
+                          views: [UIView] = [],
+                          sizeStrategy: (width: SimpleViewSizeSource.ViewSizeStrategy,
+                                         height: SimpleViewSizeSource.ViewSizeStrategy) = (.fit, .fit),
+                          layout: Layout = FlowLayout(),
+                          identifierMapper: @escaping (Int, UIView) -> String = { index, view in
+                            return "\(view.hash)"
+                          }) {
+    self.init(identifier: identifier,
+              views: views,
+              identifierMapper: identifierMapper,
+              sizeSource: SimpleViewSizeSource(sizeStrategy: sizeStrategy),
+              layout: layout)
   }
 }
